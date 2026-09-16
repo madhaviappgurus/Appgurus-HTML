@@ -10,8 +10,8 @@
 @media (max-width: 1650px) {
 
 
-	h1 { font-size:90px;}
-	h2 { font-size:70px;}
+	h1 { font-size:80px;}
+	h2 { font-size:60px;}
 	h3 { font-size:45px;}
 	h4 { font-size:28px;}
 	h5 { font-size:20px;}  
@@ -99,9 +99,9 @@
 
 
 	
-	h1 { font-size:80px;}
-	h2 { font-size:60px;}
-	h3 { font-size:45px;}
+	h1 { font-size:70px;}
+	h2 { font-size:50px;}
+	h3 { font-size:40px;}
 	h4 { font-size:26px;}
 	h5 { font-size:20px;}  
 	h6 { font-size:18px;}
@@ -157,9 +157,9 @@
 
 
 
-	h1 { font-size:60px;}
-	h2 { font-size:40px;}
-	h3 { font-size:36px;}
+	h1 { font-size:56px;}
+	h2 { font-size:38px;}
+	h3 { font-size:34px;}
 	h4 { font-size:26px;}
 	h5 { font-size:20px;}  
 	h6 { font-size:18px;}
@@ -433,7 +433,11 @@
 	.filter-button-group{padding-left:0px;gap:10px 8px;}
 	.filter-button-group .btn{padding:6px 18px;font-size:11px;}
 
-	.banner-sec.banner-sec-v2 .banner-wrap{padding: 50px 0px;}
+	.team-person-info-wp .back{padding:10px;}
+	.team-person-info-wp .back .team-person-info .position{font-size:10px;line-height:15px;margin-top:5px;}
+	.team-person-info-wp .team-person-info > .position .theme-color-text{font-size:12px;}
+
+	
 }
 
 /*=========================================================
@@ -451,7 +455,7 @@ Extra small devices (portrait phones, less than 576px)
 	.whychooseus-info{gap:0px;}
 	.whychooseus-info .whychooseus-col{width:100%;}
 	.whychooseus-col .wcu-lg-font{font-size:26px;}
-	.case--study-row{gap:0px;flex-wrap:wrap;border-top:none;margin-top:40px; flex-direction: column-reverse;}
+	.case--study-row{gap:0px;flex-wrap:wrap;border-top:none;margin-top:40px;}
 	.case--study-row:after{display:none;}
 	.case--study-row .case--study-col{width:100%;padding-top:0px;}
 	.case--study-orange-box{margin-bottom:30px;}
@@ -467,7 +471,6 @@ Extra small devices (portrait phones, less than 576px)
 	.values-vision-col ul.numbers-count li{width:100%;}
 	.values-vision-col ul.numbers-count{gap:15px;}
 
-
 	button.slick-arrow{width:35px;height:35px;}
 	button.slick-prev.slick-arrow{left:-12px;}
 	button.slick-prev.slick-arrow:after{font-size:20px; padding-right: 2px; line-height: 35px;}
@@ -476,8 +479,6 @@ Extra small devices (portrait phones, less than 576px)
 
 	.whychooseus_about .whychooseus-info .whychooseus-col{padding-bottom:40px!important;}
 	.whychooseus_about .whychooseus-info:last-child .whychooseus-col:last-child{padding-bottom:0px!important;}
-
-	.d-none-a-567{display: none !important;}
 
 }
 
@@ -500,10 +501,10 @@ Extra small devices (portrait phones, less than 576px)
 	ul.social-link li .social-icon{width:22px;height:22px;}
 	ul.social-link li .social-icon:hover img.icon-2 {transform: translateY(-22px); }
 
-/*	button.slick-arrow{bottom:calc(100% - 9px);top:unset;}
+	/*button.slick-arrow{bottom:calc(100% - 9px);top:unset;}
 	button.slick-prev.slick-arrow{left:unset;right:40px;}
-	button.slick-next.slick-arrow{right:-4px;}*/
-	
+	button.slick-next.slick-arrow{right:-4px;}
+*/
 	.form-btn-main .btn {min-width: 120px;}
 }
 

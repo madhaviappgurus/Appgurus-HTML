@@ -18,13 +18,13 @@
 .blog-catagary-main ul.blog-catagary{display:flex;flex-wrap:wrap;justify-content:center;}
 .blog-catagary-main ul.blog-catagary li{padding-top:8px;padding-left:8px;}
 .blog-catagary-main ul.blog-catagary li a.blog-catagary-link{border:1px solid rgba(175,175,175,0.5);border-radius:110px;padding:8px 17px;line-height:1.2;text-transform:uppercase;font-weight:700;font-size:13px;background:transparent;}
-.blog-catagary-main ul.blog-catagary li.active a.blog-catagary-link{background:#000;color:#fff !important;}
-.blog-catagary-main ul.blog-catagary li a.blog-catagary-link:hover{border-color:#000;color:#000;}
+.blog-catagary-main ul.blog-catagary li.active a.blog-catagary-link{background:#000;color:#fff;}
+.blog-catagary-main ul.blog-catagary li a.blog-catagary-link:hover{border-color:#000;}
 .blog-box-vv1 .blog-img-vv1{display:block;overflow:hidden;padding-bottom:57%;position:relative;border-radius:1rem;margin-bottom:1rem;}
 .blog-box-vv1 .blog-img-vv1 .blog-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;transform:scale(1);transition:transform 2s cubic-bezier(0.16,1,0.3,1);}
 .blog-row-vv1{display:flex;flex-wrap:wrap;align-items:stretch;margin:0 0 0 -2.5rem;padding:2rem 0px;}
 .blog-row-vv1 .blog-col-vv1{width:calc(3 / 12 * 100%);padding:0.25rem 0 0 2.5rem;margin-bottom:80px;}
-.blog-img-link-vv1{display:inline-block;width:100%;height:1000%;}
+.blog-img-link-vv1{display:inline-block;width:100%;height:100%;}
 .blog-row-main-vv1{overflow:hidden;}
 .author-pub-date-catagary{display:flex;align-items:center;flex-wrap:wrap;}
 .author-pub-date-catagary .author-vv1{padding-right:15px;padding-bottom:10px;}
@@ -44,6 +44,16 @@
 .blog-lists-main{padding-bottom:80px;}
 .blog-box-vv1 .blog-img-link-vv1:hover .blog-img-vv1 .blog-img{transform:scale(1.05);}
 
+
+.btnloader .loader{width:17px;height:17px;border:2px solid transparent;border-top:2px solid #F05D27;border-right:2px solid #F05D27;border-radius:50%;animation:spin 1s linear infinite;display:none;margin-left:10px;}
+.btnloader .loader.open, .btnloader[disabled] .loader{display: inline-block !important;}
+@keyframes spin{
+	0%{transform:rotate(0deg);}
+	100%{transform:rotate(360deg);}
+}
+.btnloader{position:relative;}
+.btnloader .loader{position:absolute;right:15px;top:0px;bottom:0px;margin:auto;}
+.btnloader[disabled] .loader {border-color: #ccc; border-top-color: #000; border-right-color: #000; }
 
 
 
@@ -227,14 +237,6 @@ background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(240, 93, 39, 1) 44%
 .privacy-link:hover{text-decoration:underline;}
 
 
-.load-more-btn .loader{width:17px;height:17px;border:2px solid transparent;border-top:2px solid #F05D27;border-right:2px solid #F05D27;border-radius:50%;animation:spin 1s linear infinite;display:none;margin-left:10px;}
-.hidden{display:none;}
-.load-more-btn .loader.open{display: inline-block !important;}
-@keyframes spin{
-	0%{transform:rotate(0deg);}
-	100%{transform:rotate(360deg);}
-}
-
  @media (min-width: 1200px) { 
 
 .blog-details-sec .blog-details-wp h1{font-size:min(4.44444vw, 42px);}
@@ -317,3 +319,30 @@ label.custom-checkbox:after{content:'';left:7px;top:5px;width:5px;height:10px;bo
 label.custom-checkbox.checked::before{background-color:#f05d28;border-color:#f05d28;}
 .checkbox-container label.custom-checkbox span.wpcf7-list-item{margin:0px;}
 label.custom-checkbox.checked::after{display:block;}
+
+
+.sidebar-form .wpcf7 form.invalid .wpcf7-response-output,.sidebar-form .wpcf7 form.payment-required .wpcf7-response-output,.sidebar-form .wpcf7 form.unaccepted .wpcf7-response-output,.sidebar-form .wpcf7-response-output{color:#fff;padding-top:8px;padding-bottom:10px;}
+.sidebar-form .form-send-btn span.wpcf7-spinner{margin-top:5px;}
+
+
+
+.blog-box-vv1 .blog-img-vv1 .blog-img {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #fafafa 8%, #f4f4f4 38%, #fafafa 54%);
+    background-size: 1000px 640px;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+

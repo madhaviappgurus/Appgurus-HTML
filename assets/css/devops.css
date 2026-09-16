@@ -1,0 +1,14 @@
+/*=========================================================
+	Devops cloud page CSS 
+===========================================================*/
+
+.devops-banner .banner-heading {
+    font-size: clamp(32px, calc(2.3vw + 3.2vh + 1vmin), 60px);
+}
+
+
+@media (max-width: 575px) {
+    .devops-banner .banner-heading br {
+        display: none;
+    }
+}
