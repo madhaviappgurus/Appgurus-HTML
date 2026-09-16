@@ -563,29 +563,34 @@
             <div class="banner-wrap">
                 <div class="container">
                     <div class="banner-text-wrap">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-12 col-sm-12">
-                                <div class="banner-text">
+                        <div class="row align-items-center">
+                            <div class="col-xl-8 col-lg-7">
+                                <div class="banner-text text-center text-lg-start">
                                     <div class="banner-heading-wrap">
                                         <h1 class="banner-heading white_text">Build & Deploy Cloud <br><span
-                                                class="ai-color-text">Infrastructure Faster Without </span><br> Leaving a Trace of Break.</h1>
+                                                class="ai-color-text">Infrastructure Faster Without </span><br> Leaving
+                                            a Trace of Break.</h1>
                                     </div>
-                                    <p style="max-width: 1250px; margin-left: auto; margin-right: auto;">App Gurus, an
+                                    <p style="max-width: 1250px; margin-left: auto; margin-right: auto;"
+                                        class="font-we-200">App Gurus, an
                                         Australian owned team with a rich experience of 14+ years, has remained the
                                         first choice for industry leaders for designing and building the Cloud
                                         Infrastructure, CI/CD pipelines for the products which can move with stubborn
                                         confidence to ship on AWS, Azure, or GCP. Our clientele includes startups as
                                         well as enterprise level organizations</p>
 
-                                    <div class="banner-cta mt-lg-5 mt-4">
-                                       <a href="#" class="btn btn-with-arrow">Book Your Free Cloud Audit</a>
-                                       <a href="#" class="btn btn-with-arrow gray-btn">See what's included</a>
+                                    <div
+                                        class="banner-cta mt-lg-5 mt-4 d-flex align-items-center gap-xl-4 gap-3 flex-wrap justify-content-center justify-content-lg-start">
+                                        <a href="#" class="btn btn-with-arrow">Book Your Free Cloud Audit</a>
+                                        <a href="#" class="btn btn-with-arrow gray-btn">See what's included</a>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12">
-
+                            <div class="col-xl-4 col-lg-5">
+                                <div class="devops-right-img text-center text-lg-start">
+                                    <img src="assets/images/devops/devops-banner.webp" alt="image">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -593,6 +598,15 @@
             </div>
         </section>
 
+        <div class="devops-tabs-sticky">
+            <div class="devops-tabs-wrap">
+                <a href="#devops-services" class="devops-tab active">DevOps & cloud services</a>
+                <a href="#platform-tooling" class="devops-tab">Platforms & Tooling</a>
+                <a href="#how-we-deliver" class="devops-tab">How we deliver</a>
+                <a href="#transparent-pricing" class="devops-tab">Transparent pricing</a>
+                <a href="#success-stories" class="devops-tab">Success Stories</a>
+            </div>
+        </div>
 
         <div class="black-bg-overlay">
 
@@ -1568,6 +1582,151 @@
 <script type="text/javascript" src="./assets/js/typed.min.js"></script>
 <script type="text/javascript" src="./assets/js/custom.js"></script>
 
+<script>
+    // DevOps Tabs JS Start
+    if ($('.devops-tab').length) {
 
+        function moveActiveTabIntoView($tab) {
+
+            const $tabsWrap = $('.devops-tabs-wrap');
+
+            if (!$tabsWrap.length || !$tab.length) return;
+
+            const wrap = $tabsWrap[0];
+            const tab = $tab[0];
+
+            const wrapRect = wrap.getBoundingClientRect();
+            const tabRect = tab.getBoundingClientRect();
+
+            if (tabRect.right > wrapRect.right) {
+
+                wrap.scrollTo({
+                    left: wrap.scrollLeft + (tabRect.right - wrapRect.right) + 20,
+                    behavior: 'smooth'
+                });
+            }
+            else if (tabRect.left < wrapRect.left) {
+
+                wrap.scrollTo({
+                    left: wrap.scrollLeft - (wrapRect.left - tabRect.left) - 20,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        $('.devops-tab').on('click', function (e) {
+            e.preventDefault();
+            const $this = $(this);
+            const target = $this.attr('href');
+            const $target = $(target);
+
+            // Check target section exists
+            if (!$target.length) {
+                console.warn('Target section not found:', target);
+                return;
+            }
+
+            // Active class
+            $('.devops-tab').removeClass('active');
+            $this.addClass('active');
+
+            // Move active tab into visible area
+            moveActiveTabIntoView($this);
+
+            // Scroll to section
+            $('html, body').animate({
+                scrollTop: $target.offset().top - 50
+            }, 0);
+        });
+
+        // Add active class based on scroll position
+        $(window).on('scroll', function () {
+
+            const scrollTop = $(window).scrollTop();
+            const scrollPosition = scrollTop + 100;
+
+            $('.devops-tab').each(function () {
+                const $tab = $(this);
+                const target = $tab.attr('href');
+                const $section = $(target);
+                if (!$section.length) return;
+
+                const sectionTop = $section.offset().top;
+                const sectionBottom = sectionTop + $section.outerHeight();
+
+                if (
+                    scrollPosition >= sectionTop &&
+                    scrollPosition < sectionBottom
+                ) {
+
+                    if (!$tab.hasClass('active')) {
+
+                        $('.devops-tab').removeClass('active');
+                        $tab.addClass('active');
+
+                        moveActiveTabIntoView($tab);
+                    }
+                }
+            });
+        });
+
+        // Drag to scroll on .devops-tabs-wrap
+        (function () {
+
+            const $wrap = $('.devops-tabs-wrap');
+            if (!$wrap.length) return;
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            $wrap.on('mousedown', function (e) {
+
+                isDown = true;
+                $wrap.addClass('active');
+
+                // Prevent text/element selection on drag start
+                e.preventDefault();
+
+                startX = e.pageX - $wrap.offset().left;
+                scrollLeft = $wrap.scrollLeft();
+            });
+
+            $wrap.on('mousemove', function (e) {
+
+                if (!isDown) return;
+                e.preventDefault();
+
+                const x = e.pageX - $wrap.offset().left;
+                const walk = (x - startX);
+
+                if (Math.abs(walk) > 5) {
+                    $wrap.attr('data-dragging', 'true');
+                }
+
+                $wrap.scrollLeft(scrollLeft - walk);
+            });
+
+            $wrap.on('mouseup', function () {
+
+                isDown = false;
+                $wrap.removeClass('active');
+
+                setTimeout(function () {
+                    $wrap.removeAttr('data-dragging');
+                }, 0);
+            });
+
+            $wrap.on('mouseleave', function () {
+
+                isDown = false;
+                $wrap.removeClass('active');
+                $wrap.removeAttr('data-dragging');
+            });
+
+        })();
+    }
+    // end
+</script>
 
 </html>

@@ -1,14 +1,154 @@
 /*=========================================================
 	Devops cloud page CSS 
 ===========================================================*/
-
-.devops-banner .banner-heading {
-    font-size: clamp(32px, calc(2.3vw + 3.2vh + 1vmin), 60px);
+.devops-cloud-page {
+    overflow-x: unset;
 }
 
+.devops-banner .banner-heading {
+    font-size: clamp(30px, 3.5vw, 60px);
+    font-weight: 600;
+}
+
+.btn.btn-with-arrow.gray-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+}
+
+.devops-banner .banner-text {
+    padding-right: 40px;
+}
+
+.font-we-200 {
+    font-weight: 200 !important;
+}
+
+.devops-banner .devops-right-img img {
+    max-width: 550px;
+    max-height: 540px;
+    width: 100%;
+    height: 100%;
+}
+
+.devops-tabs-sticky {
+    background: #000;
+}
+
+.devops-tabs-wrap {
+    position: fixed;
+    bottom: 35px;
+    z-index: 99;
+    right: 0;
+    left: 0;
+    max-width: 54%;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    background: rgba(177, 177, 177, 65%);
+    backdrop-filter: blur(40px);
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.devops-tabs-wrap .devops-tab {
+    display: inline-block;
+    flex: 0 0 auto;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    padding: 18px 18px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+
+.devops-tabs-wrap .devops-tab:hover,
+.devops-tabs-wrap .devops-tab.active {
+    background: #fff;
+}
+
+@media (max-width: 1600px) {
+    .devops-tabs-wrap .devops-tab {
+        font-size: 14px;
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .devops-banner .banner-text {
+        padding-right: 0;
+    }
+
+    .devops-tabs-wrap {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 991px) {
+    .devops-right-img {
+        margin: 50px 0 0;
+    }
+
+    .devops-banner .devops-right-img img {
+        max-width: 400px;
+    }
+
+    .devops-tabs-wrap .devops-tab {
+        font-size: 13px;
+        padding: 13px 13px;
+    }
+
+    .devops-tabs-wrap {
+        max-width: calc(100% - 150px);
+        bottom: 24px;
+        padding: 3px;
+        gap: 4px;
+    }
+
+}
 
 @media (max-width: 575px) {
     .devops-banner .banner-heading br {
         display: none;
+    }
+
+    .devops-banner .devops-right-img img {
+        max-width: 300px;
+    }
+
+    .devops-banner .banner-text>p {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    .devops-tabs-wrap {
+        max-width: calc(100% - 50px);
+    }
+
+    .devops-tabs-wrap .devops-tab {
+        font-size: 12px;
     }
 }
