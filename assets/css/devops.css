@@ -32,14 +32,15 @@
 
 .devops-tabs-sticky {
     background: #000;
+    padding: 0 0 40px;
 }
 
 .devops-tabs-wrap {
-    position: fixed;
+    /* position: fixed;
     bottom: 35px;
     z-index: 99;
     right: 0;
-    left: 0;
+    left: 0; */
     max-width: 54%;
     margin: 0 auto;
     border: 1px solid #fff;
@@ -90,10 +91,132 @@
     background: #fff;
 }
 
+.devops-strategy {
+    padding: 100px 0;
+}
+
+.devops-strategy-img img {
+    height: 100%;
+    aspect-ratio: 660 / 600;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+.ds-title-wrap p {
+    margin-top: 50px;
+}
+
+.devops-strategy .title-text-row-vv1 .title-text-col h3 {
+    font-size: 32px;
+}
+
+.devops-strategy .title-text-row-vv1 .title-text-col p {
+    font-size: 16px;
+    line-height: normal;
+}
+
+.devops-strategy .title-text-row-vv1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.devops-strategy .title-text-row-vv1 .title-text-col {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid #E4E7EC;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.devops-strategy .ds-left-col {
+    gap: 30px;
+}
+
+.devops-strategy .ai-specialist {
+    background: #000;
+    padding: 10px;
+    border-radius: 50px;
+    margin-top: 80px;
+}
+
+.devops-strategy .ds-talk-wrap {
+    padding-left: 30px;
+    width: calc(100% - 240px);
+}
+
+.devops-strategy .ai-specialist-cta .btn {
+    padding: 26px;
+}
+
+
 @media (max-width: 1600px) {
     .devops-tabs-wrap .devops-tab {
         font-size: 14px;
         padding: 14px 16px;
+    }
+
+    .devops-strategy .title-text-row-vv1 .title-text-col {
+        padding: 14px;
+    }
+
+    .ds-title-wrap p {
+        margin-top: 40px;
+    }
+
+    .devops-strategy .title-text-row-vv1 .title-text-col h3 {
+        font-size: 26px;
+    }
+
+    .devops-strategy .title-text-row-vv1 .title-text-col p {
+        font-size: 14px;
+    }
+
+    .devops-strategy .ai-specialist-cta .btn {
+        padding: 18px;
+    }
+
+    .devops-strategy .ai-specialist-left .ai-specialist-img {
+        width: 153px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .devops-strategy {
+        padding: 80px 0;
+    }
+
+    .devops-strategy .title-text-row-vv1 .title-text-col h3 {
+        font-size: 20px;
+    }
+
+    .devops-strategy .title-text-row-vv1 .title-text-col {
+        border-radius: 14px;
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        -ms-border-radius: 14px;
+        -o-border-radius: 14px;
+    }
+
+    .devops-strategy-img img {
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -ms-border-radius: 18px;
+        -o-border-radius: 18px;
+    }
+
+    .devops-strategy .ds-talk-wrap {
+        padding-left: 20px;
+        width: calc(100% - 170px);
+    }
+
+    .devops-strategy .ai-specialist {
+        margin-top: 60px;
     }
 }
 
@@ -104,6 +227,25 @@
 
     .devops-tabs-wrap {
         max-width: 60%;
+    }
+
+    .ds-title-wrap p {
+        margin-top: 24px;
+    }
+
+    .devops-strategy .title-text-row-vv1 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .ai-specialist-left h3 {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .h-lg-100 {
+        height: 100% !important;
     }
 }
 
@@ -128,6 +270,40 @@
         gap: 4px;
     }
 
+    .devops-strategy-img {
+        margin: 50px 0 0;
+    }
+
+    .devops-strategy-img img {
+        width: 100%;
+    }
+
+    .devops-strategy .ds-talk-wrap {
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    .devops-strategy .ai-specialist-left h3 {
+        margin-top: 6px;
+    }
+
+    .devops-strategy .ai-specialist {
+        margin-top: 20px;
+        padding: 30px;
+        border-radius: 18px;
+    }
+
+    .devops-strategy .ai-specialist-cta .btn {
+        padding: 10px 20px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .devops-strategy {
+        padding: 50px 0;
+    }
 }
 
 @media (max-width: 575px) {
@@ -150,5 +326,22 @@
 
     .devops-tabs-wrap .devops-tab {
         font-size: 12px;
+    }
+
+    .devops-strategy-img {
+        margin: 30px 0 0;
+    }
+
+    .devops-strategy .ds-left-col {
+        gap: 10px;
+    }
+
+    .devops-strategy .title-text-row-vv1 .title-text-col {
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .devops-strategy .ai-specialist {
+        padding: 20px 16px;
     }
 }
