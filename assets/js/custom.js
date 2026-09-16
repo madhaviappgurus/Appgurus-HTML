@@ -32,6 +32,7 @@ $(document).ready(function() {
         ]
     });
 
+   
 
     $('.team-title-slider').slick({
         dots: false,
@@ -204,14 +205,228 @@ $(document).ready(function() {
         // pauseOnHover: false,
     });
 
-    // $('.testimonials--slider').slick({
-    //     dots: true,
+   
+
+
+    const $slider = $('.ai-dev-services-slider');
+    const $track = $('.custom-scrollbar-track');
+    const $thumb = $('.custom-scrollbar-thumb');
+
+    let totalSlides = 0;
+    let visibleSlides = 4;
+
+    $slider.on('init', function(event, slick) {
+        totalSlides = slick.slideCount;
+        visibleSlides = slick.options.slidesToShow;
+        updateThumbWidth(slick);
+        updateThumbPosition(slick.currentSlide);
+    });
+
+    $slider.slick({
+        dots: false,
+        arrows: false,
+        infinite: false,
+        autoplay: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        touchThreshold: 100,
+        responsive: [{
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint:767,
+            settings: {
+                slidesToShow: 1
+            }
+        }, ]
+    });
+
+    $slider.on('afterChange', function(event, slick, currentSlide) {
+        updateThumbWidth(slick);
+        updateThumbPosition(currentSlide);
+    });
+
+    function updateThumbWidth(slick) {
+        const trackWidth = $track.width();
+        const thumbWidth = (slick.options.slidesToShow / slick.slideCount) * trackWidth;
+        $thumb.css('width', thumbWidth + 'px');
+    }
+
+    function updateThumbPosition(currentSlide) {
+        const trackWidth = $track.width();
+        const thumbWidth = $thumb.width();
+        const maxScrollable = totalSlides - visibleSlides;
+        const maxLeft = trackWidth - thumbWidth;
+        const percent = currentSlide / maxScrollable;
+
+        $thumb.css('left', percent * maxLeft + 'px');
+    }
+
+    $track.on('click', function(e) {
+        const trackOffset = $(this).offset().left;
+        const clickX = e.pageX - trackOffset;
+        const trackWidth = $(this).width();
+        const clickPercent = clickX / trackWidth;
+        const maxSlide = totalSlides - visibleSlides;
+        const goToSlide = Math.round(clickPercent * maxSlide);
+
+        $slider.slick('slickGoTo', goToSlide);
+    });
+
+    // Update on resize
+    $(window).on('resize', function() {
+        const slick = $slider.slick('getSlick');
+        updateThumbWidth(slick);
+        updateThumbPosition(slick.currentSlide);
+    });
+
+
+
+    $('.iot-industry-served-slider').slick({
+        dots: false,
+        arrows: false,
+        infinite: false,
+        autoplay: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        touchThreshold: 100,
+        responsive: [{
+            breakpoint: 1599,
+            settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint: 580,
+            settings: {
+                slidesToShow: 1
+            }
+        }, ]
+    });
+
+     $('.ai-client-review-slider').slick({
+        dots: false,
+        arrows: false,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: false,
+        slidesToShow: 3,
+        touchThreshold:100,
+        slidesToScroll: 1,
+        // speed: 2000,
+        
+        responsive: [{
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }, {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+
+    $('.wca-bussiness-slider').slick({
+        dots: false,
+        arrows: false,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: false,
+        slidesToShow: 5,
+        touchThreshold:100,
+        slidesToScroll: 1,
+        // speed: 2000,
+        
+        responsive: [{
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }, {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }, {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+
+    $('.iws_row_slider').slick({
+        speed: 5000,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        swipe: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        variableWidth: true
+    });
+
+    $('.iws_row_slider2').slick({
+        speed: 5000,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        slidesToShow: 1,
+        swipe: false,
+        slidesToScroll: 1,
+        rtl: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        variableWidth: true
+    });
+
+    // $(".iws_row_slider").slick({
+    //     autoplay: true,
+    //     autoplaySpeed: 0,
+    //     speed: 5000,
     //     arrows: false,
-    //     autoplay: false,
-    //     infinite: false,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     // speed: 2000,
+    //     swipe: false,
+    //     slidesToShow: 4,
+    //     cssEase: "linear",
+    //     pauseOnFocus: false,
+    //     pauseOnHover: false,
+    //     rtl: true
     // });
 
 
@@ -219,45 +434,15 @@ $(document).ready(function() {
 
 
 
+    // var typed = new Typed("#typed", {
+    //     stringsElement: '#typed-strings',
+    //     typeSpeed: 40,
+    //     loop: true,
+    //     backDelay: 3000,
+    //     backSpeed: 5,
+    // });
 
 
-    var typed = new Typed("#typed", {
-        stringsElement: '#typed-strings',
-        typeSpeed: 40,
-        loop: true,
-        backDelay: 3000,
-        backSpeed: 5,
-    });
-
-
-    /**** testimonial video start ****/
-
-    //play/pause on double click on the video
-    $('.videoplayer-modal').on('click', function (e) {
-        if (this.paused) {
-            this.play();
-        }else{
-            this.pause();
-        }
-    });
-
-    //play/pause of the video when the modal opens/closes. 
-        $('.video-modal').on('show.bs.modal', function() { //show modal event for an element which has class 'modal'
-            var id = $(this).attr('id'); //saves in the var the ID value of the opened modal
-            var video = document.getElementById(id).querySelectorAll("video"); //Find the element 'video' inside of the modal defined by the ID previosly saved
-
-            $(video)[0].play(); //plays what we saved on 'video' variable      
-        });
-
-        $('.video-modal').on('hidden.bs.modal', function() { //show modal event for an element which has class 'modal'
-            var id = $(this).attr('id');//saves in the var the ID value of the closed modal
-            var video = document.getElementById(id).querySelectorAll("video");//Find the element 'video' inside of the modal defined by the ID previosly saved
-
-            $(video)[0].pause(); //pauses the video
-            $(video)[0].currentTime = 0; //rests the video to 0 for have it from the beging when the user opens the modal again
-        });
-
-    /**** testimonial video end ****/
 
 
     // scroll hide and show
@@ -373,4 +558,24 @@ $(document).ready(function() {
             });
         });
 
+
+$('.ai-p-step-info-click').each(function() {
+    var $parent = $(this).closest('.ai-p-step-info-main');
+
+    // Hover behavior
+    $(this).hover(
+        function() {
+            $parent.addClass('open-tooltip');
+        },
+        function() {
+            $parent.removeClass('open-tooltip');
+        }
+    );
+
+    // Click behavior
+    // $(this).on('click', function(e) {
+    //     e.preventDefault();
+    //     $parent.toggleClass('open-tooltip');
+    // });
+});
 

@@ -26,6 +26,15 @@
 
 		<style type="text/css">
 			.show_hide {display:none; }
+			
+			.header-main .header-right .navbar-toggler:after{content:'Menu';position:absolute;right:0px;color:#fff;padding:2px 0;font-weight:600;transition:all 400ms ease;visibility:visible!important;opacity:1!important;}
+			.header-main button.navbar-toggler[aria-expanded="false"] span.icon-bar{visibility:hidden!important;opacity:0!important;}
+			.header-main button.navbar-toggler[aria-expanded="true"] span.icon-bar{visibility:visible!important;opacity:1!important;}
+			.header-main .header-right .navbar-toggler:after {content: 'Menu'; position: absolute; right: 0px; color: #fff; top: 4px; padding: 5px 0; font-weight: 600; transition: all 400ms ease; visibility: visible !important; opacity: 1 !important; }
+			.header-main button.navbar-toggler[aria-expanded="true"]:after{visibility:hidden!important;opacity:0!important;}
+			.header-main button.navbar-toggler span.icon-bar:nth-child(2){visibility:hidden!important;opacity:0!important;}
+			.header-main.nav-area.active.sticky .navbar-toggler:after {color: #000; }
+			
 		</style>
 	</head>
 	<body id="home" class="homePage">
@@ -51,6 +60,7 @@
 					              	<div class="header-inner d-flex">
 						                <div class="header-right">
 						                	<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					
 							                    <span class="icon-bar"></span>
 							                    <span class="icon-bar"></span>
 							                    <span class="icon-bar"></span>
@@ -977,6 +987,7 @@
 
 
 
+
 			<section class="testimonials-sec">
 				<div class="container">
 					<div class="section-title">
@@ -1052,12 +1063,11 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12 ">
 										<div class="testimonials-details">
-											<!-- <p class="font-we-md">We came to App Gurus with an idea and extremely basic wireframe of our concept. They provided priceless industry knowledge, transparency and understanding as part of the design and construction process. As a startup with no app development or programming knowledge, the experience of App Gurus turned our idea into a polished, fully functioning product. The continuing support we have received after completion of our app has been exceptional.</p> -->
-											<!-- Button trigger modal -->
-											<div class="client-says-video-main">
-												<img src="assets/images/whychooseus-img-1.png" class="img-fluid client-says-img" alt="#">
+											<div class="client-video-main">
+												<img src="assets/images/whychooseus-img-1.png" class="img-fluid" alt="#">
 												<a href="#" data-bs-toggle="modal" data-bs-target="#videoModal" class="play-video">
 													<img src="assets/images/play-icon.svg" alt="#">
 												</a>
@@ -1079,7 +1089,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">We came to App Gurus with an idea and extremely basic wireframe of our concept. They provided priceless industry knowledge, transparency and understanding as part of the design and construction process. As a startup with no app development or programming knowledge, the experience of App Gurus turned our idea into a polished, fully functioning product. The continuing support we have received after completion of our app has been exceptional.</p>
@@ -1100,7 +1110,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">I moved to App Gurus in 2019 after using another company for a number of years and not being satisfied with the quality of work. The change was the best thing I ever did for my app. App Gurus actually listened to exactly what I wanted out of my app and nothing was too hard for them - as well as their pricing was attractive. I would happily recommend App Gurus to anyone whether they are wanting a development done from scratch or already have a product and they are not happy with their current service. I'm very excited about the future of my app knowing I have the backing of App Gurus if I need anything. </p>
@@ -1121,7 +1131,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">Where to begin? We can all conceive that app development is highly specialized.  Client expectations have to be managed especially where projects take on a life of their own, creating options that could never have been envisaged at the start. In our case, subject to certain parameters, App Gurus became a quasi partner in fulfilling the dreams we had of our project. The integration of their ideas into our project was priceless. This does not happen in normal business dealings. Big Thumbs Up App Gurus.</p>
@@ -1142,7 +1152,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">App Gurus built a platform to manage the driver compliance paperwork and fault reporting system for heavy vehicles. It could automatically review all paperwork, sending notifications when there were issues. App Gurus showed genuine passion for the project, giving invaluable technical insights.</p>
@@ -1163,7 +1173,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">App Gurus offered strong interpersonal relationships that optimized the development process. The apps have remained in the top positions of the education genre in the Apple Store. I appreciate App Gurus' loyalty and understanding. We've formed a bond and trust with each other, and we respect each other's opinions.</p>
@@ -1184,7 +1194,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">These guys are great and easy to work with. Their patience and service has been amazing considering we come from a non tech background. Highly recommend them.</p>
@@ -1205,7 +1215,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">We never felt that we were dealing with sales people, but rather with a team that had a deep technical understanding. App Gurus built an app to improve communication between the client and their customers. They also integrated an AI element to make custom recommendations to users. As a result of App Guru’s work, client engagement has increased 300% and net promoter score has increased by 10%. Client managers also report increased productivity due to optimized communication via the app.</p>
@@ -1226,7 +1236,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">I approached the App Gurus to transform my Homeworthy Inspection System into a mobile app. They guided me through the entire process and made Homeworthy a robust platform by utilising my vision and industry experience. Many businesses and individuals now conduct their inspection services using Homeworthy and the numbers are growing. I personally have saved 2 hours per day on inspection reports, by simply using the Homeworthy app. It's a fast and reliable experience.</p>
@@ -1247,7 +1257,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">Working with the App Gurus was very professional and streamlined. They took my vague descriptions of what I wanted and turned them into something real and functional. There was a lot of extra guidance which has been quite valuable in shaping Eater Meter to what it is today. I highly recommend App Gurus for any sort of web-app related development.</p>
@@ -1268,7 +1278,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">We came to App Gurus with an idea and extremely basic wireframe of our concept. They provided priceless industry knowledge, transparency and understanding as part of the design and construction process. As a startup with no app development or programming knowledge, the experience of App Gurus turned our idea into a polished, fully functioning product. The continuing support we have received after completion of our app has been exceptional.</p>
@@ -1289,7 +1299,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">I moved to App Gurus in 2019 after using another company for a number of years and not being satisfied with the quality of work. The change was the best thing I ever did for my app. App Gurus actually listened to exactly what I wanted out of my app and nothing was too hard for them - as well as their pricing was attractive. I would happily recommend App Gurus to anyone whether they are wanting a development done from scratch or already have a product and they are not happy with their current service. I'm very excited about the future of my app knowing I have the backing of App Gurus if I need anything. </p>
@@ -1310,7 +1320,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">Where to begin? We can all conceive that app development is highly specialized.  Client expectations have to be managed especially where projects take on a life of their own, creating options that could never have been envisaged at the start. In our case, subject to certain parameters, App Gurus became a quasi partner in fulfilling the dreams we had of our project. The integration of their ideas into our project was priceless. This does not happen in normal business dealings. Big Thumbs Up App Gurus.</p>
@@ -1331,7 +1341,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">App Gurus built a platform to manage the driver compliance paperwork and fault reporting system for heavy vehicles. It could automatically review all paperwork, sending notifications when there were issues. App Gurus showed genuine passion for the project, giving invaluable technical insights.</p>
@@ -1352,7 +1362,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">App Gurus offered strong interpersonal relationships that optimized the development process. The apps have remained in the top positions of the education genre in the Apple Store. I appreciate App Gurus' loyalty and understanding. We've formed a bond and trust with each other, and we respect each other's opinions.</p>
@@ -1373,7 +1383,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">These guys are great and easy to work with. Their patience and service has been amazing considering we come from a non tech background. Highly recommend them.</p>
@@ -1394,7 +1404,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">We never felt that we were dealing with sales people, but rather with a team that had a deep technical understanding. App Gurus built an app to improve communication between the client and their customers. They also integrated an AI element to make custom recommendations to users. As a result of App Guru’s work, client engagement has increased 300% and net promoter score has increased by 10%. Client managers also report increased productivity due to optimized communication via the app.</p>
@@ -1415,7 +1425,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">I approached the App Gurus to transform my Homeworthy Inspection System into a mobile app. They guided me through the entire process and made Homeworthy a robust platform by utilising my vision and industry experience. Many businesses and individuals now conduct their inspection services using Homeworthy and the numbers are growing. I personally have saved 2 hours per day on inspection reports, by simply using the Homeworthy app. It's a fast and reliable experience.</p>
@@ -1436,7 +1446,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">Working with the App Gurus was very professional and streamlined. They took my vague descriptions of what I wanted and turned them into something real and functional. There was a lot of extra guidance which has been quite valuable in shaping Eater Meter to what it is today. I highly recommend App Gurus for any sort of web-app related development.</p>
@@ -1457,7 +1467,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 col-sm-12 col-12 align-self-center">
+									<div class="col-lg-7 col-md-12 col-sm-12 col-12">
 										<div class="testimonials-details">
 											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="31.5" viewBox="0 0 36 31.5"> <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M32.625,2.25h-9A3.376,3.376,0,0,0,20.25,5.625v9A3.376,3.376,0,0,0,23.625,18H29.25v4.5a4.5,4.5,0,0,1-4.5,4.5h-.562A1.683,1.683,0,0,0,22.5,28.688v3.375a1.683,1.683,0,0,0,1.688,1.688h.563A11.247,11.247,0,0,0,36,22.5V5.625A3.376,3.376,0,0,0,32.625,2.25Zm-20.25,0h-9A3.376,3.376,0,0,0,0,5.625v9A3.376,3.376,0,0,0,3.375,18H9v4.5A4.5,4.5,0,0,1,4.5,27H3.938A1.683,1.683,0,0,0,2.25,28.688v3.375A1.683,1.683,0,0,0,3.938,33.75H4.5A11.247,11.247,0,0,0,15.75,22.5V5.625A3.376,3.376,0,0,0,12.375,2.25Z" transform="translate(0 -2.25)"/> </svg>
 											<p class="font-we-md">We came to App Gurus with an idea and extremely basic wireframe of our concept. They provided priceless industry knowledge, transparency and understanding as part of the design and construction process. As a startup with no app development or programming knowledge, the experience of App Gurus turned our idea into a polished, fully functioning product. The continuing support we have received after completion of our app has been exceptional.</p>
@@ -1471,6 +1481,25 @@
 					</div>
 				</div>
 			</section>
+
+
+			  <!-- Modal Structure -->
+			  <div class="modal fade videoModal-main" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+			    <div class="modal-dialog modal-fullscreen">
+			      <div class="modal-content">
+			        <div class="modal-header boder-none">
+			          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+			        </div>
+			        <div class="modal-body text-center">
+			          <!-- Video Player -->
+			          <video id="videoPlayer" class="" controls>
+			            <source src="assets/video/dummy_video.mp4" type="video/mp4">
+			            Your browser does not support the video tag.
+			          </video>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
 
 
 			<section class="technology--stack-sec">
@@ -2250,19 +2279,7 @@
 		  <!-- ====== /FOOTER EOC ====== -->
 
 		
-        <!-- Modal -->
-		<div class="modal fade video-modal" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel">
-		  <button type="button" id="VideoCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		  <div class="modal-dialog modal-xl">
-		    <div class="modal-content border-0 rounded-0">
-		      <video id="ModalvideoPlayer" class="videoplayer-modal" controls>
-		        <!-- <source src="assets/video/dummy_video.mp4" type="video/mp4"> -->
-		        <source src="https://www.clouddownunder.com.au/wp-content/themes/cdu/assets/video/CDU_FINAL.mp4" type="video/mp4">
-		        Your browser does not support the video tag.
-		      </video>
-		    </div>
-		  </div>
-		</div>
+
 
 	</body>
 	<script type="text/javascript" src="./assets/js/jquery-3.6.0/jquery.min.js"></script>
@@ -2271,5 +2288,31 @@
 	<script type="text/javascript" src="./assets/js/slick.min.js"></script>
 	<script type="text/javascript" src="./assets/js/typed.min.js"></script>
 	<script type="text/javascript" src="./assets/js/custom.js"></script>
+
+	<script>
+	    document.addEventListener('DOMContentLoaded', function () {
+		  const videoModal = document.getElementById('videoModal');
+		  const videoPlayer = document.getElementById('videoPlayer');
+		  const triggerButton = document.querySelector('[data-bs-toggle="modal"]');
+
+		  if (videoModal && videoPlayer && triggerButton) {
+		    
+		    videoModal.addEventListener('show.bs.modal', function () {
+		      videoPlayer.play();
+		    });
+		   
+		    videoModal.addEventListener('hide.bs.modal', function () {
+		      videoPlayer.pause();
+		      videoPlayer.currentTime = 0; 
+
+		      setTimeout(() => {
+		        triggerButton.focus(); 
+		      }, 100);
+		    });
+		  }
+		});
+
+	</script>
+
 
 </html>
