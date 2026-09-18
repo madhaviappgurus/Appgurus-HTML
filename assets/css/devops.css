@@ -278,6 +278,7 @@
 	.devops-strategy .title-text-row-vv1 .title-text-col{padding:12px;border-radius:10px;}
 	.devops-strategy .ai-specialist{padding:20px 16px;}
 	.fs-tabs-wrap ul.ts-info-list li{font-size:14px;}
+    .font50 {line-height: 1.5 !important;}
 }
 @media (max-width:400px){
 	.hwd-sec .deliver-cards{padding:16px;}
