@@ -464,6 +464,9 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+.devops-partner-sec .ai-dvlpmt-partner-col{
+	justify-content: start;
+}
 @media (max-width: 1399px) {
 	.ai-dvlpmt-col-bottom-info ul li {font-size: 15px}
 }
