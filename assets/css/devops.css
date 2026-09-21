@@ -175,6 +175,17 @@
 .devops-partner-sec .ai-dvlpmt-partner-col{justify-content: start;}
 
 
+
+/*=========================================================
+	AI v2 page CSS 
+===========================================================*/
+
+
+
+
+
+
+
 /* Media Query */
 @media (max-width:1600px){
 	.devops-tabs-wrap .devops-tab{font-size:14px;padding:14px 16px;}
