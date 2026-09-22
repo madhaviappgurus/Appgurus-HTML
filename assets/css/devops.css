@@ -226,8 +226,7 @@
 
 
 .ai-tech-tab .home-left-tabs .nav-pills .nav-link.active,.home-left-tabs .nav-pills .show>.nav-link{padding-left:0px;border-left:none!important;border-bottom:2px solid #F05D26;border-radius: 0px}
-.ai-tech-tab .home-left-tabs .nav-pills{flex-direction:unset!important;gap:50px;flex-wrap:nowrap;overflow-y:scroll;margin-bottom:10px;border-bottom: 1px solid #dedede;white-space: nowrap;}
-/*.ai-tech-tab .home-left-tabs .nav-pills {border: none;}*/
+.ai-tech-tab .home-left-tabs .nav-pills{flex-direction:unset!important;gap:50px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width: thin;overflow-y: hidden;margin-bottom:10px;border-bottom: 1px solid #dedede;white-space: nowrap;}
 .ai-tech-tab .tech-stack-row .tech-stack-tabs{width: 100%;padding: 0;border: none;}
 .ai-tech-tab .tech-stack-row{border: none;}
 .ai-tech-tab .tech-stack-row .ts-tab-content {width: 100%;padding: 0;margin-top: 69px;}
@@ -258,7 +257,7 @@
 	.fs-tabs-wrap .ts-info-heading{font-size:16px;}
 	.fs-tabs-wrap .fs-title-name{margin-bottom:16px;}
 	.fs-tabs-wrap ul.ts-info-list{padding-bottom:30px;}
-	.ai-tech-tab .tech-stack-row .ts-tab-content {margin-top: 50px;}
+	.ai-tech-tab .tech-stack-row .ts-tab-content {margin-top: 40px;}
 }
 @media (max-width:1599px) {
     .CAID-sec .caid-row-left { flex: 0 0 550px; max-width: 550px; }
