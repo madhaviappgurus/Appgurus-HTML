@@ -234,12 +234,8 @@
 .ai-tech-tab .home-left-tabs .nav-pills .nav-link {border: none;}
 .ai-tech-tab .fs-tabs-wrap .home-left-tabs .nav-pills .nav-link {padding: 12px 0px;display: block;width: auto;}
 .ai-tech-tab .home-left-tabs .nav-pills .nav-link {color: #7D8387;background: transparent;font-size: 16px;font-weight: 700;display: inline-block;text-align: justify;padding: 0px;width: auto;margin: 0px 0px; transition: all 400ms ease;border-radius: 0px;}
-.ai-tech-tab .fs-tabs-wrap .home-left-tabs .fs-tab-button {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
+.ai-tech-tab .fs-tabs-wrap .home-left-tabs .fs-tab-button {display: flex;gap: 10px;align-items: center;}
+.ai-tech-tab .fs-tabs-wrap .fs-tab-button .fs-tab-num {font-size: 16px;line-height: normal;}
 
 /* Media Query */
 @media (max-width:1600px){
