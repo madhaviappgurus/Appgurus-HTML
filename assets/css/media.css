@@ -241,8 +241,8 @@
 	.testimonials_top_row .testimonials-tcol{flex-wrap:wrap;gap:5px;flex-direction:column;}
 	.review_logo_rating .review__logo{width:100%;margin-bottom:5px;}
 	.review_logo_rating{width:100%;}
-	.tech-stack-row .tech-stack-tabs{width:25%;}
-	.tech-stack-row .ts-tab-content{width:75%;}
+	.tech-stack-row .tech-stack-tabs{width:100%;}
+	.tech-stack-row .ts-tab-content{width:100%;}
 	.op-tab-content-main .our-process-content{padding-left:9%;}
 	.our-process-content h3{font-size:24px;line-height:32px;}
 	.our-process-content ul li svg{width:20px;}

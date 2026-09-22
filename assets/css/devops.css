@@ -45,7 +45,7 @@
 .fs-tab-title-wrap .fs-tab-sub{font-weight:300;}
 .fs-tabs-wrap .fs-tab-button{display:flex;gap:10px;}
 .fs-tabs-wrap .home-left-tabs .nav-pills .nav-link{padding:16px 24px;display:block;width:100%;border-width:3px;border-radius:0 8px 8px 0;-webkit-border-radius:0 8px 8px 0;-moz-border-radius:0 8px 8px 0;-ms-border-radius:0 8px 8px 0;-o-border-radius:0 8px 8px 0;}
-.fs-tabs-wrap .home-left-tabs .nav-pills .nav-link.active,.fs-tabs-wrap .home-left-tabs .nav-pills .show>.nav-link{background-color:#fff;}
+.fs-tabs-wrap .home-left-tabs .nav-pills .nav-link.active,.fs-tabs-wrap .home-left-tabs .nav-pills .show>.nav-link{background-color:#fff;border-radius: 0px 0px;}
 .fs-tabs-wrap .home-left-tabs .nav-pills .nav-link.active .fs-tab-title,.fs-tabs-wrap .home-left-tabs .nav-pills .show>.nav-link .fs-tab-title{color:#000;}
 .fs-tab-title-wrap .fs-tab-num{color:#7D8387;}
 .fs-tabs-wrap .home-left-tabs .nav-pills .nav-link.active .fs-tab-num,.fs-tabs-wrap .home-left-tabs .nav-pills .show>.nav-link .fs-tab-num{color:#F05D27;}
@@ -219,6 +219,9 @@
 .CAID-sec .caid-desc { font-size: 18px; color: #6B7280; line-height: 1.6; margin: 0; }
 
 
+
+.technology--stack-sec .ai-specialist {    background: rgba(0, 0, 0, 0.15);padding: 10px;border-radius: 50px;margin-top: 80px;}
+.tech-stack-row .fs-tabs-wrap
 /* Media Query */
 @media (max-width:1600px){
 	.ai-software-sec .card-list .info-card {padding: 20px ;border-radius: 14px;}
@@ -266,6 +269,7 @@
 	.fs-content-left .btn{font-size:14px;}
 	.fs-tabs-wrap ul.ts-info-list li svg,.fs-tabs-wrap ul.ts-info-list li img{width:15px;}
 	.fs-tabs-wrap ul.ts-info-list li{font-size:13px;}
+	.technology--stack-sec .ai-specialist {margin-top: 60px;}
 }
 @media (min-width:1200px){
    .devops-tabs-wrap .devops-tab:hover{background:#fff;}
@@ -381,6 +385,7 @@
 	.fs-tab-button .fs-tab-num{font-size:14px;margin-bottom:0;line-height:1.5;}
 	.fs-tabs-wrap .home-left-tabs .nav-pills .nav-link{border-radius:8px 8px 0 0;padding:12px 0;}
 	.fs-tabs-wrap .home-left-tabs .nav-pills .nav-link.active,.fs-tabs-wrap .home-left-tabs .nav-pills .show>.nav-link{padding:12px 0;background-color:transparent;}
+	.technology--stack-sec .ai-specialist {margin-top: 20px;padding: 30px;border-radius: 18px;}
 }
 @media (max-width:767px){
 	.CAID-sec { padding: 50px 0; }
@@ -526,6 +531,7 @@
 	.devops-strategy .ai-specialist{padding:30px 16px;}
 	.fs-tabs-wrap ul.ts-info-list li{font-size:14px;}
     .font50 {line-height: 1.4 !important;}
+    .technology--stack-sec .ai-specialist {padding: 30px 16px;}
 }
 @media (max-width:400px){
 	.CAID-sec .caid-title { font-size: 16px; }
