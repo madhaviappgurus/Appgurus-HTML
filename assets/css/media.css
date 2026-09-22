@@ -241,8 +241,8 @@
 	.testimonials_top_row .testimonials-tcol{flex-wrap:wrap;gap:5px;flex-direction:column;}
 	.review_logo_rating .review__logo{width:100%;margin-bottom:5px;}
 	.review_logo_rating{width:100%;}
-	.tech-stack-row .tech-stack-tabs{width:100%;}
-	.tech-stack-row .ts-tab-content{width:100%;}
+	.tech-stack-row .tech-stack-tabs{width:25%;}
+	.tech-stack-row .ts-tab-content{width:75%;}
 	.op-tab-content-main .our-process-content{padding-left:9%;}
 	.our-process-content h3{font-size:24px;line-height:32px;}
 	.our-process-content ul li svg{width:20px;}
@@ -324,6 +324,7 @@
 	.tech-stack-row .ts-tab-content{width:100%;padding:30px 0px 0px;}
 	.home-left-tabs .nav-pills .nav-link.active,.home-left-tabs .nav-pills .show>.nav-link{padding-left:0px;border-left:none!important;border-bottom:2px solid #F05D26;}
 	.home-left-tabs .nav-pills{flex-direction:unset!important;gap:20px;flex-wrap:nowrap;overflow-y:scroll;padding-bottom:10px;}
+
 	.home-left-tabs .nav-pills .nav-link{padding-bottom:5px;border-bottom:2px solid transparent;border-left:none;margin:0px;white-space:nowrap;}
 	.our-process-sec{padding:60px 0px;border-radius:25px;}
 	.blogs-sec{padding:65px 0px;}
