@@ -107,6 +107,20 @@
 .sdropdown-wp.sdropdown-two-col .sdropdown-main ul li a span.sb-icon img{max-width:100%;}
 .sdropdown-wp.sdropdown-two-col .sdropdown-main ul li a span.sb-icon svg {width: 24px; height: 24px; max-width: 100%;}
 
+/* change logo when hover on logo */
+.header-main .header-logo svg{ transition:all 0.4s ease ; -webkit-transition:all 0.4s ease ; -moz-transition:all 0.4s ease ; -ms-transition:all 0.4s ease ; -o-transition:all 0.4s ease ; }
+.header-main .header-logo a:hover,.header-main .header-logo a{font-weight:500;color:#ffffff;}
+.header-main .header-logo .h-logo-home{opacity:0;visibility:hidden;position:absolute;inset:10px 0 0 0;z-index:1;display:inline-flex;justify-content:center;align-items:center;gap:4px;transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-ms-transform:scale(1.2);-o-transform:scale(1.2);}
+.header-main .header-logo a:hover .h-logo-home{opacity:1;visibility:visible;}
+.header-main .header-logo a:hover .h-logo-main{opacity:0;visibility:hidden;}
+.header-main .header-logo a:hover .h-logo-home.home-2{visibility:hidden;opacity:0;}
+.header-main.active.sticky .header-logo a:hover .h-logo-home.home-2{visibility:visible;opacity:1;}
+.header-main.active.sticky .header-logo a:hover .h-logo-home.home-1{visibility:hidden;opacity:0;}
+.header-main.header-bg-white .header-logo a:hover .h-logo-home.home-2{visibility:visible;opacity:1;}
+.header-main.header-bg-white .header-logo a:hover .h-logo-home.home-1{visibility:hidden;opacity:0;}
+.header-main.active.sticky .header-logo a,.header-main.header-bg-white .header-logo a{color:#000;}
+.header-main .header-logo svg,.header-main .header-logo span{transition:all 0.3s ease-in-out 0s;-webkit-transition:all 0.3s ease-in-out 0s;-moz-transition:all 0.3s ease-in-out 0s;-ms-transition:all 0.3s ease-in-out 0s;-o-transition:all 0.3s ease-in-out 0s;}
+
 
 @media (min-width: 992px) { 
 .dropdown-main-wp{position:absolute;left:0;right:0;top:100%;background:#fff;margin-top:1px;width:100%;}
@@ -165,7 +179,9 @@ ul.sub-menu li.sub-menu-link a{position:relative;}
  }
 
  @media (max-width: 1599px) { 
-
+.header-main .header-logo .h-logo-home {
+    font-size: 14px;
+}
 .header-main .header-inner-main .header-inner .header-menu ul li a, .header-btn-main .call-link, .header-main .header-btn-main .header-btn {font-size: 15px; }
 .header-btn-main .call-link{font-size:15px;}
 .header-main .header-btn-main .header-btn{font-size:15px;min-width:145px;padding:13px 10px 15px;line-height:1;}
@@ -210,7 +226,9 @@ ul.sub-menu li.sub-menu-link a{position:relative;}
 }
 
 @media (max-width: 1199px) { 
-
+	.header-main .header-logo .h-logo-home svg {
+		height: auto;
+	}
 	.header-main .header-inner-main .header-inner .header-menu ul li a {font-size: 13px; margin: 0px 6px; }
 	.dropdown-click{font-size: 16px;}
 
