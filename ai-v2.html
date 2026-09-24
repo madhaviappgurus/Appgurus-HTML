@@ -558,44 +558,46 @@
         <!-- header End -->
 
         <!-- Content Start -->
-        <div class="">
-            <section class="banner-sec devops-banner ai-v2-banner">
-                <div class="banner-wrap">
-                    <div class="container">
-                        <div class="banner-text-wrap">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7">
-                                    <div class="banner-text text-center text-lg-start">
-                                        <div class="banner-heading-wrap">
-                                            <h1 class="banner-heading white_text">AI Solutions by Apps Guru <br><span
-                                                    class="ai-color-text">A new way to Ease </span><br>
-                                                of Doing a Business…</h1>
-                                        </div>
-                                        <p style="max-width: 1250px; margin-left: auto; margin-right: auto;"
-                                            class="font-we-200">AI is not just about the processes to automate but a
-                                            systematic intelligence which fills the gap between deviations in the
-                                            processes be it a decision-making, user experience or exploring the new
-                                            opportunities to add value to the existing business processes.</p>
-
-                                        <div
-                                            class="banner-cta mt-lg-5 mt-4 d-flex align-items-center gap-xl-4 gap-3 flex-wrap justify-content-center justify-content-lg-start">
-                                            <a href="#" class="btn btn-with-arrow">Talk to an AI specialist</a>
-                                        </div>
-
+      
+        <section class="banner-sec devops-banner ai-v2-banner">
+            <div class="banner-wrap">
+                <div class="container">
+                    <div class="banner-text-wrap">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="banner-text text-center">
+                                    <div class="banner-heading-wrap">
+                                        <h1 class="banner-heading white_text">AI Solutions by Apps Guru <br><span
+                                                class="ai-color-text">A new way to Ease </span><br>
+                                            of Doing a Business…</h1>
                                     </div>
+                                    <p style="max-width: 1250px; margin-left: auto; margin-right: auto;"
+                                        class="font-we-200">AI is not just about the processes to automate but a
+                                        systematic intelligence which fills the gap between deviations in the
+                                        processes be it a decision-making, user experience or exploring the new
+                                        opportunities to add value to the existing business processes.</p>
+
+                                    <div
+                                        class="banner-cta mt-lg-5 mt-4 d-flex align-items-center gap-xl-4 gap-3 flex-wrap justify-content-center">
+                                        <a href="#" class="btn btn-with-arrow">Talk to an AI specialist</a>
+                                    </div>
+
                                 </div>
-                                <div class="col-lg-5">
-                                    <div class="devops-right-img text-center text-lg-start">
-                                        <img src="assets/images/ai-v2/ai-banner.webp" alt="image">
-                                    </div>
+                            </div>
+                            <div class="col-lg-5 d-none">
+                                <div class="devops-right-img text-center">
+                                    <img src="assets/images/ai-v2/ai-banner.webp" alt="image">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <div class="devops-tabs-sticky">
-                <div class="devops-tabs-wrap">
+            </div>
+        </section>
+        
+        <div class="devops-tabs-sticky ai-gradient-animate">
+            <div class="devops-tabs-wrap">
+                <div class="border-overlay">
                     <a href="index.html" class="devops-tab ds-white-box first">
                         <svg class="ds-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_3686_546)">
@@ -614,7 +616,7 @@
                     <div class="ds-tabs-links">
                         <a href="#ai-consulting" class="devops-tab active">AI consulting</a>
                         <a href="#ai-software-development" class="devops-tab">AI software development</a>
-                        <a href="#agentic-ai" class="devops-tab">agentic ai</a>
+                        <a href="#agentic-ai" class="devops-tab">agentic AI</a>
                         <a href="#custom-ai-development" class="devops-tab">Custom AI development</a>
                         <a href="#success-stories" class="devops-tab">Success Stories</a>
                     </div>
@@ -628,7 +630,7 @@
                 </div>
             </div>
         </div>
-
+    
         <section class="ai-consulting-sec" id="ai-consulting">
             <div class="container">
                 <div class="ai-consulting-wrap">
@@ -2113,6 +2115,52 @@
 <script type="text/javascript" src="./assets/js/slick.min.js"></script>
 <script type="text/javascript" src="./assets/js/typed.min.js"></script>
 <script type="text/javascript" src="./assets/js/custom.js"></script>
+
+<script>
+    $(function () {
+
+        var scroll = $(document).scrollTop();
+
+        $(window).scroll(function () {
+
+            var scrolled = $(document).scrollTop();
+
+            // Active class - threshold 20px
+            if (scrolled > 68) {
+
+                if (scrolled > scroll) {
+                    // Scroll down
+                    $('.devops-tabs-sticky').addClass('active');
+                } else if (scrolled < scroll) {
+                    // Scroll up
+                    // $('.devops-tabs-sticky').removeClass('active');
+                }
+
+            } else {
+                $('.devops-tabs-sticky').removeClass('active');
+            }
+
+            // Sticky class - threshold 68px
+            if (scrolled > 68) {
+
+                if (scrolled > scroll) {
+                    // Scroll down
+                    $('.devops-tabs-sticky').removeClass('sticky');
+                } else if (scrolled < scroll) {
+                    // Scroll up
+                    $('.devops-tabs-sticky').addClass('sticky');
+                }
+
+            } else {
+                $('.devops-tabs-sticky').removeClass('sticky');
+            }
+
+            scroll = scrolled;
+
+        });
+
+    });
+</script>
 
 <script>
     // Devops tabs visible on section
