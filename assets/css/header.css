@@ -110,7 +110,7 @@
 /* change logo when hover on logo */
 .header-main .header-logo svg{ transition:all 0.4s ease ; -webkit-transition:all 0.4s ease ; -moz-transition:all 0.4s ease ; -ms-transition:all 0.4s ease ; -o-transition:all 0.4s ease ; }
 .header-main .header-logo a:hover,.header-main .header-logo a{font-weight:500;color:#ffffff;}
-.header-main .header-logo .h-logo-home{opacity:0;visibility:hidden;position:absolute;inset:10px 0 0 0;z-index:1;display:inline-flex;justify-content:center;align-items:center;gap:4px;transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-ms-transform:scale(1.2);-o-transform:scale(1.2);}
+.header-main .header-logo .h-logo-home{opacity:0;visibility:hidden;position:absolute;inset:10px 0 0 0;z-index:1;display:inline-flex;justify-content:center;align-items:center;gap:7px;transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-ms-transform:scale(1.2);-o-transform:scale(1.2);}
 .header-main .header-logo a:hover .h-logo-home{opacity:1;visibility:visible;}
 .header-main .header-logo a:hover .h-logo-main{opacity:0;visibility:hidden;}
 .header-main .header-logo a:hover .h-logo-home.home-2{visibility:hidden;opacity:0;}

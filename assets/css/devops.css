@@ -209,7 +209,7 @@
 .CAID-sec .caid-title{font-size:26px;font-weight:800;color:#14161A;margin:0;}
 .CAID-sec .caid-row-right{flex:1;}
 .CAID-sec .caid-desc{font-size:18px;color:#6B7280;line-height:1.6;margin:0;}
-.technology--stack-sec .ai-specialist{background:rgba(0,0,0,0.15);padding:10px;border-radius:50px;margin-top:80px;}
+.technology--stack-sec .ai-specialist{margin-top:80px;}
 .ai-tech-tab .home-left-tabs .nav-pills .nav-link.active,.home-left-tabs .nav-pills .show>.nav-link{padding-left:0px;border-left:none!important;border-bottom:2px solid #F05D26;border-radius:0px}
 .ai-tech-tab .home-left-tabs .nav-pills{flex-direction:unset!important;gap:50px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;overflow-y:hidden;margin-bottom:10px;border-bottom:1px solid #dedede;white-space:nowrap;}
 .ai-tech-tab .tech-stack-row .tech-stack-tabs{width:100%;padding:0;border:none;}
