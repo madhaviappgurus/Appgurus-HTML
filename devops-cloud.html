@@ -3333,7 +3333,7 @@
         var scroll = $(document).scrollTop();
 
         $(window).scroll(function () {
-
+            
             var scrolled = $(document).scrollTop();
 
             // Active class - threshold 20px
@@ -3353,7 +3353,7 @@
 
             // Sticky class - threshold 68px
             if (scrolled > 68) {
-
+                DC-services-main
                 if (scrolled > scroll) {
                     // Scroll down
                     $('.devops-tabs-sticky').removeClass('sticky');
@@ -3427,7 +3427,7 @@
 
             const $tabsWrap = $('.devops-tabs-wrap');
             const $tabsLinks = $('.ds-tabs-links');
-
+            
             if (!$tabsWrap.length || !$tab.length || !$tabsLinks.length) return;
 
             const wrap = $tabsWrap[0];
@@ -3483,9 +3483,17 @@
         }
 
         $('.devops-tab').on('click', function (e) {
-            e.preventDefault();
             const $this = $(this);
             const target = $this.attr('href');
+
+            // Only intercept in-page anchor links (e.g. "#ai-consulting").
+            // Real links like "aboutUs.html", "index.html" or "tel:..."
+            // are NOT anchors, so let the browser navigate/dial normally.
+            if (!target || target.charAt(0) !== '#') {
+                return;
+            }
+
+            e.preventDefault();
             const $target = $(target);
 
             // Check target section exists
