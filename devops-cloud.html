@@ -591,7 +591,7 @@
                                     <div
                                         class="banner-cta mt-lg-5 mt-4 d-flex align-items-center gap-xl-4 gap-3 flex-wrap justify-content-center justify-content-lg-start">
                                         <a href="#" class="btn btn-with-arrow">Book Your Free Cloud Audit</a>
-                                        <a href="#" class="btn btn-with-arrow gray-btn">See what's included</a>
+                                        <!-- <a href="#" class="btn btn-with-arrow gray-btn">See what's included</a> -->
                                     </div>
 
                                 </div>
@@ -3370,25 +3370,6 @@
 
         });
 
-    });
-</script>
-
-<script>
-    // ── card cursor spotlight via CSS ──
-    document.querySelectorAll('.cursor-spotlight').forEach(card => {
-        card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty('--mx', x + 'px');
-        card.style.setProperty('--my', y + 'px');
-        });
-    
-        // Reset when leaving
-        card.addEventListener('mouseleave', () => {
-        card.style.setProperty('--mx', '-200px');
-        card.style.setProperty('--my', '-200px');
-        });
     });
 </script>
 
