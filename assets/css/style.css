@@ -2223,7 +2223,7 @@ ul.iot-our-points li:after{content:'';position:absolute;left:0px;width:19px;heig
 .quote-strip .quote-text { font-weight: 600; font-size: 20px; line-height: 1.45; margin-bottom: 16px; color: #FFFFFF; }
 .quote-strip .quote-attr { font-size: 12px; color: rgba(255, 255, 255, 0.6); }
 .quote-strip .quote-attr b { color: #FFFFFF; }
-.quote-strip .quote-side { border-top: 1px solid rgba(255, 255, 255, 0.14); padding-top: 32px; margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+.quote-strip .quote-side { border-left: 1px solid rgba(255, 255, 255, 0.14); padding-left: 40px; display: flex; flex-direction: column; gap: 20px; }
 .quote-strip .stat { display: flex; align-items: center; gap: 12px; }
 .quote-strip .stat b { font-size: 28px; font-weight: 700; color: #F05D26; line-height: 1; min-width: 75px; }
 .quote-strip .stat span { font-size: 13px; line-height: 1.4; color: rgba(255, 255, 255, 0.65); }
@@ -2293,7 +2293,7 @@ ul.iot-our-points li:after{content:'';position:absolute;left:0px;width:19px;heig
 .note { margin-top: 20px; }
 .redeem-card { border-right: 1px solid rgba(255, 255, 255, 0.14); border-bottom: 1px solid rgba(255, 255, 255, 0.14); }
 .ref-top .rating .stars { font-size: 13px; }
-.quote-strip .quote-side { border-top: 1px solid rgba(255, 255, 255, 0.18); border-left: none; margin-top: 30px; }
+.quote-strip .quote-side { border-top: 1px solid rgba(255, 255, 255, 0.18); border-left: none; margin-top: 30px;padding-left: 0px; padding-top: 30px; }
 .formsec .formcard { padding: 24px; border-radius: 12px; }
 .formcard .field label { font-size: 16px; }
 
