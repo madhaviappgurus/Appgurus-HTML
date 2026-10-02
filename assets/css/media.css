@@ -324,7 +324,6 @@
 	.tech-stack-row .ts-tab-content{width:100%;padding:30px 0px 0px;}
 	.home-left-tabs .nav-pills .nav-link.active,.home-left-tabs .nav-pills .show>.nav-link{padding-left:0px;border-left:none!important;border-bottom:2px solid #F05D26;}
 	.home-left-tabs .nav-pills{flex-direction:unset!important;gap:20px;flex-wrap:nowrap;overflow-y:scroll;padding-bottom:10px;}
-
 	.home-left-tabs .nav-pills .nav-link{padding-bottom:5px;border-bottom:2px solid transparent;border-left:none;margin:0px;white-space:nowrap;}
 	.our-process-sec{padding:60px 0px;border-radius:25px;}
 	.blogs-sec{padding:65px 0px;}
@@ -558,7 +557,9 @@ iPad Pro devices (portrait phones, less than 1021px)
 @media (max-width: 767px) {
 	.banner-count-main .banner-count-box{width:50%;max-width:45%;}
 	.banner-text .banner-link {height: 100px; width: 100px; left: unset; top: calc(100% + 50px); font-size: 10px; right: 0px; padding: 10px; min-width: auto; }
-	.banner-text > p {max-width: 100%; }
+	.banner-text > p {max-width: 100%; width:100%;}
+
+	.banner-text .banner-link {display: none;}
 }
 
   

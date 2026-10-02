@@ -579,3 +579,46 @@ $('.ai-p-step-info-click').each(function() {
     // });
 });
 
+$('.sdropdown-slider').slick({
+        dots: false,
+        arrows: false,
+        autoplay: false,
+        infinite: true,
+        autoplaySpeed: 2000,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+
+    $('#menu_servece1').click( function() {
+        $('.sdropdown-slider').slick('slickPlay');
+    });
+
+    $('#menu_servece1').hover( function() {
+        $('.sdropdown-slider').slick('slickPlay');
+});
+
+
+// Service Menu Tabs on Header - Hover + Click
+if ($('#service-Tabs').length) {
+    const $serviceTabs = $('#service-Tabs .nav-link');
+    const $tabContent = $('#serviceTabsContent .tab-pane');
+    $serviceTabs.on('mouseenter', function () {
+
+        const $this = $(this);
+        const target = $this.attr('data-bs-target');
+
+        if (!target) return;
+
+        // Remove active state from all tabs and contents
+        $serviceTabs.removeClass('active');
+        $tabContent.removeClass('show active');
+
+        // Add active state only to hovered tab
+        $this.addClass('active');
+
+        // Show only its corresponding content
+        $(target).addClass('show active');
+    });
+
+}
