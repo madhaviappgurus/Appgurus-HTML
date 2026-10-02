@@ -257,6 +257,7 @@
 	.header-logo img{max-width:150px;}
 }
 @media (max-width:991.98px){
+	.service-menu-tabs .tab-pane:last-child .sm-content-box > ul:last-of-type{margin-bottom: 10px;}
 	/* company menu */
 	.header-main .sm_menu_main .sub-menu-desc{font-size: 12px;}
 	.header-main .sm_menu_main.company-main .sdropdown-wp .sdropdown-main{padding: 10px;}
@@ -326,7 +327,7 @@
 	.get-in-touch span.mail{display:inline-block;font-size:16px;color:#f05d26;width:100%;margin-top:9px;}
 
 	/*.header-btn-main .call-link svg{width:20px;height:20px;}*/
-	.header-address{max-width:93%;margin:auto;padding:12px;margin-bottom:0px;text-align:left;width:100%;}
+	.header-address{max-width:93%;margin:auto;padding:12px 12px 40px;margin-bottom:0px;text-align:left;width:100%;}
 	.header-address span{color:#fff;text-align:left!important;display:inline-block;font-size:15px;}
 	.header-main .header-inner-main .header-menu-inner .header-btn:before{display:none;}
 	.header-main.nav-area.active.sticky .header-inner-main .header-menu .header-menu-inner{background:#fff;}
