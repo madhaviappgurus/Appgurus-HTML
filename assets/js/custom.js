@@ -622,3 +622,67 @@ if ($('#service-Tabs').length) {
     });
 
 }
+
+// Header Service Menu & Company Menu Backdrop Overlay
+(function () {
+    var overlayTimeout = null;
+
+    function activateOverlay() {
+        clearTimeout(overlayTimeout);
+        $('body').addClass('menu-overlay-active');
+    }
+
+    function deactivateOverlay() {
+        clearTimeout(overlayTimeout);
+        overlayTimeout = setTimeout(function () {
+            var isHovered = $('.header-main .navbar-nav > li.service-mega-menu:hover, .header-main .navbar-nav > li.company-main:hover').length > 0;
+            var isCollapseOpen = $('#servmenu_collapse1.show, #company_collapse1.show').length > 0;
+            if (!isHovered && !isCollapseOpen) {
+                $('body').removeClass('menu-overlay-active');
+            }
+        }, 60);
+    }
+
+    // Desktop hover events for Service Menu & Company Menu
+    $('.header-main .navbar-nav > li.service-mega-menu, .header-main .navbar-nav > li.company-main').on('mouseenter', function () {
+        if (window.innerWidth >= 992) {
+            activateOverlay();
+        }
+    }).on('mouseleave', function () {
+        if (window.innerWidth >= 992) {
+            deactivateOverlay();
+        }
+    });
+
+    // Bootstrap collapse events (clicks on desktop or mobile)
+    $('#servmenu_collapse1, #company_collapse1').on('show.bs.collapse shown.bs.collapse', function () {
+        activateOverlay();
+    }).on('hidden.bs.collapse', function () {
+        deactivateOverlay();
+    });
+
+    // Dismiss open menus and overlay on clicking outside header when overlay is active
+    $(document).on('click', function (e) {
+        if ($('body').hasClass('menu-overlay-active') && !$(e.target).closest('.site-header').length) {
+            $('#servmenu_collapse1, #company_collapse1').collapse('hide');
+            $('body').removeClass('menu-overlay-active');
+        }
+    });
+
+    // Also close overlay when main navbar collapses (on mobile)
+    $('#navbarNavDropdown').on('hidden.bs.collapse', function () {
+        deactivateOverlay();
+    });
+
+    // Auto-dismiss overlay when user scrolls past the header height threshold
+    $(window).on('scroll.menuOverlay', function () {
+        if ($('body').hasClass('menu-overlay-active')) {
+            var scrolled = $(document).scrollTop();
+            var threshold = $('.header-main').outerHeight() || 80;
+            if (scrolled > threshold) {
+                $('#servmenu_collapse1, #company_collapse1').collapse('hide');
+                $('body').removeClass('menu-overlay-active');
+            }
+        }
+    });
+})();

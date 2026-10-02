@@ -487,3 +487,42 @@
 .header-main button.navbar-toggler span.icon-bar:nth-child(2){visibility:hidden!important;opacity:0!important;}
 .header-main.nav-area.active.sticky .navbar-toggler:after{color:#000;}
 .header-main.header-bg-white .header-right .navbar-toggler:after{color:#000;}
+
+@media (min-width:992px){
+	/* Header Menu Backdrop Overlay directly on body */
+	body::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 100vh;
+		/* background-color: rgba(0, 0, 0, 0.3); */
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: blur(3px);
+		z-index: 998;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	}
+
+	/* Active overlay state on body */
+	body.menu-overlay-active::after {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	/* Pure CSS hover and collapse support on desktop for Service Menu and Company Menu */
+	body:has(.header-main .navbar-nav > li.service-mega-menu:hover)::after,
+	body:has(.header-main .navbar-nav > li.company-main:hover)::after,
+	body:has(#servmenu_collapse1.show)::after,
+	body:has(#company_collapse1.show)::after {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+}
