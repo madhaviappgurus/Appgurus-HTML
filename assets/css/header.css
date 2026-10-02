@@ -136,7 +136,9 @@
 .header-main .sm-content-box ul li a:hover:after{display:none!important;}
 .header-main .sm_menu_main .sdropdown-wp .sdropdown-main .sm-content-box ul li a{color:#5F6368;}
 .linkhover,.linkhover h3{transition:all 400ms ease;-webkit-transition:all 400ms ease;-moz-transition:all 400ms ease;-ms-transition:all 400ms ease;-o-transition:all 400ms ease;}
-.linkhover:hover,.linkhover:hover h3{color:#5F6368;}
+.linkhover:hover,.linkhover:hover h3{text-decoration: underline;}
+.linkhover h3{display: -webkit-box;-webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis;}
+
 @media (min-width:992px){
 
 	/* mega menu */
