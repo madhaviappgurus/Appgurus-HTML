@@ -590,11 +590,11 @@ $('.sdropdown-slider').slick({
         slidesToScroll: 1
     });
 
-    $('#menu_servece1').click( function() {
+    $('#menu_servece1,#menu_industries1').click( function() {
         $('.sdropdown-slider').slick('slickPlay');
     });
 
-    $('#menu_servece1').hover( function() {
+    $('#menu_servece1,#menu_industries1').hover( function() {
         $('.sdropdown-slider').slick('slickPlay');
 });
 
@@ -637,8 +637,8 @@ if ($('#service-Tabs').length) {
         function deactivateOverlay() {
             clearTimeout(overlayTimeout);
             overlayTimeout = setTimeout(function () {
-                var isHovered = $('.header-main .navbar-nav > li.service-mega-menu:hover, .header-main .navbar-nav > li.company-main:hover').length > 0;
-                var isCollapseOpen = $('#servmenu_collapse1.show, #company_collapse1.show').length > 0;
+                var isHovered = $('.header-main .navbar-nav > li.service-mega-menu:hover, .header-main .navbar-nav > li.company-main:hover, .header-main .navbar-nav > li.industries_menu:hover').length > 0;
+                var isCollapseOpen = $('#servmenu_collapse1.show, #company_collapse1.show, #industries_collapse1.show').length > 0;
                 if (!isHovered && !isCollapseOpen) {
                     $('body').removeClass('menu-overlay-active');
                 }
@@ -646,7 +646,7 @@ if ($('#service-Tabs').length) {
         }
 
         // Desktop hover events for Service Menu & Company Menu
-        $('.header-main .navbar-nav > li.service-mega-menu, .header-main .navbar-nav > li.company-main').on('mouseenter', function () {
+        $('.header-main .navbar-nav > li.service-mega-menu, .header-main .navbar-nav > li.company-main, .header-main .navbar-nav > li.industries_menu').on('mouseenter', function () {
             if (window.innerWidth >= 992) {
                 activateOverlay();
             }
@@ -657,7 +657,7 @@ if ($('#service-Tabs').length) {
         });
 
         // Bootstrap collapse events (clicks on desktop or mobile)
-        $('#servmenu_collapse1, #company_collapse1').on('show.bs.collapse shown.bs.collapse', function () {
+        $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').on('show.bs.collapse shown.bs.collapse', function () {
             activateOverlay();
         }).on('hidden.bs.collapse', function () {
             deactivateOverlay();
@@ -666,7 +666,7 @@ if ($('#service-Tabs').length) {
         // Dismiss open menus and overlay on clicking outside header when overlay is active
         $(document).on('click', function (e) {
             if ($('body').hasClass('menu-overlay-active') && !$(e.target).closest('.site-header').length) {
-                $('#servmenu_collapse1, #company_collapse1').collapse('hide');
+                $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').collapse('hide');
                 $('body').removeClass('menu-overlay-active');
             }
         });
@@ -682,7 +682,7 @@ if ($('#service-Tabs').length) {
                 var scrolled = $(document).scrollTop();
                 var threshold = $('.header-main').outerHeight() || 80;
                 if (scrolled > threshold) {
-                    $('#servmenu_collapse1, #company_collapse1').collapse('hide');
+                    $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').collapse('hide');
                     $('body').removeClass('menu-overlay-active');
                 }
             }
