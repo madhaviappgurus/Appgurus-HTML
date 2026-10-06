@@ -151,14 +151,17 @@
 @keyframes pulse {
 	50% { opacity: .3;}
 }
+.header-main .header-menu .header-menu-inner ul.navbar-nav > li.nav-item .main-menu > a:has(+ .dropdown-click[aria-expanded="true"]),.header-main .header-menu .header-menu-inner ul.navbar-nav>li.nav-item .main-menu>.dropdown-click[aria-expanded="true"] {
+    color: #F05D26;
+}
 @media (min-width:992px){
 
 	/* mega menu */
 	.header-main .sm_menu_main.service-mega-menu { position: unset;}
 	.b-right{border-right: 1px solid #f1f5f9;}
 	.service-menu-tabs .sdropdown-wp .view-in {border-left: 1px solid #ddd;}
-	.sm-menu-row .col_3{ background-color: rgba(248, 250, 252, 0.7); width: 26%;}
-	.sm-menu-row .col_6{width:74%;}
+	.sm-menu-row .col_3{ background-color: rgba(248, 250, 252, 0.7); width: 28%;}
+	.sm-menu-row .col_6{width:72%;}
 	.dropdown-main-wp{position:absolute;left:0;right:0;top:100%;background:#fff;margin-top:1px;width:100%;}
 
 	/*.dropdown-main-wp .dropdown-main:after{content:'';position:absolute;width:100vw;background:#fff;top:0px;left:-37.7%;right:0px;height:100%;z-index:-1;}*/
@@ -260,6 +263,9 @@
 @media (max-width:1199px){
 
 	/* mega menu */
+	.sdropdown-testimonial-trust{text-align: center;}
+	.cta-btn-with-icon{justify-content: center;}
+	.sdropdown-inner-wrap {flex-direction: column;justify-content: center;text-align: center;}
 	.header-main .sm_menu_main .sdropdown-wp .sdropdown-main .service-menu-tabs .sub-menu-link{padding:10px 10px;}
 	.service-menu-tabs .tab-content{padding:14px 0;}
 	.service-menu-tabs .nav-tabs{padding:16px 12px 16px 12px;}
@@ -273,6 +279,7 @@
 	.header-logo img{max-width:150px;}
 }
 @media (max-width:991.98px){
+	.header-main .sm_menu_main .sdropdown-wp .sdropdown-main .service-menu-tabs .sub-menu-link { border: transparent;}
 	.service-menu-tabs .nav-tabs .nav-link .sdropdown-main-title h3{color: #b1b1b1;}
 	.service-menu-tabs .tab-pane:last-child .sm-content-box > ul:last-of-type{margin-bottom: 10px;}
 	/* company menu */
@@ -434,8 +441,6 @@
 	.header-main .sm_menu_main.service-mega-menu .sdropdown-wp.sdropdown-two-col{max-width:1040px;}
 	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 67%);}
 	.sub-menu-title{font-size:14px;}
-	.sm-menu-row .col_6 {width: 72%;}
-	.sm-menu-row .col_3 { width: 28%;}
 	.sdropdown-wp .view-in{display:block;}
 }
 
