@@ -699,7 +699,7 @@ if ($('#service-Tabs').length) {
         "I am evaluating App Gurus. What are the key takeaways from their website? https://appgurus.com.au";
 
     const providers = {
-        chatgpt: "https://chatgpt.com/",
+        chatgpt: "https://chatgpt.com/?q=" + encodeURIComponent(promptText),
         gemini: "https://www.google.com/search?udm=50&aep=11&q=" +
             encodeURIComponent(promptText)
     };
@@ -795,15 +795,9 @@ if ($('#service-Tabs').length) {
             if (provider === "chatgpt") {
                 openProvider(providers.chatgpt);
                 closeWidget();
-
-                const copied = await copyPrompt();
-
                 showToast(
-                    copied ?
-                    "Prompt copied. Paste it into ChatGPT." :
-                    "Prompt: " + promptText
+                    "ChatGPT opened with your prompt."
                 );
-
                 return;
             }
 
