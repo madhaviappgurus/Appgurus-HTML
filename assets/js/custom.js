@@ -795,9 +795,7 @@ if ($('#service-Tabs').length) {
             if (provider === "chatgpt") {
                 openProvider(providers.chatgpt);
                 closeWidget();
-                showToast(
-                    "ChatGPT opened with your prompt."
-                );
+                showToast("ChatGPT opened with your prompt.");
                 return;
             }
 
