@@ -12,27 +12,26 @@ $(document).ready(function() {
         cssEase: "linear",
         pauseOnHover: false,
         responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    infinite: true,
-                    dots: false
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                }
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4,
+                infinite: true,
+                dots: false
             }
-        ]
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 3,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+            }
+        }]
     });
 
-   
+
 
     $('.team-title-slider').slick({
         dots: false,
@@ -55,33 +54,32 @@ $(document).ready(function() {
         slidesToShow: 5,
         slidesToScroll: 1,
         // speed: 2000,
-        
+
         responsive: [{
-                breakpoint: 1400,
-                settings: {
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-                    slidesToShow: 5,
-                    infinite: true,
-                    dots: false
-                }
-            }, {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 4,
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                }
+            breakpoint: 1400,
+            settings: {
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 5,
+                infinite: true,
+                dots: false
             }
-        ]
+        }, {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 3,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+            }
+        }]
     });
 
 
@@ -94,26 +92,25 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         // speed: 2000,
-        
+
         responsive: [{
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 2,
-                    infinite: false,
-                    dots: false
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }, {
-                breakpoint: 550,
-                settings: {
-                    slidesToShow: 1,
-                }
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 2,
+                infinite: false,
+                dots: false
             }
-        ]
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 550,
+            settings: {
+                slidesToShow: 1,
+            }
+        }]
     });
 
 
@@ -125,26 +122,25 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         // speed: 2000,
-        
+
         responsive: [{
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 3,
-                    infinite: false,
-                    dots: false
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }, {
-                breakpoint: 550,
-                settings: {
-                    slidesToShow: 1,
-                }
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 3,
+                infinite: false,
+                dots: false
             }
-        ]
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 550,
+            settings: {
+                slidesToShow: 1,
+            }
+        }]
     });
 
 
@@ -157,26 +153,25 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         // speed: 2000,
-        
+
         responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    infinite: true,
-                    dots: false
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                }
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                infinite: true,
+                dots: false
             }
-        ]
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }]
     });
 
 
@@ -188,7 +183,7 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.testimonials--slider .slick-dots'
-        // speed: 2000,
+            // speed: 2000,
     });
 
     $('.testimonials--slider .slick-dots').slick({
@@ -200,12 +195,12 @@ $(document).ready(function() {
         // slidesToScroll: 1,
         centerMode: true,
         variableWidth: true,
-         asNavFor: '.testimonials--slider',
+        asNavFor: '.testimonials--slider',
         autoplaySpeed: 0,
         // pauseOnHover: false,
     });
 
-   
+
 
 
     const $slider = $('.ai-dev-services-slider');
@@ -241,7 +236,7 @@ $(document).ready(function() {
                 slidesToShow: 2
             }
         }, {
-            breakpoint:767,
+            breakpoint: 767,
             settings: {
                 slidesToShow: 1
             }
@@ -315,39 +310,38 @@ $(document).ready(function() {
         }, ]
     });
 
-     $('.ai-client-review-slider').slick({
+    $('.ai-client-review-slider').slick({
         dots: false,
         arrows: false,
         autoplay: false,
         autoplaySpeed: 2000,
         infinite: false,
         slidesToShow: 3,
-        touchThreshold:100,
+        touchThreshold: 100,
         slidesToScroll: 1,
         // speed: 2000,
-        
+
         responsive: [{
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 3,
-                }
-            }, {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                }
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 3,
             }
-        ]
+        }, {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }]
     });
 
 
@@ -358,32 +352,31 @@ $(document).ready(function() {
         autoplaySpeed: 2000,
         infinite: false,
         slidesToShow: 5,
-        touchThreshold:100,
+        touchThreshold: 100,
         slidesToScroll: 1,
         // speed: 2000,
-        
+
         responsive: [{
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 3,
-                }
-            }, {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                }
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 3,
             }
-        ]
+        }, {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }]
     });
 
 
@@ -475,32 +468,32 @@ $(document).ready(function() {
     //     }
     // });
 
-    
-    $(function(){
-  
-      var scroll = $(document).scrollTop();
-      var navHeight = $('.header-main').outerHeight();
-      
-      $(window).scroll(function(){
-        
-        var scrolled = $(document).scrollTop();
-         
-        if(scrolled > navHeight){
 
-          $('.header-main').addClass('active');
-            }else{
-            $('.header-main').removeClass('active');
+    $(function() {
+
+        var scroll = $(document).scrollTop();
+        var navHeight = $('.header-main').outerHeight();
+
+        $(window).scroll(function() {
+
+            var scrolled = $(document).scrollTop();
+
+            if (scrolled > navHeight) {
+
+                $('.header-main').addClass('active');
+            } else {
+                $('.header-main').removeClass('active');
             }
 
-          if(scrolled > scroll){
-            $('.header-main').removeClass('sticky');
-            }else{
-            $('.header-main').addClass('sticky');
+            if (scrolled > scroll) {
+                $('.header-main').removeClass('sticky');
+            } else {
+                $('.header-main').addClass('sticky');
             }
-        
-          scroll = $(document).scrollTop();
 
-      }); 
+            scroll = $(document).scrollTop();
+
+        });
 
     });
 
@@ -519,44 +512,44 @@ $(document).ready(function() {
     //     opacity: Math.random()
     //   });
     //   $(".banner-sec").append($snowflake);
-      
+
     //   setTimeout(function () {
     //     $snowflake.remove();
     //   }, 3000);
     // }, 100);
 
 
-}); 
+});
 
 
 
 
-        // var $portfolioItem = $('.grid').isotope({
-        //     itemSelector: '.grid-item',
-        //     layoutMode: 'fitRows'
-        // });
+// var $portfolioItem = $('.grid').isotope({
+//     itemSelector: '.grid-item',
+//     layoutMode: 'fitRows'
+// });
 
-        // $portfolioItem.imagesLoaded(function() {
-        //     $portfolioItem.isotope('layout');
-        // });
+// $portfolioItem.imagesLoaded(function() {
+//     $portfolioItem.isotope('layout');
+// });
 
-        // $('.filter-button-group button').click(function() {
-        //     $('.filter-button-group button').removeClass('is-checked');
-        //     $(this).addClass('is-checked');
+// $('.filter-button-group button').click(function() {
+//     $('.filter-button-group button').removeClass('is-checked');
+//     $(this).addClass('is-checked');
 
-        //     var selector = $(this).attr('data-filter');
-        //     $portfolioItem.isotope({
-        //         filter: selector
-        //     });
-        //     return false;
-        // });
+//     var selector = $(this).attr('data-filter');
+//     $portfolioItem.isotope({
+//         filter: selector
+//     });
+//     return false;
+// });
 
 
-        $(window).on('load',function(){
-            setTimeout(function(){ 
-                $('.portfolio-loader-main').fadeOut('slow');
-            });
-        });
+$(window).on('load', function() {
+    setTimeout(function() {
+        $('.portfolio-loader-main').fadeOut('slow');
+    });
+});
 
 
 $('.ai-p-step-info-click').each(function() {
@@ -580,22 +573,22 @@ $('.ai-p-step-info-click').each(function() {
 });
 
 $('.sdropdown-slider').slick({
-        dots: false,
-        arrows: false,
-        autoplay: false,
-        infinite: true,
-        autoplaySpeed: 2000,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
+    dots: false,
+    arrows: false,
+    autoplay: false,
+    infinite: true,
+    autoplaySpeed: 2000,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
 
-    $('#menu_servece1,#menu_industries1').click( function() {
-        $('.sdropdown-slider').slick('slickPlay');
-    });
+$('#menu_servece1,#menu_industries1').click(function() {
+    $('.sdropdown-slider').slick('slickPlay');
+});
 
-    $('#menu_servece1,#menu_industries1').hover( function() {
-        $('.sdropdown-slider').slick('slickPlay');
+$('#menu_servece1,#menu_industries1').hover(function() {
+    $('.sdropdown-slider').slick('slickPlay');
 });
 
 
@@ -603,7 +596,7 @@ $('.sdropdown-slider').slick({
 if ($('#service-Tabs').length) {
     const $serviceTabs = $('#service-Tabs .nav-link');
     const $tabContent = $('#serviceTabsContent .tab-pane');
-    $serviceTabs.on('mouseenter', function () {
+    $serviceTabs.on('mouseenter', function() {
 
         const $this = $(this);
         const target = $this.attr('data-bs-target');
@@ -624,7 +617,7 @@ if ($('#service-Tabs').length) {
 }
 
 // Header Service Menu & Company Menu Backdrop Overlay
-(function () {
+(function() {
     if (window.innerWidth > 992) {
 
         var overlayTimeout = null;
@@ -636,7 +629,7 @@ if ($('#service-Tabs').length) {
 
         function deactivateOverlay() {
             clearTimeout(overlayTimeout);
-            overlayTimeout = setTimeout(function () {
+            overlayTimeout = setTimeout(function() {
                 var isHovered = $('.header-main .navbar-nav > li.service-mega-menu:hover, .header-main .navbar-nav > li.company-main:hover, .header-main .navbar-nav > li.industries_menu:hover').length > 0;
                 var isCollapseOpen = $('#servmenu_collapse1.show, #company_collapse1.show, #industries_collapse1.show').length > 0;
                 if (!isHovered && !isCollapseOpen) {
@@ -646,25 +639,25 @@ if ($('#service-Tabs').length) {
         }
 
         // Desktop hover events for Service Menu & Company Menu
-        $('.header-main .navbar-nav > li.service-mega-menu, .header-main .navbar-nav > li.company-main, .header-main .navbar-nav > li.industries_menu').on('mouseenter', function () {
+        $('.header-main .navbar-nav > li.service-mega-menu, .header-main .navbar-nav > li.company-main, .header-main .navbar-nav > li.industries_menu').on('mouseenter', function() {
             if (window.innerWidth >= 992) {
                 activateOverlay();
             }
-        }).on('mouseleave', function () {
+        }).on('mouseleave', function() {
             if (window.innerWidth >= 992) {
                 deactivateOverlay();
             }
         });
 
         // Bootstrap collapse events (clicks on desktop or mobile)
-        $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').on('show.bs.collapse shown.bs.collapse', function () {
+        $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').on('show.bs.collapse shown.bs.collapse', function() {
             activateOverlay();
-        }).on('hidden.bs.collapse', function () {
+        }).on('hidden.bs.collapse', function() {
             deactivateOverlay();
         });
 
         // Dismiss open menus and overlay on clicking outside header when overlay is active
-        $(document).on('click', function (e) {
+        $(document).on('click', function(e) {
             if ($('body').hasClass('menu-overlay-active') && !$(e.target).closest('.site-header').length) {
                 $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').collapse('hide');
                 $('body').removeClass('menu-overlay-active');
@@ -672,12 +665,12 @@ if ($('#service-Tabs').length) {
         });
 
         // Also close overlay when main navbar collapses (on mobile)
-        $('#navbarNavDropdown').on('hidden.bs.collapse', function () {
+        $('#navbarNavDropdown').on('hidden.bs.collapse', function() {
             deactivateOverlay();
         });
 
         // Auto-dismiss overlay when user scrolls past the header height threshold
-        $(window).on('scroll.menuOverlay', function () {
+        $(window).on('scroll.menuOverlay', function() {
             if ($('body').hasClass('menu-overlay-active')) {
                 var scrolled = $(document).scrollTop();
                 var threshold = $('.header-main').outerHeight() || 80;
@@ -688,4 +681,139 @@ if ($('#service-Tabs').length) {
             }
         });
     }
+})();
+
+
+
+// AI Tool Js Start
+(function() {
+    "use strict";
+
+    const widget = document.getElementById("aiWidget");
+    const toggle = document.getElementById("aiToggle");
+    const panel = document.getElementById("aiPanel");
+    const closeButton = document.getElementById("aiClose");
+    const toast = document.getElementById("aiToast");
+
+    const promptText =
+        "I am evaluating App Gurus. What are the key takeaways from their website? https://appgurus.com.au";
+
+    const providers = {
+        chatgpt: "https://chatgpt.com/",
+        gemini: "https://www.google.com/search?udm=50&aep=11&q=" +
+            encodeURIComponent(promptText)
+    };
+
+    let toastTimer;
+
+    function openWidget() {
+        widget.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        panel.setAttribute("aria-hidden", "false");
+    }
+
+    function closeWidget() {
+        widget.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        panel.setAttribute("aria-hidden", "true");
+    }
+
+    function showToast(message) {
+        toast.textContent = message;
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(
+            () => toast.classList.remove("show"),
+            4000
+        );
+    }
+
+    async function copyPrompt() {
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(promptText);
+                return true;
+            }
+        } catch {}
+
+        try {
+            const textarea = document.createElement("textarea");
+            textarea.value = promptText;
+            textarea.setAttribute("readonly", "");
+            Object.assign(textarea.style, {
+                position: "fixed",
+                left: "-9999px",
+                top: "0"
+            });
+
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            const copied = document.execCommand("copy");
+            textarea.remove();
+
+            return copied;
+        } catch {
+            return false;
+        }
+    }
+
+    function openProvider(url) {
+        const tab = window.open(url, "_blank");
+        if (tab) tab.opener = null;
+        return tab;
+    }
+
+    toggle.addEventListener("click", event => {
+        event.stopPropagation();
+        widget.classList.contains("is-open") ?
+            closeWidget() :
+            openWidget();
+    });
+
+    closeButton.addEventListener("click", event => {
+        event.stopPropagation();
+        closeWidget();
+    });
+
+    panel.addEventListener("click", event => {
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click", event => {
+        if (!widget.contains(event.target)) closeWidget();
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeWidget();
+    });
+
+    document.querySelectorAll(".ai-provider").forEach(button => {
+        button.addEventListener("click", async() => {
+            const provider = button.dataset.provider;
+
+            if (provider === "chatgpt") {
+                openProvider(providers.chatgpt);
+                closeWidget();
+
+                const copied = await copyPrompt();
+
+                showToast(
+                    copied ?
+                    "Prompt copied. Paste it into ChatGPT." :
+                    "Prompt: " + promptText
+                );
+
+                return;
+            }
+
+            if (provider === "gemini") {
+                openProvider(providers.gemini);
+                closeWidget();
+                showToast(
+                    "Google AI Mode opened with your prompt."
+                );
+            }
+        });
+    });
 })();
