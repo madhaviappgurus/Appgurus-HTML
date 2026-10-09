@@ -684,8 +684,9 @@ if ($('#service-Tabs').length) {
 })();
 
 
+
 // AI Tool Js Start
-(function () {
+(function() {
     "use strict";
 
     const widget = document.getElementById("aiWidget");
@@ -693,10 +694,6 @@ if ($('#service-Tabs').length) {
     const panel = document.getElementById("aiPanel");
     const closeButton = document.getElementById("aiClose");
     const toast = document.getElementById("aiToast");
-
-    if (!widget || !toggle || !panel || !closeButton || !toast) return;
-    if (widget.dataset.aiInit) return; // guard against double initialisation
-    widget.dataset.aiInit = "1";
 
     const promptText =
         "I am evaluating App Gurus. What are the key takeaways from their website? https://appgurus.com.au";
@@ -725,74 +722,92 @@ if ($('#service-Tabs').length) {
         toast.textContent = message;
         toast.classList.add("show");
         clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => toast.classList.remove("show"), 5000);
+        toastTimer = setTimeout(
+            () => toast.classList.remove("show"),
+            4000
+        );
     }
 
-    function copyPrompt() {
-        // Fire-and-forget so we never delay window.open (keeps user activation)
+    async function copyPrompt() {
         try {
             if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(promptText).catch(legacyCopy);
-                return;
+                await navigator.clipboard.writeText(promptText);
+                return true;
             }
-        } catch (e) {}
-        legacyCopy();
-    }
+        } catch {}
 
-    function legacyCopy() {
         try {
-            const ta = document.createElement("textarea");
-            ta.value = promptText;
-            ta.setAttribute("readonly", "");
-            Object.assign(ta.style, { position: "fixed", left: "-9999px", top: "0" });
-            document.body.appendChild(ta);
-            ta.select();
-            document.execCommand("copy");
-            ta.remove();
-        } catch (e) {}
+            const textarea = document.createElement("textarea");
+            textarea.value = promptText;
+            textarea.setAttribute("readonly", "");
+            Object.assign(textarea.style, {
+                position: "fixed",
+                left: "-9999px",
+                top: "0"
+            });
+
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            const copied = document.execCommand("copy");
+            textarea.remove();
+
+            return copied;
+        } catch {
+            return false;
+        }
     }
 
     function openProvider(url) {
-        // Open synchronously inside the click handler to avoid popup blocking
-        const tab = window.open(url, "_blank", "noopener,noreferrer");
-        if (!tab) window.location.href = url; // popup blocked: navigate instead
+        const tab = window.open(url, "_blank");
+        if (tab) tab.opener = null;
+        return tab;
     }
 
-    toggle.addEventListener("click", (event) => {
+    toggle.addEventListener("click", event => {
         event.stopPropagation();
-        widget.classList.contains("is-open") ? closeWidget() : openWidget();
+        widget.classList.contains("is-open") ?
+            closeWidget() :
+            openWidget();
     });
 
-    closeButton.addEventListener("click", (event) => {
+    closeButton.addEventListener("click", event => {
         event.stopPropagation();
         closeWidget();
     });
 
-    panel.addEventListener("click", (event) => event.stopPropagation());
+    panel.addEventListener("click", event => {
+        event.stopPropagation();
+    });
 
-    document.addEventListener("click", (event) => {
+    document.addEventListener("click", event => {
         if (!widget.contains(event.target)) closeWidget();
     });
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", event => {
         if (event.key === "Escape") closeWidget();
     });
 
-    document.querySelectorAll(".ai-provider").forEach((button) => {
-        button.addEventListener("click", () => {
+    document.querySelectorAll(".ai-provider").forEach(button => {
+        button.addEventListener("click", async() => {
             const provider = button.dataset.provider;
-            if (!providers[provider]) return;
 
-            copyPrompt(); // fallback if the provider drops ?q= on login/verification
-            openProvider(providers[provider]);
-            closeWidget();
+            if (provider === "chatgpt") {
+                openProvider(providers.chatgpt);
+                closeWidget();
+                showToast(
+                    "ChatGPT opened with your prompt."
+                );
+                return;
+            }
 
-            showToast(
-                provider === "chatgpt"
-                    ? "ChatGPT opened. If it asks you to log in or verify, just paste your prompt (already copied)."
-                    : "Google AI Mode opened with your prompt."
-            );
+            if (provider === "gemini") {
+                openProvider(providers.gemini);
+                closeWidget();
+                showToast(
+                    "Google AI Mode opened with your prompt."
+                );
+            }
         });
     });
 })();
-// AI Tool Js End
