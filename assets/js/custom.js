@@ -685,6 +685,7 @@ if ($('#service-Tabs').length) {
 
 
 
+
 // AI Tool JS Start
 (function() {
     "use strict";
@@ -693,12 +694,23 @@ if ($('#service-Tabs').length) {
     const toggle = document.getElementById("aiToggle");
     const panel = document.getElementById("aiPanel");
     const closeButton = document.getElementById("aiClose");
-    const toast = document.getElementById("aiToast");
 
-    // Stop safely if the widget HTML is missing
-    if (!widget || !toggle || !panel || !closeButton || !toast) {
-        console.warn("AI widget elements were not found.");
+    // Check required widget elements
+    if (!widget || !toggle || !panel || !closeButton) {
+        console.error("AI widget error: Required HTML elements are missing.");
         return;
+    }
+
+    // Create toast automatically if it is missing from the HTML
+    let toast = document.getElementById("aiToast");
+
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "aiToast";
+        toast.className = "ai-toast";
+        toast.setAttribute("role", "status");
+        toast.setAttribute("aria-live", "polite");
+        document.body.appendChild(toast);
     }
 
     const promptText =
@@ -713,12 +725,14 @@ if ($('#service-Tabs').length) {
         },
 
         gemini: function() {
-            return "https://www.google.com/search?udm=50&aep=11&q=" +
-                encodeURIComponent(promptText);
+            return (
+                "https://www.google.com/search?udm=50&aep=11&q=" +
+                encodeURIComponent(promptText)
+            );
         }
     };
 
-    let toastTimer;
+    let toastTimer = null;
 
     // Open widget
     function openWidget() {
@@ -739,7 +753,9 @@ if ($('#service-Tabs').length) {
         toast.textContent = message;
         toast.classList.add("show");
 
-        clearTimeout(toastTimer);
+        if (toastTimer) {
+            clearTimeout(toastTimer);
+        }
 
         toastTimer = setTimeout(function() {
             toast.classList.remove("show");
@@ -748,6 +764,7 @@ if ($('#service-Tabs').length) {
 
     // Copy prompt to clipboard
     async function copyPrompt() {
+        // Modern Clipboard API
         try {
             if (navigator.clipboard && window.isSecureContext) {
                 await navigator.clipboard.writeText(promptText);
@@ -757,7 +774,7 @@ if ($('#service-Tabs').length) {
             console.warn("Clipboard API failed:", error);
         }
 
-        // Fallback for browsers where Clipboard API is unavailable
+        // Fallback for older browsers
         let textarea;
 
         try {
@@ -773,12 +790,13 @@ if ($('#service-Tabs').length) {
             });
 
             document.body.appendChild(textarea);
+            textarea.focus();
             textarea.select();
             textarea.setSelectionRange(0, textarea.value.length);
 
             return document.execCommand("copy");
         } catch (error) {
-            console.warn("Fallback clipboard copy failed:", error);
+            console.warn("Clipboard fallback failed:", error);
             return false;
         } finally {
             if (textarea && textarea.parentNode) {
@@ -792,14 +810,19 @@ if ($('#service-Tabs').length) {
         const newTab = window.open(url, "_blank");
 
         if (newTab) {
-            newTab.opener = null;
+            try {
+                newTab.opener = null;
+            } catch (error) {
+                console.warn("Could not clear tab opener:", error);
+            }
         }
 
         return newTab;
     }
 
-    // Toggle widget
+    // Main toggle button
     toggle.addEventListener("click", function(event) {
+        event.preventDefault();
         event.stopPropagation();
 
         if (widget.classList.contains("is-open")) {
@@ -811,6 +834,7 @@ if ($('#service-Tabs').length) {
 
     // Close button
     closeButton.addEventListener("click", function(event) {
+        event.preventDefault();
         event.stopPropagation();
         closeWidget();
     });
@@ -820,7 +844,7 @@ if ($('#service-Tabs').length) {
         event.stopPropagation();
     });
 
-    // Close when clicking outside
+    // Close when clicking outside the widget
     document.addEventListener("click", function(event) {
         if (!widget.contains(event.target)) {
             closeWidget();
@@ -835,7 +859,7 @@ if ($('#service-Tabs').length) {
     });
 
     // ChatGPT and Gemini buttons
-    document.querySelectorAll(".ai-provider").forEach(function(button) {
+    widget.querySelectorAll(".ai-provider").forEach(function(button) {
         button.addEventListener("click", async function(event) {
             event.preventDefault();
             event.stopPropagation();
@@ -843,32 +867,31 @@ if ($('#service-Tabs').length) {
             const provider = button.dataset.provider;
 
             if (provider === "chatgpt") {
-                // Open ChatGPT with the prompt URL immediately
+                // Open ChatGPT using your working prompt parameter
                 const newTab = openProvider(providers.chatgpt());
-
-                // Copy prompt as a fallback if the URL doesn't prefill it
-                const copied = await copyPrompt();
 
                 closeWidget();
 
                 if (!newTab) {
                     showToast(
-                        "Please allow pop-ups for this website and try again."
+                        "Pop-up blocked. Allow pop-ups and try again."
                     );
                     return;
                 }
 
+                // Copy prompt as a fallback
+                const copied = await copyPrompt();
+
                 showToast(
                     copied ?
-                    "ChatGPT opened. If the prompt is not filled in, paste it using Cmd+V or Ctrl+V." :
-                    "ChatGPT opened. If needed, copy and paste your prompt manually."
+                    "ChatGPT opened. If the prompt is missing, paste it using Cmd+V or Ctrl+V." :
+                    "ChatGPT opened. If the prompt is missing, copy and paste it manually."
                 );
 
                 return;
             }
 
             if (provider === "gemini") {
-                // Open Google AI Mode with the prompt
                 const newTab = openProvider(providers.gemini());
 
                 closeWidget();
@@ -876,11 +899,11 @@ if ($('#service-Tabs').length) {
                 showToast(
                     newTab ?
                     "Google AI Mode opened with your prompt." :
-                    "Please allow pop-ups for this website and try again."
+                    "Pop-up blocked. Allow pop-ups and try again."
                 );
             }
         });
     });
 
 })();
-// AI Tool Js End
+// AI Tool JS End
