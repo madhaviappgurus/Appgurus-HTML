@@ -796,15 +796,20 @@ if ($('#service-Tabs').length) {
             const success = await copyPrompt();
 
             if (provider === "chatgpt") {
-                window.open(providers.chatgpt, "_blank", "noopener,noreferrer");
+                openProvider("https://chatgpt.com");
                 closeWidget();
+                showToast(
+                    success 
+                        ? "Prompt copied! Paste it (Ctrl+V / Cmd+V) into ChatGPT." 
+                        : "ChatGPT opened with your prompt."
+                );
                 return;
             }
 
-            if (provider === "gemini") { 
+            if (provider === "gemini") {
                 openProvider(providers.gemini);
-                closeWidget(); 
-                showToast("Google AI Mode opened with your prompt."); 
+                closeWidget();
+                showToast("Google AI Mode opened with your prompt.");
             }
         });
     });
