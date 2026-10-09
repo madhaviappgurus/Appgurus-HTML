@@ -789,14 +789,19 @@ if ($('#service-Tabs').length) {
     });
 
     document.querySelectorAll(".ai-provider").forEach(button => {
-        button.addEventListener("click", async() => {
+        button.addEventListener("click", async () => {
             const provider = button.dataset.provider;
 
+            // Copy prompt text to clipboard first
+            const success = await copyPrompt();
+
             if (provider === "chatgpt") {
-                openProvider(providers.chatgpt);
+                openProvider("https://chatgpt.com");
                 closeWidget();
                 showToast(
-                    "ChatGPT opened with your prompt."
+                    success 
+                        ? "Prompt copied! Paste it (Ctrl+V / Cmd+V) into ChatGPT." 
+                        : "ChatGPT opened with your prompt."
                 );
                 return;
             }
@@ -804,9 +809,7 @@ if ($('#service-Tabs').length) {
             if (provider === "gemini") {
                 openProvider(providers.gemini);
                 closeWidget();
-                showToast(
-                    "Google AI Mode opened with your prompt."
-                );
+                showToast("Google AI Mode opened with your prompt.");
             }
         });
     });
