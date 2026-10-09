@@ -2017,3 +2017,13 @@ RESPONSIVE
 @media (min-width:576px) and (max-width:991px){
 	.ai-widget{left:20px;bottom:20px;}
 }
+
+	.ai-page .ai-widget, .devops-page .ai-widget{bottom:32px;}
+	.ai-page span.toggle-title, .devops-page span.toggle-title{display:none;}
+	.ai-page .ai-widget-toggle, .devops-page .ai-widget-toggle{width:68px;height: 68px;}
+@media (max-width:1399px) {
+	.ai-page .ai-widget-toggle, .devops-page .ai-widget-toggle{width:58px;height: 58px;}
+}
+@media (max-width:991px) {
+	.ai-page .ai-widget, .devops-page .ai-widget {bottom: 20px;}
+}
