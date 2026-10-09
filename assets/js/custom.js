@@ -789,7 +789,7 @@ if ($('#service-Tabs').length) {
     });
 
     document.querySelectorAll(".ai-provider").forEach(button => {
-        button.addEventListener("click", async () => {
+        button.addEventListener("click", async() => {
             const provider = button.dataset.provider;
 
             // Copy prompt text to clipboard first
