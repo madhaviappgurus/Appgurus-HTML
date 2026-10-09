@@ -685,7 +685,7 @@ if ($('#service-Tabs').length) {
 
 
 
-// AI Tool Js Start
+// AI Tool JS Start
 (function() {
     "use strict";
 
@@ -695,122 +695,192 @@ if ($('#service-Tabs').length) {
     const closeButton = document.getElementById("aiClose");
     const toast = document.getElementById("aiToast");
 
+    // Stop safely if the widget HTML is missing
+    if (!widget || !toggle || !panel || !closeButton || !toast) {
+        console.warn("AI widget elements were not found.");
+        return;
+    }
+
     const promptText =
         "I am evaluating App Gurus. What are the key takeaways from their website? https://appgurus.com.au";
 
+    // Provider URLs
     const providers = {
-        chatgpt: "https://chatgpt.com/?q=" + encodeURIComponent(promptText),
-        gemini: "https://www.google.com/search?udm=50&aep=11&q=" +
-            encodeURIComponent(promptText)
+        chatgpt: function() {
+            const url = new URL("https://chatgpt.com/");
+            url.searchParams.set("prompt", promptText);
+            return url.toString();
+        },
+
+        gemini: function() {
+            return "https://www.google.com/search?udm=50&aep=11&q=" +
+                encodeURIComponent(promptText);
+        }
     };
 
     let toastTimer;
 
+    // Open widget
     function openWidget() {
         widget.classList.add("is-open");
         toggle.setAttribute("aria-expanded", "true");
         panel.setAttribute("aria-hidden", "false");
     }
 
+    // Close widget
     function closeWidget() {
         widget.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
         panel.setAttribute("aria-hidden", "true");
     }
 
+    // Display toast message
     function showToast(message) {
         toast.textContent = message;
         toast.classList.add("show");
+
         clearTimeout(toastTimer);
-        toastTimer = setTimeout(
-            () => toast.classList.remove("show"),
-            4000
-        );
+
+        toastTimer = setTimeout(function() {
+            toast.classList.remove("show");
+        }, 4000);
     }
 
+    // Copy prompt to clipboard
     async function copyPrompt() {
         try {
             if (navigator.clipboard && window.isSecureContext) {
                 await navigator.clipboard.writeText(promptText);
                 return true;
             }
-        } catch {}
+        } catch (error) {
+            console.warn("Clipboard API failed:", error);
+        }
+
+        // Fallback for browsers where Clipboard API is unavailable
+        let textarea;
 
         try {
-            const textarea = document.createElement("textarea");
+            textarea = document.createElement("textarea");
             textarea.value = promptText;
             textarea.setAttribute("readonly", "");
+
             Object.assign(textarea.style, {
                 position: "fixed",
                 left: "-9999px",
-                top: "0"
+                top: "0",
+                opacity: "0"
             });
 
             document.body.appendChild(textarea);
             textarea.select();
+            textarea.setSelectionRange(0, textarea.value.length);
 
-            const copied = document.execCommand("copy");
-            textarea.remove();
-
-            return copied;
-        } catch {
+            return document.execCommand("copy");
+        } catch (error) {
+            console.warn("Fallback clipboard copy failed:", error);
             return false;
+        } finally {
+            if (textarea && textarea.parentNode) {
+                textarea.parentNode.removeChild(textarea);
+            }
         }
     }
 
+    // Open provider in a new tab
     function openProvider(url) {
-        const tab = window.open(url, "_blank");
-        if (tab) tab.opener = null;
-        return tab;
+        const newTab = window.open(url, "_blank");
+
+        if (newTab) {
+            newTab.opener = null;
+        }
+
+        return newTab;
     }
 
-    toggle.addEventListener("click", event => {
+    // Toggle widget
+    toggle.addEventListener("click", function(event) {
         event.stopPropagation();
-        widget.classList.contains("is-open") ?
-            closeWidget() :
+
+        if (widget.classList.contains("is-open")) {
+            closeWidget();
+        } else {
             openWidget();
+        }
     });
 
-    closeButton.addEventListener("click", event => {
+    // Close button
+    closeButton.addEventListener("click", function(event) {
         event.stopPropagation();
         closeWidget();
     });
 
-    panel.addEventListener("click", event => {
+    // Prevent clicks inside the panel from closing it
+    panel.addEventListener("click", function(event) {
         event.stopPropagation();
     });
 
-    document.addEventListener("click", event => {
-        if (!widget.contains(event.target)) closeWidget();
+    // Close when clicking outside
+    document.addEventListener("click", function(event) {
+        if (!widget.contains(event.target)) {
+            closeWidget();
+        }
     });
 
-    document.addEventListener("keydown", event => {
-        if (event.key === "Escape") closeWidget();
+    // Close with Escape key
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeWidget();
+        }
     });
 
-    document.querySelectorAll(".ai-provider").forEach(button => {
-        button.addEventListener("click", async() => {
+    // ChatGPT and Gemini buttons
+    document.querySelectorAll(".ai-provider").forEach(function(button) {
+        button.addEventListener("click", async function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
             const provider = button.dataset.provider;
 
-            // Copy prompt text to clipboard first
-            const success = await copyPrompt();
-
             if (provider === "chatgpt") {
-                openProvider("https://chatgpt.com");
+                // Open ChatGPT with the prompt URL immediately
+                const newTab = openProvider(providers.chatgpt());
+
+                // Copy prompt as a fallback if the URL doesn't prefill it
+                const copied = await copyPrompt();
+
                 closeWidget();
+
+                if (!newTab) {
+                    showToast(
+                        "Please allow pop-ups for this website and try again."
+                    );
+                    return;
+                }
+
                 showToast(
-                    success 
-                        ? "Prompt copied! Paste it (Ctrl+V / Cmd+V) into ChatGPT." 
-                        : "ChatGPT opened with your prompt."
+                    copied ?
+                    "ChatGPT opened. If the prompt is not filled in, paste it using Cmd+V or Ctrl+V." :
+                    "ChatGPT opened. If needed, copy and paste your prompt manually."
                 );
+
                 return;
             }
 
             if (provider === "gemini") {
-                openProvider(providers.gemini);
+                // Open Google AI Mode with the prompt
+                const newTab = openProvider(providers.gemini());
+
                 closeWidget();
-                showToast("Google AI Mode opened with your prompt.");
+
+                showToast(
+                    newTab ?
+                    "Google AI Mode opened with your prompt." :
+                    "Please allow pop-ups for this website and try again."
+                );
             }
         });
     });
+
 })();
+// AI Tool Js End
