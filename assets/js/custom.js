@@ -792,26 +792,19 @@ if ($('#service-Tabs').length) {
         button.addEventListener("click", async () => {
             const provider = button.dataset.provider;
 
+            // Copy prompt text to clipboard first
+            const success = await copyPrompt();
+
             if (provider === "chatgpt") {
-                // Copy prompt to clipboard first (works for both guest & logged in users)
-                const copied = await copyPrompt();
-
-                // Open clean URL to prevent Cloudflare / guest verification errors
-                openProvider("https://chatgpt.com");
+                window.open(providers.chatgpt, "_blank", "noopener,noreferrer");
                 closeWidget();
-
-                if (copied) {
-                    showToast("Prompt copied to clipboard! Press Ctrl+V / Cmd+V to paste.");
-                } else {
-                    showToast("ChatGPT opened. Please paste your prompt.");
-                }
                 return;
             }
 
-            if (provider === "gemini") {
+            if (provider === "gemini") { 
                 openProvider(providers.gemini);
-                closeWidget();
-                showToast("Google AI Mode opened with your prompt.");
+                closeWidget(); 
+                showToast("Google AI Mode opened with your prompt."); 
             }
         });
     });
