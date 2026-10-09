@@ -792,17 +792,19 @@ if ($('#service-Tabs').length) {
         button.addEventListener("click", async () => {
             const provider = button.dataset.provider;
 
-            // Copy prompt text to clipboard first
-            const success = await copyPrompt();
-
             if (provider === "chatgpt") {
+                // Copy prompt to clipboard first (works for both guest & logged in users)
+                const copied = await copyPrompt();
+
+                // Open clean URL to prevent Cloudflare / guest verification errors
                 openProvider("https://chatgpt.com");
                 closeWidget();
-                showToast(
-                    success 
-                        ? "Prompt copied! Paste it (Ctrl+V / Cmd+V) into ChatGPT." 
-                        : "ChatGPT opened with your prompt."
-                );
+
+                if (copied) {
+                    showToast("Prompt copied to clipboard! Press Ctrl+V / Cmd+V to paste.");
+                } else {
+                    showToast("ChatGPT opened. Please paste your prompt.");
+                }
                 return;
             }
 
