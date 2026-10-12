@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
     $('.clients-logo-inner').slick({
@@ -183,7 +183,7 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.testimonials--slider .slick-dots'
-            // speed: 2000,
+        // speed: 2000,
     });
 
     $('.testimonials--slider .slick-dots').slick({
@@ -210,7 +210,7 @@ $(document).ready(function() {
     let totalSlides = 0;
     let visibleSlides = 4;
 
-    $slider.on('init', function(event, slick) {
+    $slider.on('init', function (event, slick) {
         totalSlides = slick.slideCount;
         visibleSlides = slick.options.slidesToShow;
         updateThumbWidth(slick);
@@ -240,10 +240,10 @@ $(document).ready(function() {
             settings: {
                 slidesToShow: 1
             }
-        }, ]
+        },]
     });
 
-    $slider.on('afterChange', function(event, slick, currentSlide) {
+    $slider.on('afterChange', function (event, slick, currentSlide) {
         updateThumbWidth(slick);
         updateThumbPosition(currentSlide);
     });
@@ -264,7 +264,7 @@ $(document).ready(function() {
         $thumb.css('left', percent * maxLeft + 'px');
     }
 
-    $track.on('click', function(e) {
+    $track.on('click', function (e) {
         const trackOffset = $(this).offset().left;
         const clickX = e.pageX - trackOffset;
         const trackWidth = $(this).width();
@@ -276,7 +276,7 @@ $(document).ready(function() {
     });
 
     // Update on resize
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         const slick = $slider.slick('getSlick');
         updateThumbWidth(slick);
         updateThumbPosition(slick.currentSlide);
@@ -307,7 +307,7 @@ $(document).ready(function() {
             settings: {
                 slidesToShow: 1
             }
-        }, ]
+        },]
     });
 
     $('.ai-client-review-slider').slick({
@@ -440,19 +440,19 @@ $(document).ready(function() {
 
     // scroll hide and show
 
-    $('.navbar-nav li a').on('click', function() {
+    $('.navbar-nav li a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
     });
 
-    $(".navbar-toggler").click(function() {
+    $(".navbar-toggler").click(function () {
         $("body").toggleClass("no-scroll");
     });
 
-    $(".header-menu a").click(function() {
+    $(".header-menu a").click(function () {
         $("body").removeClass("no-scroll");
     });
 
-    $('.header-btn-main a').on('click', function() {
+    $('.header-btn-main a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
     });
 
@@ -469,12 +469,12 @@ $(document).ready(function() {
     // });
 
 
-    $(function() {
+    $(function () {
 
         var scroll = $(document).scrollTop();
         var navHeight = $('.header-main').outerHeight();
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
 
             var scrolled = $(document).scrollTop();
 
@@ -545,22 +545,22 @@ $(document).ready(function() {
 // });
 
 
-$(window).on('load', function() {
-    setTimeout(function() {
+$(window).on('load', function () {
+    setTimeout(function () {
         $('.portfolio-loader-main').fadeOut('slow');
     });
 });
 
 
-$('.ai-p-step-info-click').each(function() {
+$('.ai-p-step-info-click').each(function () {
     var $parent = $(this).closest('.ai-p-step-info-main');
 
     // Hover behavior
     $(this).hover(
-        function() {
+        function () {
             $parent.addClass('open-tooltip');
         },
-        function() {
+        function () {
             $parent.removeClass('open-tooltip');
         }
     );
@@ -583,11 +583,11 @@ $('.sdropdown-slider').slick({
     slidesToScroll: 1
 });
 
-$('#menu_servece1,#menu_industries1').click(function() {
+$('#menu_servece1,#menu_industries1').click(function () {
     $('.sdropdown-slider').slick('slickPlay');
 });
 
-$('#menu_servece1,#menu_industries1').hover(function() {
+$('#menu_servece1,#menu_industries1').hover(function () {
     $('.sdropdown-slider').slick('slickPlay');
 });
 
@@ -596,7 +596,7 @@ $('#menu_servece1,#menu_industries1').hover(function() {
 if ($('#service-Tabs').length) {
     const $serviceTabs = $('#service-Tabs .nav-link');
     const $tabContent = $('#serviceTabsContent .tab-pane');
-    $serviceTabs.on('mouseenter', function() {
+    $serviceTabs.on('mouseenter', function () {
 
         const $this = $(this);
         const target = $this.attr('data-bs-target');
@@ -617,7 +617,7 @@ if ($('#service-Tabs').length) {
 }
 
 // Header Service Menu & Company Menu Backdrop Overlay
-(function() {
+(function () {
     if (window.innerWidth > 992) {
 
         var overlayTimeout = null;
@@ -629,7 +629,7 @@ if ($('#service-Tabs').length) {
 
         function deactivateOverlay() {
             clearTimeout(overlayTimeout);
-            overlayTimeout = setTimeout(function() {
+            overlayTimeout = setTimeout(function () {
                 var isHovered = $('.header-main .navbar-nav > li.service-mega-menu:hover, .header-main .navbar-nav > li.company-main:hover, .header-main .navbar-nav > li.industries_menu:hover').length > 0;
                 var isCollapseOpen = $('#servmenu_collapse1.show, #company_collapse1.show, #industries_collapse1.show').length > 0;
                 if (!isHovered && !isCollapseOpen) {
@@ -639,25 +639,25 @@ if ($('#service-Tabs').length) {
         }
 
         // Desktop hover events for Service Menu & Company Menu
-        $('.header-main .navbar-nav > li.service-mega-menu, .header-main .navbar-nav > li.company-main, .header-main .navbar-nav > li.industries_menu').on('mouseenter', function() {
+        $('.header-main .navbar-nav > li.service-mega-menu, .header-main .navbar-nav > li.company-main, .header-main .navbar-nav > li.industries_menu').on('mouseenter', function () {
             if (window.innerWidth >= 992) {
                 activateOverlay();
             }
-        }).on('mouseleave', function() {
+        }).on('mouseleave', function () {
             if (window.innerWidth >= 992) {
                 deactivateOverlay();
             }
         });
 
         // Bootstrap collapse events (clicks on desktop or mobile)
-        $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').on('show.bs.collapse shown.bs.collapse', function() {
+        $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').on('show.bs.collapse shown.bs.collapse', function () {
             activateOverlay();
-        }).on('hidden.bs.collapse', function() {
+        }).on('hidden.bs.collapse', function () {
             deactivateOverlay();
         });
 
         // Dismiss open menus and overlay on clicking outside header when overlay is active
-        $(document).on('click', function(e) {
+        $(document).on('click', function (e) {
             if ($('body').hasClass('menu-overlay-active') && !$(e.target).closest('.site-header').length) {
                 $('#servmenu_collapse1, #company_collapse1, #industries_collapse1').collapse('hide');
                 $('body').removeClass('menu-overlay-active');
@@ -665,12 +665,12 @@ if ($('#service-Tabs').length) {
         });
 
         // Also close overlay when main navbar collapses (on mobile)
-        $('#navbarNavDropdown').on('hidden.bs.collapse', function() {
+        $('#navbarNavDropdown').on('hidden.bs.collapse', function () {
             deactivateOverlay();
         });
 
         // Auto-dismiss overlay when user scrolls past the header height threshold
-        $(window).on('scroll.menuOverlay', function() {
+        $(window).on('scroll.menuOverlay', function () {
             if ($('body').hasClass('menu-overlay-active')) {
                 var scrolled = $(document).scrollTop();
                 var threshold = $('.header-main').outerHeight() || 80;
@@ -687,7 +687,7 @@ if ($('#service-Tabs').length) {
 
 
 // AI Tool JS Start
-(function() {
+(function () {
     "use strict";
 
     const widget = document.getElementById("aiWidget");
@@ -718,13 +718,13 @@ if ($('#service-Tabs').length) {
 
     // Provider URLs
     const providers = {
-        chatgpt: function() {
+        chatgpt: function () {
             const url = new URL("https://chatgpt.com/");
             url.searchParams.set("prompt", promptText);
             return url.toString();
         },
 
-        gemini: function() {
+        gemini: function () {
             return (
                 "https://www.google.com/search?udm=50&aep=11&q=" +
                 encodeURIComponent(promptText)
@@ -757,7 +757,7 @@ if ($('#service-Tabs').length) {
             clearTimeout(toastTimer);
         }
 
-        toastTimer = setTimeout(function() {
+        toastTimer = setTimeout(function () {
             toast.classList.remove("show");
         }, 4000);
     }
@@ -821,7 +821,7 @@ if ($('#service-Tabs').length) {
     }
 
     // Main toggle button
-    toggle.addEventListener("click", function(event) {
+    toggle.addEventListener("click", function (event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -833,34 +833,34 @@ if ($('#service-Tabs').length) {
     });
 
     // Close button
-    closeButton.addEventListener("click", function(event) {
+    closeButton.addEventListener("click", function (event) {
         event.preventDefault();
         event.stopPropagation();
         closeWidget();
     });
 
     // Prevent clicks inside the panel from closing it
-    panel.addEventListener("click", function(event) {
+    panel.addEventListener("click", function (event) {
         event.stopPropagation();
     });
 
     // Close when clicking outside the widget
-    document.addEventListener("click", function(event) {
+    document.addEventListener("click", function (event) {
         if (!widget.contains(event.target)) {
             closeWidget();
         }
     });
 
     // Close with Escape key
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
             closeWidget();
         }
     });
 
     // ChatGPT and Gemini buttons
-    widget.querySelectorAll(".ai-provider").forEach(function(button) {
-        button.addEventListener("click", async function(event) {
+    widget.querySelectorAll(".ai-provider").forEach(function (button) {
+        button.addEventListener("click", async function (event) {
             event.preventDefault();
             event.stopPropagation();
 
@@ -884,8 +884,8 @@ if ($('#service-Tabs').length) {
 
                 showToast(
                     copied ?
-                    "ChatGPT opened. If the prompt is missing, paste it using Cmd+V or Ctrl+V." :
-                    "ChatGPT opened. If the prompt is missing, copy and paste it manually."
+                        "ChatGPT opened. If the prompt is missing, paste it using Cmd+V or Ctrl+V." :
+                        "ChatGPT opened. If the prompt is missing, copy and paste it manually."
                 );
 
                 return;
@@ -898,8 +898,8 @@ if ($('#service-Tabs').length) {
 
                 showToast(
                     newTab ?
-                    "Google AI Mode opened with your prompt." :
-                    "Pop-up blocked. Allow pop-ups and try again."
+                        "Google AI Mode opened with your prompt." :
+                        "Pop-up blocked. Allow pop-ups and try again."
                 );
             }
         });

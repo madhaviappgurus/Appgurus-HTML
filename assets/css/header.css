@@ -133,7 +133,9 @@
 /* 29092026 */
 .service-mega-menu .sdropdown-main {overflow-x: hidden !important;}
 .header-main .sub-menu-title-wrap{align-items:center;gap:8px;transition:transform .2s;}
-.trending-badge{font-size:10px;text-transform:uppercase;font-weight:800;color:#f05d26;border-radius:50px;padding:4px 8px;line-height:1;display:inline-block;background-color:rgba(240,93,38,12%);letter-spacing:0.4px;}
+.trending-badge{text-transform: uppercase; margin-top: 3px;font-size:10px;font-weight:800;color:#f05d26;border-radius:50px;padding:4px 8px;line-height:1;display:inline-block;background-color:rgba(240,93,38,12%); transition: all 0.4s ease-in-out;}
+.service-menu-tabs .sub-menu-link:hover .trending-badge {background-color: #f05d26;color: #fff;}
+
 .ar{margin-left:auto;margin-top:1px;flex-shrink:0;opacity:0;transition:.2s;transform:translateX(-4px);-webkit-transform:translateX(-4px);-moz-transform:translateX(-4px);-ms-transform:translateX(-4px);-o-transform:translateX(-4px);}
 .header-main .sm_menu_main .sdropdown-wp .sdropdown-main .service-menu-tabs .sub-menu-link{ border: 1px solid transparent; padding:10px 12px;border-radius:10px;transition:all 0.4s ease-in-out;-webkit-transition:all 0.4s ease-in-out;-moz-transition:all 0.4s ease-in-out;-ms-transition:all 0.4s ease-in-out;-o-transition:all 0.4s ease-in-out;}
 .service-menu-tabs .sub-menu-link:hover,.service-menu-tabs .sub-menu-link:focus-visible{background:#f8fafc;color:#f05d26; border-color: #f1f5f9 !important;}
@@ -141,13 +143,24 @@
 .service-menu-tabs{display:flex;align-items:start;height:100%;}
 .service-menu-tabs .col:first-child{max-width:fit-content;}
 .service-menu-tabs .nav-tabs{max-width:240px;height:100%;display:block;border-bottom:0;background-color:rgba(248, 250, 252, 0.7);border-right:1px solid #f1f5f9;padding:20px 16px 20px 16px;}
-.service-menu-tabs .nav-tabs ul{overflow-y:auto;max-height:260px; min-height: calc(100% - 40px);}
+.service-menu-tabs .nav-tabs ul{overflow-y:auto;max-height:260px; border-bottom: 1px solid #ddd; margin-bottom: 12px; padding-bottom: 8px; }
+
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link{margin-bottom: 2px;color: #475569; padding: 10px 12px;}
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .sp-serv-title {font-size: 11px;padding-left: 13px;text-transform: uppercase; color: #9b9b9b; font-weight: 700; letter-spacing: 0.4px;}
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link:last-child {margin-bottom: 0;}
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link h3 {font-size: 13px;}
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link .arw{width: 11px;margin-top: 2px; transition: transform .18s;}
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link.active .arw, .service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link:hover .arw {stroke: #f05d26;transform: translate(2px, -2px); }
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link.active, .service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link:hover{background: rgba(240, 93, 38, 0.1);}
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link.active .sdropdown-main-title h3, .service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link:hover .sdropdown-main-title h3{color: #f05d26;}
+
 .service-menu-tabs .tab-content{height:100%;padding:20px 0;}
 .service-menu-tabs .nav-tabs .nav-item{padding:0!important;margin-bottom:6px;}
 .service-menu-tabs .nav-tabs .nav-item:last-child{border-bottom:0;}
 .service-menu-tabs .nav-tabs .nav-link{width:100%;border:none;background-color:transparent;padding:12px 18px;border-radius:7px;-webkit-border-radius:7px;-moz-border-radius:7px;-ms-border-radius:7px;-o-border-radius:7px;transition:none;-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;}
 .service-menu-tabs .sdropdown-main-title{padding:0;margin:0;border-bottom:0;text-align:start;}
 .sdropdown-main-title h3{font-size:15px;text-transform:capitalize;}
+.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link .arw{stroke: #b1b1b1;}
 .service-menu-tabs .nav-tabs .nav-link.active,.service-menu-tabs .nav-tabs .nav-link:hover{background:#f05d26;}
 .service-menu-tabs .nav-tabs .nav-link .sdropdown-main-title h3{ color: #475569; font-weight: 600;}
 .service-menu-tabs .nav-tabs .nav-link.active .sdropdown-main-title h3,.service-menu-tabs .nav-tabs .nav-link:hover .sdropdown-main-title h3{color:#fff;}
@@ -187,7 +200,7 @@
 	.header-main .sm_menu_main.service-mega-menu { position: unset;}
 	.b-right{border-right: 1px solid #f1f5f9;}
 	.service-menu-tabs .sdropdown-wp .view-in {border-left: 1px solid #ddd;}
-	.sm-menu-row .col_3{ background-color: rgba(248, 250, 252, 0.7); width: 28%;}
+	.sm-menu-row .col_3{ background-color: rgba(248, 250, 252, 0.7);border-left: 1px solid #f1f5f9; width: 28%;}
 	.sm-menu-row .col_6{width:72%;}
 	.dropdown-main-wp{position:absolute;left:0;right:0;top:100%;background:#fff;margin-top:1px;width:100%;}
 
@@ -263,6 +276,7 @@
 @media (max-width:1499px){
 
 	/* mega menu */
+	.trending-badge{font-size: 9px;}
 	.sdropdown-main-title h3{font-size:13px;}
 	.header-main .sm_menu_main .sdropdown-wp .sdropdown-main .service-menu-tabs .sub-menu-link .sub-menu-title{font-size:13px;}
 	.header-main .header-inner-main .header-menu-inner>.navbar-nav{width:calc(100% - 250px - 70px);}
@@ -411,6 +425,7 @@
 	.header-main .header-inner-main .header-inner .header-menu ul li a .text-wrapper span.bracket:first-child{padding-left:0px;}
 }
 @media(max-width:767px){
+	.service-menu-tabs .sm-content-box ul{grid-template-columns: 1fr;}
 	.header-main .sm_menu_main .sdropdown-wp .sdropdown-main{background:#3c3c3d;}
 
 	.header-main.header-bg-white .service-menu-tabs .tab-content{background-color:#fffbf7;}
@@ -464,6 +479,8 @@
 }
 
 @media(max-width:991px){
+	.service-menu-tabs .nav-tabs .fix-service-tab-bottom .sp-serv-title{ padding-left: 8px;}
+	.service-menu-tabs .nav-tabs .fix-service-tab-bottom .nav-link{padding: 10px 8px;}
 	.header-main .header-inner-main .header-inner .header-menu ul li a.on-change-sticky {padding-top: 0;padding-bottom: 0;}
 	.header-main .header-inner-main{background: transparent;}
 	.header-main.sticky{background: transparent; box-shadow: none;}
