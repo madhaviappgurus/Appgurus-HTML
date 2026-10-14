@@ -653,49 +653,20 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 .cs-service-link:hover h5{color:#E8654E;}
 .cs-service-link:hover .cs-service-arrow{transform:translate(3px,-3px);}
 
-@media (min-width:1400px){
-	.cs-service-link h5{font-size:14px;}
-}
-
-@media (max-width:1199px){
-	/*.cs-phones{max-width:400px;height:450px;}*/
-}
-
-/* -------- Tablets (Landscape) / up to 991px -------- */
-@media (max-width:991px){
-	.custom-solutions-sec{padding:60px 0;}
-	.custom-solutions-main{margin-top:30px;padding-top:30px;}
-	.cs-phones{max-width:440px;height:480px;}
-}
-
-/* -------- Tablets (Portrait) / up to 767px -------- */
-@media (max-width:767px){
-	/*.cs-phones{max-width:380px;height:430px;}*/
-}
-
-/* -------- Mobile / up to 575px -------- */
-@media (max-width:575px){
-	.custom-solutions-sec{padding:40px 0;}
-	.custom-solutions-main{margin-top:24px;padding-top:24px;}
-	.cs-phones{max-width:320px;height:380px;}
-	.cs-glow{width:300px;height:300px;}
-	.cs-services{grid-template-columns:1fr;}
-	.cs-service-link h5{font-size:13px;}
-}
-
 
 /*why appgurus css start*/
 .healthcare-banner .healthcare-right-img img{width:100%;height:100%;}
-.why-appgurus-right {display: flex;}
-.proof-item{display:flex;align-items:center;gap:20px;}
-.proof-marker{flex-shrink:0;width:50px;height:50px;border-radius:50%;background:#FCEEE9;display:flex;align-items:center;justify-content:center;color:#F05D27;font-size:20px;}
-.proof-marker img{width:24px;height:24px;object-fit:contain;}
-.proof-content span{display:block;font-size:15px;font-weight:700;color:#14161A;line-height:1.4;margin-bottom:4px;}
-.proof-content p{font-size:15px;font-weight:500;color:#5B6270;line-height:1.5;margin:0;}
+/*.why-appgurus-right {display: flex;}*/
+.proof-item{display:flex;align-items:center;gap:20px;margin-bottom: 50px;}
+.proof-item:nth-child(n):last-child {
+    margin-bottom: 0;
+}
+.proof-marker{flex-shrink:0;width:50px;height:50px;border-radius:50%;background:##fbe7df;display:flex;align-items:center;justify-content:center;color:#F05D27;font-size:20px;}
+.proof-marker img{width:50px;height:50px;object-fit:contain;}
+.proof-content span{display:block;font-size:20px;font-weight:700;color:#14161A;line-height:1.4;}
+.proof-content p{font-size:20px;font-weight:500;color:#5B6270;line-height:1.5;margin:0;}
 .why-appgurus-img {width: 354px;}
 .why-appgurus-img img{max-width: 100%;border-radius: 12px;}
-
-
 
 
 .ai-specialist-left p{font-size:20px;line-height:1.3;margin-bottom:0px;color:#fff;width:calc(100% - 0px);padding-left:30px;}
@@ -711,11 +682,33 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 @media (max-width:1599px){
 	.ai-specialist-left p{font-size:14px;}
 }
+
 @media (max-width:1399px){
+	.cs-service-link h5{font-size:14px;}
 	.ai-specialist-left p{font-size:13px;}
 }
 
+@media (max-width:1199px){
+	.cs-phones{max-width:400px;height:450px;}
+}
+
 @media (max-width:991px){
+	.custom-solutions-sec{padding:60px 0;}
+	.custom-solutions-main{margin-top:30px;padding-top:30px;}
+	.cs-phones{max-width:440px;height:480px;}
 	.ai-specialist-left p{width:100%;text-align:center;}
 }
+
+@media (max-width:767px){
+}
+
+@media (max-width:575px){
+	.custom-solutions-sec{padding:40px 0;}
+	.custom-solutions-main{margin-top:24px;padding-top:24px;}
+	.cs-phones{max-width:320px;height:380px;}
+	.cs-glow{width:300px;height:300px;}
+	.cs-services{grid-template-columns:1fr;}
+	.cs-service-link h5{font-size:13px;}
+}
+
 
