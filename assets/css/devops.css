@@ -676,6 +676,14 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 .hl-benefits-sec .hl-benefits-title span,.hl-benefits-sec .hl-benefits-title h3{font-size: 22px;}
 .hl-benefits-sec .hl-benefits-desc p{font-size: 16px;}
 
+.hl-cta-banner .hl-cta-banner-main{background: #000; position: relative; overflow: hidden; z-index: 1;  border-radius: 40px;}
+.hl-cta-banner .hl-cta-banner-img{position: absolute;top: 0;right: 0;bottom: 0; z-index: -1;}
+.hl-cta-banner .hl-cta-banner-main::before {content: "";position: absolute;inset: 0;background:linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 66%);z-index: 1;}
+.hl-cta-banner .cta-content {position: relative;z-index: 1; padding: 45px 60px; }
+.hl-cta-banner .cta-text {margin: 18px 0 50px; padding-right: 40px;}
+.healthcare-ai .hl-benefits-grid {margin-top: 60px;}
+.healthcare-ai .hl-benefits-title {padding-bottom: 100px;}
+.healthcare-ai .hl-benefits-item {border-top: 1px solid #DDD8CE;padding-top: 24px;}
 
 @media (max-width:1750px){
 	.ai-specialist-left p{font-size:18px;}
@@ -687,6 +695,15 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 
 @media (max-width:1599px){
 	.ai-specialist-left p{font-size:14px;}
+
+	/* benefits */
+	.hl-benefits-sec .hl-benefits-title span, .hl-benefits-sec .hl-benefits-title h3 {font-size: 18px;}
+	.hl-benefits-sec .hl-benefits-desc p {font-size: 14px;}
+	.hl-cta-banner .hl-cta-banner-main {border-radius: 30px;}
+	.hl-cta-banner .cta-content{padding: 35px 50px; }
+	.hl-cta-banner .cta-text { margin: 10px 0 30px;padding-right: 0;}
+	.healthcare-ai .hl-benefits-item {padding-top: 20px;}
+	.healthcare-ai .hl-benefits-title {padding-bottom: 80px;}
 }
 
 @media (max-width:1399px){
@@ -695,6 +712,10 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 
 	/* benefits */
 	.hl-benefits-sec{padding: 80px 0;}
+	.hl-cta-banner .hl-cta-banner-img img{ object-position: 50px;}
+	.hl-cta-banner .cta-content {padding: 35px 40px;}
+	.healthcare-ai .hl-benefits-title {padding-bottom: 50px;}
+	.healthcare-ai .hl-benefits-grid {margin-top: 40px;}
 }
 
 @media (max-width:1199px){
@@ -706,11 +727,21 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 	.custom-solutions-main{margin-top:30px;padding-top:30px;}
 	.cs-phones{max-width:440px;height:480px;}
 	.ai-specialist-left p{width:100%;text-align:center;}
+
+	/* benefits */
+	.hl-cta-banner .cta-content {padding: 30px 30px;}
+	.hl-cta-banner .hl-cta-banner-main { border-radius: 24px;display: flex; flex-direction: column-reverse;}
+	.hl-cta-banner .hl-cta-banner-img{position: relative;}
+	.hl-cta-banner .hl-cta-banner-img img {object-position: top right;width: 100%; height: 300px;object-fit: cover;}
+	.hl-cta-banner .hl-cta-banner-main::before {inset: auto 0 0 0;height: 87%;background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);}
 }
 
 @media (max-width:767px){
 	/* benefits */
 	.hl-benefits-sec{padding: 50px 0;}
+	.hl-benefits-sec .whyChooseUs-row .whyChooseUs-left{padding-bottom: 0;}
+	.healthcare-ai .hl-benefits-item {padding-top: 22px;margin-top: 22px;}
+
 }
 
 @media (max-width:575px){
@@ -720,6 +751,12 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 	.cs-glow{width:300px;height:300px;}
 	.cs-services{grid-template-columns:1fr;}
 	.cs-service-link h5{font-size:13px;}
+
+	/* benefits */
+	.hl-cta-banner .cta-title br{display: none;}
+	.hl-cta-banner .cta-content {padding: 30px 24px 24px;}
+	.hl-cta-banner .hl-cta-banner-img img{height: 260px;}
+	.healthcare-ai .hl-benefits-grid {margin-top: 20px;}
 }
 
 
