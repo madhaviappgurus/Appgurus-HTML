@@ -59,6 +59,7 @@
     width: max-content;
     margin: 0 auto;
     background: rgba(50, 50, 50, 0.8);
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -99,19 +100,19 @@
 
 .ai-gradient-animate .border-overlay::before {
     /*content: "";
-	    position: absolute;
-	    z-index: 0;
-	    width: 220px;
-	    height: 22px;
-	    -webkit-transform: translate(-50%, -50%);
-	    transform: translate(-50%, -50%);
-	    background: linear-gradient(90deg, transparent 0%, rgba(240, 93, 39, 0.25) 15%, #F05D27 35%, #F05D27 50%, #F05D27 65%, rgba(240, 93, 39, 0.25) 85%, transparent 100%);
-	    pointer-events: none;
-	    animation: borderWalk 6s linear infinite;
-	    -webkit-animation: AnimateBorder 4s linear infinite;
-	    filter: drop-shadow(4px 4px 6px #F05D27);
-	    -webkit-filter: drop-shadow(4px 4px 6px #F05D27);
-	    */
+		    position: absolute;
+		    z-index: 0;
+		    width: 220px;
+		    height: 22px;
+		    -webkit-transform: translate(-50%, -50%);
+		    transform: translate(-50%, -50%);
+		    background: linear-gradient(90deg, transparent 0%, rgba(240, 93, 39, 0.25) 15%, #F05D27 35%, #F05D27 50%, #F05D27 65%, rgba(240, 93, 39, 0.25) 85%, transparent 100%);
+		    pointer-events: none;
+		    animation: borderWalk 6s linear infinite;
+		    -webkit-animation: AnimateBorder 4s linear infinite;
+		    filter: drop-shadow(4px 4px 6px #F05D27);
+		    -webkit-filter: drop-shadow(4px 4px 6px #F05D27);
+		    */
     content: "";
     position: absolute;
     top: 0;
@@ -2085,7 +2086,7 @@
     }
     .ai-gradient-animate .border-overlay::before {
         /* width: 120px;
-				height: 20px; */
+						height: 20px; */
     }
     .devops-strategy-img {
         margin: 50px 0 0;
@@ -2888,6 +2889,10 @@
 
 
 /*why appgurus css start*/
+
+.hl-why-appgurus .ai-specialist-left {
+    padding-right: 40px;
+}
 
 .why-appgurus-right-row {
     display: flex;
