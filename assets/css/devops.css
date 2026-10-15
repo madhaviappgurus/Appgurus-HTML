@@ -685,9 +685,9 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 	.faq-bg-white .accordion-body p {color: #5f6368 !important;}
 	.faq-bg-white .accordion-header .accordion-button:not(.collapsed) {color: #F05D26 !important;}
 	.faq-bg-white .accordion-header .accordion-button {color: #000 !important;}
-
-
-
+    .faq-bg-white .section-title{margin-bottom: 60px;}
+    .faq-bg-white .appgurus-info-faqs p{color: #000;}
+    .faq-bg-white .appgurus-icon img{width: 70px;}
 
 
 	@media (max-width:1750px){
@@ -767,4 +767,6 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 		.hl-cta-banner .hl-cta-banner-img img{height:260px;}
 		.healthcare-ai .hl-benefits-grid{margin-top:20px;}
 		.custom-solutions-sec .cs-services{grid-template-columns:1fr;column-gap:20px;}
+		.faq-bg-white .appgurus-icon img{width: 60px;}
+
 	}
