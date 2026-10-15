@@ -780,7 +780,7 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 		.cs-phones{max-width:320px;height:380px;}
 		.cs-glow{width:300px;height:300px;}
 		.cs-services{grid-template-columns:1fr;}
-		.custom-solutions-sec .cs-service-link h5{font-size:13px;max-width: 100%;}
+		.custom-solutions-sec .cs-service-link h5{max-width: 100%;}
 		.custom-solutions-sec .cs-services-col li:nth-child(n):last-child{border-bottom: 1px solid #E4E7EC}
 
 		/* benefits */
