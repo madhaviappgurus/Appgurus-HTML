@@ -636,7 +636,8 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 	.healthcare-banner .healthcare-right-img img{width:100%;height:100%;}
 	.custom-solutions-sec{padding:80px 0;background:#fff;}
 	.custom-solutions-sec .custom-solutions-main{margin-top:36px;padding-top:36px;border-top:1px solid #E4E7EC;}
-	.custom-solutions-sec .cs-phones{position:relative;width:100%;height:100%;}
+	.custom-solutions-sec .cs-phones{position:relative;width:100%;height:100%; isolation: isolate;}
+    .custom-solutions-sec .cs-phones:after {content: ""; position: absolute; inset: 0; z-index: -1; width: 60%; height: 60%; border-radius: 50%; background-color: #F05D27; margin: auto; filter: blur(140px); opacity: 0.7;}
 	.custom-solutions-sec .cs-glow{position:absolute;top:50%;left:50%;width:800px;height:800px;transform:translate(-50%,-45%);background:radial-gradient(circle,rgba(242,104,65,0.28) 0%,rgba(242,104,65,0.12) 45%,rgba(242,104,65,0) 70%);border-radius:50%;z-index:0;}
 	.custom-solutions-sec .cs-phone{position:absolute;background:#0B0B0D;border:3px solid #D5D7DB;border-radius:30px;padding:6px;box-shadow:0 20px 40px rgba(0,0,0,0.18);}
 	.custom-solutions-sec .cs-services{display:grid;grid-template-columns:repeat(2,1fr);column-gap:32px;align-items:start;}
@@ -678,6 +679,7 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 	.healthcare-ai .hl-benefits-title{padding-bottom:100px;}
 	.healthcare-ai .hl-benefits-item{border-top:1px solid #DDD8CE;padding-top:24px;}
 	.custom-solutions-sec .cs-services-col li:nth-child(n):last-child{border-bottom: 0}
+    .healthcare-ai .hl-ai-img img {aspect-ratio: 780/425;}
 
 	/*Faqs bg white css add start*/
 	.faq-bg-white {background: #fff;}
@@ -731,6 +733,8 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 		.four-situations .tech-stack-row .ts-tab-content{width:100%;padding:30px 0 0 0;}
 	}
 	@media (max-width:991px){
+        .hl-why-appgurus .ai-specialist-left{padding-right: 0;}
+        .custom-solutions-sec .cs-phones:after{opacity: 0.8; width: 50%; height: 50%;}
 		.custom-solutions-sec{padding:60px 0;}
 		.custom-solutions-main{margin-top:30px;padding-top:30px;}
 		.cs-phones{max-width:440px;height:480px;}
