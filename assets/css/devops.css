@@ -633,7 +633,11 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 	}
 
 	/*healthcare section css start*/
+    .healthcare-banner{ padding-bottom: 120px; padding-top: 160px;}
 	.healthcare-banner .healthcare-right-img img{width:100%;height:100%;}
+    .healthcare-banner .hl-tags-list { list-style:none; margin: 0;padding: 0;display: flex;flex-wrap: wrap;gap: 12px 8px;}
+    .healthcare-banner .hl-tags-list li::before {content: ""; margin-right:7px;display: inline-block; width: 8px;height: 8px;border-radius: 50%;background: rgba(255, 255, 255, 0.2);}
+    .healthcare-banner .hl-tags-list li:first-child::before{display: none;}
 	.custom-solutions-sec{padding:80px 0;background:#fff;}
 	.custom-solutions-sec .custom-solutions-main{margin-top:36px;padding-top:36px;border-top:1px solid #E4E7EC;}
 	.custom-solutions-sec .cs-phones{position:relative;width:100%;height:100%; isolation: isolate;}
@@ -699,6 +703,7 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 		.ai-specialist-left p{font-size:16px;}
 	}
 	@media (max-width:1599px){
+        .healthcare-banner {padding-bottom: 60px;padding-top: 100px;}
 		.ai-specialist-left p{font-size:14px;}
 
 		/* benefits */
@@ -737,6 +742,7 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 		.four-situations .tech-stack-row .ts-tab-content{width:100%;padding:30px 0 0 0;}
 	}
 	@media (max-width:991px){
+        .healthcare-banner {padding-bottom: 30px;}
         .hl-why-appgurus .ai-specialist-left{padding-right: 0;}
         .custom-solutions-sec .cs-phones:after{opacity: 0.8; width: 50%; height: 50%;}
 		.custom-solutions-sec{padding:60px 0;}
@@ -766,6 +772,11 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 
 	}
 	@media (max-width:575px){
+        .healthcare-banner {padding-bottom: 0px;}
+        .healthcare-banner .hl-tags-list{gap: 10px 8px;}
+        .healthcare-banner .hl-tags-list li{font-size: 14px;}
+        .healthcare-banner .hl-tags-list li::before{width: 7px;height: 7px;}
+        .healthcare-banner .hl-tags-list li:first-child::before{display: inline-block;}
 		.custom-solutions-sec{padding:40px 0;}
 		.custom-solutions-main{margin-top:24px;padding-top:24px;}
 		.cs-phones{max-width:320px;height:380px;}
