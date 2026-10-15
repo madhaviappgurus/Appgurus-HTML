@@ -677,7 +677,7 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 	.healthcare-ai .hl-benefits-grid{margin-top:60px;}
 	.healthcare-ai .hl-benefits-title{padding-bottom:100px;}
 	.healthcare-ai .hl-benefits-item{border-top:1px solid #DDD8CE;padding-top:24px;}
-
+	.custom-solutions-sec .cs-services-col li:nth-child(n):last-child{border-bottom: 0}
 
 	/*Faqs bg white css add start*/
 	.faq-bg-white {background: #fff;}
