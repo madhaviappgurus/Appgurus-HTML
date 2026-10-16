@@ -692,6 +692,7 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
     .faq-bg-white .appgurus-info-faqs p{color: #000;}
     .faq-bg-white .appgurus-icon img{width: 70px;}
 
+	.radius_top_remove{border-top-left-radius: 0; border-top-right-radius: 0;}
 
 	@media (max-width:1750px){
 		.ai-specialist-left p{font-size:18px;}
