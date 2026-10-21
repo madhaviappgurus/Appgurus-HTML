@@ -2040,7 +2040,7 @@ RESPONSIVE
 .explore-services .accordion-body ul.service-type li svg path{transition: 0.4s ease;}
 .explore-services .accordion-body ul.service-type li:hover {color: #f45d2b;border-color: #f45d2b;}
 .explore-services .accordion-body ul.service-type li:hover svg path{fill: #f45d2b;}
-.explore-services .images-main img {width: clamp(250px, 25vw, 360px);height: clamp(250px, 25vw, 360px);object-fit: contain;}
+.explore-services .images-main img {width: clamp(200px, 25vw, 360px);height: clamp(200px, 25vw, 360px);object-fit: contain;}
 @media (max-width:1400px) {
 	.explore-services .accordion-body ul.service-type li{font-size: 13px;}
 }
@@ -2053,10 +2053,19 @@ RESPONSIVE
 	.explore-services .accordion-body ul.service-type {padding: 18px 0px 16px;}
 }
 @media (max-width:991px) {
-	.explore-services .accordion-service .accordion-item .accordion-button:before {font-size: 12px;margin-top: -6px;}
+	.explore-services .accordion-service .accordion-item .accordion-button:before {font-size: 12px;margin-top: 0;}
 }
 @media (max-width:768px) {
 	.explore-services .accordion-service {padding-left: 35px;}
-	.explore-services .images-main {margin-bottom: 30px;}
-	.explore-services .learn_more_main .get-in-touch.btn {padding: 8px 14px !important;font-size: 13px !important;line-height: 1.5 !important;}
+	.explore-services .images-main {margin-bottom: 20px; margin-top: 30px; text-align: center;}
+	.explore-services .accordion-body ul.service-type {padding: 12px 0px 10px; gap: 5px;}
+	.explore-services .learn_more_main .get-in-touch.btn {padding: 8px 14px !important;font-size: 12px !important;line-height: 1.5 !important;}
+}
+@media (max-width:575px) {
+	.explore-services .explore-service-title {padding-bottom: 0;margin-bottom: 26px;}
+	.explore-services .images-main{ margin-right: 30px;}
+	.explore-services .images-main img {width: 180px; height: 180px;}
+	.explore-services .accordion-service {padding-left: 25px;}
+	.explore-services .accordion-service .accordion-item .accordion-body .learn_more_main {padding: 11px 0px 32px;}
+	.explore-services .accordion-service .accordion-item .accordion-button:before {right: calc(100% + 10px);top: 5px;}
 }
