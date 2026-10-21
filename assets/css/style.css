@@ -2035,7 +2035,8 @@ RESPONSIVE
 .explore-services .accordion-service .accordion-body{max-width: max-content;}
 .explore-services .accordion-service .accordion-item .accordion-button:before{line-height: normal;font-size: 16px;margin-top: -10px;top: auto;}
 .explore-services .accordion-service .accordion-item .accordion-body p{margin-bottom: 0; color:#5F6368;}
-.explore-services .accordion-body ul.service-type li{ font-size: 14px;display: inline-flex;align-items: center;gap: 8px;  transition: 0.4s ease;}
+.explore-services .accordion-body ul.service-type li{ font-size: 14px;display: inline-flex;align-items: center;gap: 8px;  transition: 0.4s ease; position: relative;}
+.explore-services .accordion-collapse {cursor: default;}
 .explore-services .accordion-body ul.service-type{padding: 18px 0px 20px;}
 .explore-services .accordion-body ul.service-type li svg path{transition: 0.4s ease;}
 .explore-services .accordion-body ul.service-type li:hover {color: #f45d2b;border-color: #f45d2b;}
