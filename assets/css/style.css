@@ -2028,7 +2028,7 @@ RESPONSIVE
 	.ai-page .ai-widget, .devops-page .ai-widget {bottom: 20px;}
 }
 
-/* 16-10-2026 */
+/* 16-10-2026 for explore services */
 .explore-services .explore-service-title{border-bottom: 1px solid #D7D7D7;padding-bottom: 20px;margin-bottom: 30px;}
 .explore-services .accordion-service .accordion-item .accordion-button[aria-expanded="false"]{color: #000;}
 .explore-services .accordion-service .accordion-item .accordion-button[aria-expanded="true"]{color: #F45D2C;}
