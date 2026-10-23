@@ -1085,18 +1085,27 @@ ul.why-invest-points li{width:auto;border:1px solid #4A4E50;border-radius:40px;p
 .testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details{width:100%;height:100%;}
 .testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details .client-video-main{width:100%;height:100%;}
 .testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details .client-video-main img.img-fluid{width:100%;height:100%;object-fit:cover;border-radius:12px;}
-.testimonials-sec .client-video-main .play-video:before{content:'0.005em';position:absolute;z-index:0;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);display:block;width:100%;height:100%;background:#F05D27;border-radius:50%;animation:pulse-border 1500ms ease-out infinite;z-index:-1;}
-.testimonials-sec .client-video-main .play-video:after{content:'0';position:absolute;z-index:1;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);display:block;width:100%;height:100%;background:#F05D27;border-radius:50%;transition:all 200ms;animation:pulse-border 2000ms ease-out infinite;z-index:-1;}
+.testimonials-sec .client-video-main .play-video:before{content:'';position:absolute;z-index:0;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);display:block;width:100%;height:100%;background:#F05D27;border-radius:50%;animation:pulse-border 1500ms ease-out infinite;z-index:-1;}
+.testimonials-sec .client-video-main .play-video:after{content:'';position:absolute;z-index:1;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);display:block;width:100%;height:100%;background:#F05D27;border-radius:50%;transition:all 200ms;animation:pulse-border 2000ms ease-out infinite;z-index:-1;}
 @keyframes pulse-border{
 	0%{transform:translateX(-50%) translateY(-50%) translateZ(0) scale(1);opacity:1;}
 	100%{transform:translateX(-50%) translateY(-50%) translateZ(0) scale(1.4);opacity:0;}
 }
-.testimonials_slider_main .client-video-main .play-video{position:absolute;left:0px;right:0px;bottom:0px;top:0px;margin:auto;display:block;width:126px;height:126px;z-index:2;}
+.testimonials_slider_main .client-video-main .play-video{position:absolute;left:0px;right:0px;bottom:0px;top:0px;margin:auto;display:block;width:75px;height:75px;z-index:2;}
 .testimonials-details .client-video-main{position:relative;}
 @media (max-width:991px){
 	.testimonials_slider_main .slick-list.draggable .slick-track .row{height:auto;}
 	.testimonials_slider_main .client-video-main img.img-fluid{max-height:300px;min-height:300px;}
 	.testimonials_slider_main .client-video-main .play-video{transform:scale(0.7);}
+}
+
+.testimonials--slide .testimonials-details .client-video-main .img-desktop{display:block;}
+.testimonials--slide .testimonials-details .client-video-main .img-mobile{display:none;}
+.testimonials--slide .testimonials-details .client-video-main .client-f-video{ position: absolute;inset:0;background:rgba(0,0,0,.6);border-radius:12px;}
+.videoModal-main .modal-content .modal-header .btn-close {background-color: rgba(255, 255, 255, 1);}
+@media (max-width:767px){
+	.testimonials--slide .testimonials-details .client-video-main .img-desktop{display:none;}
+	.testimonials--slide .testimonials-details .client-video-main .img-mobile{display:block;border-radius: 10px;}
 }
 
 /*=================================================================
@@ -2035,7 +2044,7 @@ RESPONSIVE
 .explore-services .accordion-service .accordion-body{max-width: max-content;}
 .explore-services .accordion-service .accordion-item .accordion-button:before{line-height: normal;font-size: 16px;margin-top: -10px;top: auto;}
 .explore-services .accordion-service .accordion-item .accordion-body p{margin-bottom: 0; color:#5F6368;}
-.explore-services .accordion-body ul.service-type li{ font-size: 14px;display: inline-flex;align-items: center;gap: 8px;  transition: 0.4s ease; position: relative;}
+.explore-services .accordion-body ul.service-type li{ font-size: 14px;display: inline-flex;align-items: center;gap: 8px;  transition: 0.4s ease; position: relative;font-weight: 500;}
 .explore-services .accordion-collapse {cursor: default;}
 .explore-services .accordion-body ul.service-type{padding: 18px 0px 20px;}
 .explore-services .accordion-body ul.service-type li svg path{transition: 0.4s ease;}
