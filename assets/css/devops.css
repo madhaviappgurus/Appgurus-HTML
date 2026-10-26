@@ -809,7 +809,7 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 .services-new-v1 .nav-sidebar .nav-link{display:block;position:relative;padding:8px 12px 8px 18px;margin:0;border:0;border-radius:0;background:transparent;color:#666666;font-size:18px;font-weight:500;line-height:1.5;text-decoration:none;white-space:normal;transition:color 0.25s ease,background-color 0.25s ease;}
 .services-new-v1 .nav-sidebar .nav-link:hover{color:#111111;}
 .services-new-v1 .nav-sidebar .nav-link:focus-visible{outline:2px solid #F05D26;outline-offset:3px;}
-.services-new-v1 .nav-sidebar .nav-link.active{color:#F05D26;font-weight:700;}
+.services-new-v1 .nav-sidebar .nav-link.active{color:#F05D26;font-weight:500;}
 .services-new-v1 .nav-sidebar .nav-link.active::before{content:"";position:absolute;left:-2px;top:0;bottom:0;width:2px;background-color:#F05D26;}
 
 /* =========================================
