@@ -2079,3 +2079,29 @@ RESPONSIVE
 	.explore-services .accordion-service .accordion-item .accordion-body .learn_more_main {padding: 11px 0px 32px;}
 	.explore-services .accordion-service .accordion-item .accordion-button:before {right: calc(100% + 10px);top: 5px;}
 }
+
+/* Hero banner video CSS 26-10-2026 */
+.home-update .banner-heading {font-size: clamp(36px, 4.2vw, 74px);}
+.h-client-video{position:relative;z-index:1;}
+.h-client-video .client-f-video{ position: absolute; inset: 0; background: rgba(0, 0, 0, .5); border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; }
+.h-client-video .img-mobile {display: none;}
+.h-client-video .img-desktop { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; }
+.h-client-video .play-video {position: absolute;left: 0px;right: 0px;bottom: 0px;top: 0px;margin: auto;display: block;width: 75px;height: 75px;z-index: 2;}
+.h-client-video .play-video:before { content: ''; position: absolute; z-index: 0; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); display: block; width: 100%; height: 100%; background: #F05D27; border-radius: 50%; animation: pulse-border 1500ms ease-out infinite; z-index: -1; -webkit-animation:; }
+.h-client-video .play-video:after {content: '';position: absolute;z-index: 1;left: 50%;top: 50%;transform: translateX(-50%) translateY(-50%);display: block;width: 100%;height: 100%;background: #F05D27;border-radius: 50%;transition: all 200ms;animation: pulse-border 2000ms ease-out infinite;z-index: -1;}
+
+@media (max-width: 1600px) {
+	.home-update .banner-heading {font-size: 52px;}
+}
+@media (max-width: 1300px) {
+	.home-update .banner-heading {font-size: 50px;}
+}
+@media (max-width: 1200px) {
+	.home-update .banner-heading {font-size: 43px;}
+}
+@media (max-width: 767px) {
+	.h-client-video .client-f-video{ border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px; -ms-border-radius:15px; -o-border-radius:15px; }
+	.h-client-video .img-mobile { display: block; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px; }
+	.h-client-video .img-desktop {display: none;}
+	.home-update .banner-heading {font-size: clamp(30px, 4.2vw, 74px);}
+}
