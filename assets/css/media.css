@@ -166,10 +166,10 @@
 
 
 	p{font-size:14px;line-height:26px;}
+ .home-update .banner-sec:after, .industries .banner-sec:after{top: 0;}
 
 
 
-	.home-update .banner-sec:after, .industries .banner-sec:after{top: 0;}
 	.header-main .header-inner-main .header-menu-inner .header-btn a {padding: 7px 10px 7px; min-width: 120px; border-radius: 8px;  font-size: 14px;}
 	.header-main .header-inner-main .header-inner .header-menu ul li a{margin: 0px 15px;}
 
@@ -218,8 +218,9 @@
 
 
 	.container {width: 93%; }
-	
 	.home-update .banner-sec:after, .industries .banner-sec:after {top: -4%; padding: 15%;}
+	
+
 	.header-logo img{max-width:175px;}
 	.header-main .header-inner-main .header-inner .header-menu ul li a{font-size:14px;margin:0px 10px;padding:25px 0 30px;}
 
@@ -277,9 +278,8 @@
 	h5 { font-size:22px; }  
 	h6 { font-size:18px; }
 	p{font-size: 15px;}
-	
-
 	.home-update .banner-sec:after, .industries .banner-sec:after {top: -10%;padding: 170px;}
+
 	.banner-sec .banner-wrap{padding:40px 0px;}
 	.banner-sec .banner-wrap .banner-text .banner-btn{margin-top:30px;margin-bottom:35px;}
 	.banner-sec {padding-top: 70px; }
@@ -445,9 +445,9 @@
 Extra small devices (portrait phones, less than 576px)
 ===========================================================*/
 @media (max-width: 576px) { 
-	.home-update .banner-sec:after, .industries .banner-sec:after {padding: 150px;top: -8%;}
-	.container{ width: 100%; padding-left:20px; padding-right:20px; }
 
+	.container{ width: 100%; padding-left:20px; padding-right:20px; }
+.home-update .banner-sec:after, .industries .banner-sec:after {padding: 150px;top: -8%;}
 	.industries-sec .industries-wrap{margin-right:0px;}
 	.industries-sec .industries-wrap .industries-right .industries-slider-main{margin-right:-20px;}
 	.tc-logos-row{gap:15px;}
@@ -558,9 +558,7 @@ iPad Pro devices (portrait phones, less than 1021px)
 @media (max-width: 767px) {
 	.banner-count-main .banner-count-box{width:50%;max-width:45%;}
 	.banner-text .banner-link {height: 100px; width: 100px; left: unset; top: calc(100% + 50px); font-size: 10px; right: 0px; padding: 10px; min-width: auto; }
-	.banner-text > p {max-width: 100%; width:100%;}
-
-	.banner-text .banner-link {display: none;}
+	.banner-text > p {max-width: 100%; }
 }
 
   
