@@ -885,6 +885,9 @@ content:"";position:absolute;top:0;left:0;bottom:0;width:calc(100% + 2px);height
 	.services-new-v1 .service-badge-icon{flex-basis:60px;width:60px;height:60px;font-size:2rem;}
 	.services-new-v1 .sub-service-item{gap:8px;padding:14px 0;}
 	.services-new-v1 .sub-title{font-size:0.95rem;}
+
+	.services-page .service-banner-rating{display: none;}
+	.services-page .devops-banner .service-text,.services-page .banner-sec .banner-wrap{padding-top: 0;}
 }
 
 @media (max-width: 475px) {
