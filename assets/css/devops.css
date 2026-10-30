@@ -4,7 +4,7 @@
 
 /* @madhavi */
 .devops-cloud-page{overflow-x:unset;}
-.devops-banner .banner-heading{font-size:clamp(35px,3.6vw,60px);font-weight:600;}
+.devops-banner .banner-heading{font-size:clamp(35px,3.3vw,60px);font-weight:600;}
 .btn.btn-with-arrow.gray-btn{background-color:rgba(255,255,255,0.2);border-color:#fff;}
 .btn.gray-btn{background-color:rgba(255,255,255,0.2);border-color:#fff;}
 .devops-banner .banner-text{padding-right:40px;}
@@ -456,7 +456,7 @@ AI v2 page CSS
 	.ai-v2-banner{overflow:hidden;}
 	.devops-tabs-sticky.active{top:0;padding-top:6px;opacity:1;visibility:visible;}
 	.devops-tabs-wrap{position:unset;}
-	.devops-tabs-sticky.active.sticky{top:68px;}
+	.devops-tabs-sticky.active.sticky{top:70px;}
 	.devops-tabs-sticky{position:fixed;top:68px;padding-bottom:6px;padding-top:2px;z-index:9;width:100%;background:transparent;transition:all 400ms ease-in-out;-webkit-transition:all 400ms ease-in-out;-moz-transition:all 400ms ease-in-out;-ms-transition:all 400ms ease-in-out;-o-transition:all 400ms ease-in-out;visibility:hidden;opacity:0;}
 	.CAID-sec{padding:50px 0;}
 	.CAID-sec .CAID-main{margin-top:28px;}
@@ -814,7 +814,7 @@ AI v2 page CSS
 ========================================= */
 .services-new-v1 .service-section{margin-bottom:70px;scroll-margin-top:100px;}
 .services-new-v1 .service-section:last-child{margin-bottom:0;border-bottom:none;}
-.services-new-v1 .section-title{margin-bottom:30px;color:#111111;font-size:2.5rem;font-weight:800;line-height:1.2;letter-spacing:-0.02em;}
+.services-new-v1 .section-title{margin-bottom:30px;color:#111111;font-size:2.5rem;font-weight:700;line-height:1.2;letter-spacing:-0.02em;}
 
 /* =========================================
 	SERVICE ICONS
@@ -851,7 +851,7 @@ AI v2 page CSS
 	.devops-banner .service-text{padding-right:40px;}
 	/*.rating-clutch-google .service-banner-rating .rating-img-wp{top:15px;}*/
 	.banner-sec.devops-banner.banner-content-bottom .banner-text-wrap.rating-clutch-google .rating-img-main{width:100%;height:110px;}
-	.services-new-v1 .service-desc{font-size:16px;}
+	.services-new-v1 .service-desc{font-size:18px;}
 	.services-new-v1 .nav-sidebar .nav-link{font-size:16px;}
 	.services-new-v1 .service-badge-icon-img{flex:0 0 120px;}
 	.services-new-v1 .sticky-sidebar-wrapper{position:sticky;top:0;z-index:100;width:100%;min-width:0;margin-bottom:30px;padding:12px 0;background-color:#ffffff;border-bottom:1px solid #eeeeee;}
@@ -859,13 +859,13 @@ AI v2 page CSS
 	.services-new-v1 .nav-sidebar .nav-link{display:inline-flex;flex:0 0 auto;align-items:center;justify-content:center;width:auto;padding:8px 16px;margin:0;border:1px solid #eeeeee;border-radius:30px;background-color:#ffffff;color:#666666;font-size:16px;line-height:1.4;white-space:nowrap;}
 	.services-new-v1 .nav-sidebar .nav-link.active{border-color:#F05D26;background-color:#F05D26;color:#ffffff;}
 	.services-new-v1 .nav-sidebar .nav-link.active::before{display:none;}
-	.services-new-v1 .sub-title{font-size:16px;}
+	.services-new-v1 .sub-title{font-size:18px;}
 }
 @media (max-width:991px){
 	.services-new-v1{padding:40px 0;}
 	.services-new-v1 .nav-sidebar::-webkit-scrollbar{display:none;}
-	.services-new-v1 .service-desc{font-size:14px;}
-	.services-new-v1 .section-title{font-size:1.85rem;}
+	.services-new-v1 .section-title{font-size:36px;letter-spacing: -0.06em;}
+	.services-new-v1 .service-desc{ font-size: 16px;}
 	.services-new-v1 .service-section{margin-bottom:45px;scroll-margin-top:100px;}
 	.services-new-v1 .service-badge-icon-img{flex:0 0 100px;width:100px;height:100px;}
 	.btn.btn-orange{padding:5px 12px;font-size:14px;min-width:130px;}
@@ -876,12 +876,11 @@ AI v2 page CSS
 	.devops-banner .service-text{padding-right:0px;padding-top:120px}
 	.services-new-v1 .sticky-sidebar-wrapper{padding:10px 0;margin-bottom:24px;}
 	.services-new-v1 .nav-sidebar .nav-link{padding:7px 13px;font-size:0.8rem;}
-	.services-new-v1 .section-title{margin-bottom:22px;font-size:1.65rem;}
+	.services-new-v1 .section-title{margin-bottom:22px;}
 	.services-new-v1 .service-section{margin-bottom:35px;}
 	.services-new-v1 .service-badge-icon-img{flex-basis:70px;width:70px;height:70px;}
 	.services-new-v1 .service-badge-icon{flex-basis:60px;width:60px;height:60px;font-size:2rem;}
 	.services-new-v1 .sub-service-item{gap:8px;padding:14px 0;}
-	.services-new-v1 .sub-title{font-size:0.95rem;}
 	.services-page .service-banner-rating{display: none;}
 	.services-page .devops-banner .service-text,.services-page .banner-sec .banner-wrap{padding-top: 0;}
 }
@@ -896,7 +895,7 @@ AI v2 page CSS
 
 /* background color on banner sec */
 
-.services-page .banner-sec:after,.services-page .banner-sec:after{content:'';position:absolute;top:-10%;left:50%;padding:12%;background:linear-gradient(0deg,rgba(240,93,39,.62) 23%,rgba(240,93,39,0) 90%);opacity:.6;filter:blur(100px);z-index:-1;transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translate(-50%);}
 .services-page .banner-sec,.services-page .banner-sec{position:relative;z-index:1;}
 .services-page .page-wrapper {overflow-x: initial;}
+.services-page .devops-banner .banner-heading br {display: block;}
 

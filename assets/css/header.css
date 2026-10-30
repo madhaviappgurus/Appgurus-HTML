@@ -174,6 +174,9 @@
 .sm-blog-fetured:hover .sdropdown-main-title h3{color: #f05d26;}
 .sdropdown-main .sm-blog-fetured .sm-blog-badge{font-size:10px;    /* text-transform: uppercase; */font-weight:600;color:#f05d26;border-radius:50px;padding:6px 10px;line-height:1;display:inline-block;background-color:rgba(240,93,38,12%); border: 1px solid rgba(240, 93, 38, 16%);}
 .sdropdown-main .sm-blog-fetured p{margin-bottom: 0; font-size:11px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;}
+.header-main .header-inner-main .header-inner .header-menu .sm-blog-cta{ padding: 6px 0 0 0; margin-top: 14px;  border-top: 1px solid #f0f0f0;}
+
+
 .header-main .header-inner-main .header-inner .header-menu .sm-blog-cta{ padding: 6px 0 0 0; margin-top: 14px;  border-top: 1px solid #f1f5f9;}
 .header-main .header-inner-main .header-inner .header-menu .sm-blog-cta .btn{padding:0;font-size:13px;min-width:auto;margin:0;border:none;background:transparent;color:#f05d26;text-transform:capitalize;text-align:start;overflow:visible;}
 .header-main .header-inner-main .header-inner .header-menu .sm-blog-cta .btn:hover{text-decoration:underline;text-underline-position:from-font;}
@@ -194,7 +197,28 @@
 .header-main .header-menu .header-menu-inner ul.navbar-nav > li.nav-item .main-menu > a:has(+ .dropdown-click[aria-expanded="true"]),.header-main .header-menu .header-menu-inner ul.navbar-nav>li.nav-item .main-menu>.dropdown-click[aria-expanded="true"] {
     color: #F05D26;
 }
+
+
+/* Industries menu - 27/10/2026 */
+.header-main .header-inner-main .header-inner .header-menu .industries_menu .sm-blog-cta {margin-top: auto;}
+.header-main .header-inner-main .header-inner .header-menu .industries_menu .sm-blog-cta .btn{font-weight: 600;}
+.industries_menu .sdropdown-main .sm-blog-fetured p{ -webkit-line-clamp: 4;}
+.industries_menu .sm-blog-fetured .sdropdown-main-title h3{-webkit-line-clamp: 2;}
+.industry_case_study .sdropdown-testimonial-img .sdropdown-uimg{ object-position: top center; aspect-ratio: 300 / 230; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; transition: transform 0.4s ease-in-out 0s; -webkit-transition: transform 0.4s ease-in-out 0s; -moz-transition: transform 0.4s ease-in-out 0s; -ms-transition: transform 0.4s ease-in-out 0s; -o-transition: transform 0.4s ease-in-out 0s;  will-change: transform;  transform: translateZ(0);}
+.industry_case_study .sdropdown-testimonial-img{ width: 100%; height: 100%; overflow: hidden; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; }
+.industry_case_study .sdropdown-testimonial{padding: 0; overflow: hidden;}
+.industry_case_study .industry_cs_card { position: relative;overflow: hidden; height: 100%; min-height: 280px;}
+.industry_cs_card:before {content: "";position: absolute; z-index: 1; top: 28%;right: 0;bottom: 0;left: 0;background: linear-gradient(180deg, #05080c00, #05080c 78%);}
+.industry_case_study .sdropdown-inner-wrap{position: absolute;bottom: 0;right: 0;left: 0;z-index: 1;padding: 20px; align-items: start !important;}
+.industry_case_study .sdropdown-slide-title{text-align: start !important; font-size: 16px !important;  transition: all 0.4s ease-in-out 0s;}
+.industry_case_study .industry_cs_card:hover .sdropdown-slide-title{ color: #f05d26;}
+.industry_case_study .industry_cs_card:hover .sdropdown-testimonial-img .sdropdown-uimg{ transform: scale(1.04) translateZ(0); -webkit-transform: scale(1.04) translateZ(0); -moz-transform: scale(1.04) translateZ(0); -ms-transform: scale(1.04) translateZ(0); -o-transform: scale(1.04) translateZ(0); }
+.industry_case_study .sdropdown-slider, .industry_case_study .slick-track, .industry_case_study .slick-slide, .industry_case_study .slick-list{height: 100%;}
+
+
 @media (min-width:992px){
+	.industries_menu .sm-menu-row .col_3{width: 32%;}
+	.industries_menu .sm-menu-row .col_6{ width: 68%;}
 
 	/* mega menu */
 	.header-main .sm_menu_main.service-mega-menu { position: unset;}
@@ -255,6 +279,7 @@
 	.header-btn-main .call-link svg{width:22px;height:22px;margin-right:14px;}
 }
 @media (max-width:1599px){
+	.industry_case_study .sdropdown-slide-title {font-size: 15px !important;}
 
 	/* mega menu */
 	.sdropdown-slide-role{font-size:12px!important;}
@@ -282,6 +307,8 @@
 	.header-main .header-inner-main .header-menu-inner>.navbar-nav{width:calc(100% - 250px - 70px);}
 }
 @media (max-width:1399px){
+	.industry_case_study .sdropdown-slide-title {font-size: 12px !important;}
+
 	.header-main .header-inner-main .header-menu-inner>.navbar-nav{width:calc(100% - 295px);}
 	.header-main .header-inner-main .header-inner .header-menu ul li a{font-size:14px;margin:0px 12px;}
 	.header-btn-main .call-link{font-size:14px;}
@@ -302,6 +329,8 @@
 	.header-logo{max-width:150px;}
 }
 @media (max-width:1199px){
+	.industries_menu .service-menu-tabs .nav-tabs {padding: 0; border-width: 0;}
+
 	.header-main.sticky.active .navbar-container:after {max-width: calc(1114px + 20px) !important; width: calc(93% + 20px) !important;}
 	.header-main .header-inner-main .header-inner .header-menu ul li a.on-change-sticky {padding-top: 28px; padding-bottom: 28px;}
 
@@ -322,6 +351,8 @@
 	.header-logo img{max-width:130px;}
 }
 @media (max-width:991.98px){
+	.industry_case_study .sdropdown-inner-wrap{padding: 16px;}
+
 	.no-scroll .header-main.active.sticky {top: 0;}
 	.no-scroll .header-main .header-inner-main:before {z-index: 999; position: absolute;top: 0; right: 0;left: 0; content: ""; width: 100%; height: 70px;backdrop-filter: blur(6px);}
 	.header-logo img {max-width: 160px;}
@@ -499,6 +530,8 @@
 	.sdropdown-row{column-gap:0;justify-content:inherit;}
 	.sub-menu-desc{font-size:11px;color:#7D8387;line-height:16px;display:block;font-weight:normal;}
 	.header-main .sm_menu_main.service-mega-menu .sdropdown-wp.sdropdown-two-col{max-width:930px;left: 50%; transform: translateX(-50%);}
+	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 72%);}
+	.header-main .sm_menu_main.industries_menu .sdropdown-wp.sdropdown-two-col::after{left: calc(100% - 62%);}
 	.sub-menu-title{font-size:13px;}
 	.header-main .sm_menu_main .sdropdown-wp.show{display:block;visibility:visible;opacity:1;height:auto;}
 	.sdropdown-row .sdropdown-col{width:27%;}
@@ -508,7 +541,7 @@
 }
 @media(min-width:1200px){
 	.header-main .sm_menu_main.service-mega-menu .sdropdown-wp.sdropdown-two-col{max-width:1040px;}
-	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 67%);}
+	.header-main .sm_menu_main.industries_menu .sdropdown-wp.sdropdown-two-col::after{left: calc(100% - 64%);}
 	.sub-menu-title{font-size:14px;}
 	.sdropdown-wp .view-in{display:block;}
 }
@@ -517,23 +550,21 @@
 	.sm-menu-row .col_3{width: 30%;}
 	.sm-menu-row .col_6{width:70%;}
 	.header-main .sm_menu_main.service-mega-menu .sdropdown-wp.sdropdown-two-col{max-width:1130px;}
-	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 69%);}
+	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 74%);}
 	.sub-menu-title{font-size:15px;}
 	.sub-menu-desc{font-size:12px;line-height:17px;}
 	.sdropdown-row .sdropdown-col{width:20.5%;}
 	.sdropdown-row .sdropdown-testimonial-slider-wrap{width:18%;}
 }
 @media(min-width:1500px){
-	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 66%);}
+	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 72%);}
+	.header-main .sm_menu_main.industries_menu .sdropdown-wp.sdropdown-two-col::after{left: calc(100% - 62%);}
 }
 @media(min-width:1600px){
-	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after {
-    left: calc(100% - 68%);
-}
 	.sub-menu-title{font-size:15px;}
 	.sub-menu-desc{font-size:13px;line-height:18px;}
 	.header-main .sm_menu_main.service-mega-menu .sdropdown-wp.sdropdown-two-col{max-width:1240px;}
-	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 65%);}
+	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after{ left: calc(100% - 72%);}
 }
 
 /* mega menu End */
@@ -576,7 +607,6 @@
 .header-main.header-bg-white .header-right .navbar-toggler:after{color:#000;}
 
 @media (min-width:992px){
-	.header-main .sm_menu_main .sdropdown-wp.sdropdown-two-col::after {left: calc(100% - 67%);}
 	/* Header Menu Backdrop Overlay directly on body */
 	body::after {
 		content: '';

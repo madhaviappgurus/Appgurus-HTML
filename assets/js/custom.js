@@ -53,6 +53,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
+        touchThreshold: 500,
         // speed: 2000,
 
         responsive: [{
@@ -91,6 +92,7 @@ $(document).ready(function () {
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
+        touchThreshold: 500,
         // speed: 2000,
 
         responsive: [{
@@ -904,6 +906,34 @@ if ($('#service-Tabs').length) {
             }
         });
     });
-
+    
 })();
 // AI Tool JS End
+
+// sticky hero banner
+$(function () {
+  var $banner = $('.sticky_banner .container');
+  var mq = window.matchMedia('(min-width: 991px)');
+
+  function scaleBanner() {
+    if (!mq.matches) {
+      $banner.css({ transform: '', opacity: '' });
+      return;
+    }
+
+    var h = $banner.outerHeight();
+    var scroll = $(window).scrollTop();
+    var progress = Math.min(Math.max(scroll / h, 0), 1);
+
+    var scale = 1 - (progress * 0.1);
+    var opacity = 1 - (progress * 0.5);
+
+    $banner.css({
+      transform: 'scale(' + scale + ')',
+      opacity: opacity
+    });
+  }
+
+  $(window).on('scroll resize', scaleBanner);
+  scaleBanner();
+});
