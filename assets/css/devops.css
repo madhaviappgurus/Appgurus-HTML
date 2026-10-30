@@ -647,7 +647,7 @@ AI v2 page CSS
 .custom-solutions-sec .cs-service-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
 .custom-solutions-sec .cs-service-icon{color:#E8654E;width:20px;height:20px;}
 .custom-solutions-sec .cs-service-arrow{color:#E8654E;transition:transform 0.3s ease;width:15px;height:15px;}
-.custom-solutions-sec .cs-service-link h5{font-size:16px;font-weight:700;color:#14161A;line-height:1.5;margin:0;transition:color 0.3s ease;max-width:180px}
+.custom-solutions-sec .cs-service-link h5{font-size:16px;font-weight:700;color:#14161A;line-height:1.5;margin:0;transition:color 0.3s ease;}
 .custom-solutions-sec .cs-service-link:hover h5{color:#E8654E;}
 .custom-solutions-sec .cs-service-link:hover .cs-service-arrow{transform:translate(3px,-3px);}
 
@@ -743,6 +743,10 @@ AI v2 page CSS
 	.custom-solutions-main{margin-top:30px;padding-top:30px;}
 	.cs-phones{max-width:440px;height:480px;}
 	.ai-specialist-left p{width:100%;text-align:center;}
+	
+    .custom-solutions-sec .cs-service-link {display: flex;align-items: center; gap: 20px;}
+    .custom-solutions-sec .cs-service-top {margin-bottom: 0;}
+    .custom-solutions-sec .cs-service-icon {width: 26px;height: 26px;}
 
 	/* benefits */
 	.hl-cta-banner .cta-content{padding:30px 30px;}
@@ -766,6 +770,8 @@ AI v2 page CSS
 	.faq-bg-white .section-title{margin-bottom:20px;}
 }
 @media (max-width:575px){
+	.healthcare-banner .banner-text p {width: 100%;}
+
 	.healthcare-banner{padding-bottom:0px;}
 	.healthcare-banner .hl-tags-list{gap:10px 8px;}
 	.healthcare-banner .hl-tags-list li{font-size:14px;}
@@ -780,6 +786,7 @@ AI v2 page CSS
 	.custom-solutions-sec .cs-services-col li:nth-child(n):last-child{border-bottom:1px solid #E4E7EC}
 
 	/* benefits */
+	.hl-why-appgurus .section-title h3 br, .hl-benefits-sec .section-title h2 br, .custom-solutions-sec .section-title h3 br{display: none;}
 	.hl-cta-banner .cta-title br{display:none;}
 	.hl-cta-banner .cta-content{padding:30px 24px 24px;}
 	.healthcare-ai .hl-benefits-grid{margin-top:20px;}
