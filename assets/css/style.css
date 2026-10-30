@@ -2673,33 +2673,41 @@ RESPONSIVE
  .h-client-video .img-desktop {display: none;}
  .home-update .banner-heading {font-size: clamp(30px, 4.2vw, 74px);}
 }
-@media (min-width: 992px) {
-	.sticky_banner{
-		position: sticky !important;
-		top: 0 !important;
-		z-index: 1 !important;
-	}
-	.sticky_banner .container{
-		transform-origin: center top;
-		will-change: transform, opacity;
-		backface-visibility: hidden;
-		-webkit-backface-visibility: hidden;
-		transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-		-webkit-transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-		-moz-transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-		-ms-transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-		-o-transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	.overlay-bg{
-		position: relative;
-		z-index: 1;
-		background-color: #fff;
-	}
-	.modal-open .overlay-bg{
-		z-index: initial;
-	}
-	.home-update .page-wrapper{overflow-x: clip;}
+
+/* start */
+.sticky_banner{
+	position: sticky !important;
+	top: 0 !important;
+	z-index: 1 !important;
 }
+.sticky_banner .container{
+	transform-origin: center top;
+	will-change: transform, opacity;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+	-webkit-transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+	-moz-transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+	-ms-transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+	-o-transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.overlay-bg{
+	position: relative;
+	z-index: 1;
+	background-color: #fff;
+}
+.modal-open .overlay-bg{
+	z-index: initial;
+}
+.home-update .page-wrapper{overflow-x: clip;}
+
+@media (max-width: 1199px) {
+	.sticky_banner{
+		top: initial !important;
+	}
+}	
+/* end */
+
 
 /* Social icons added in team slider */
 .team-person-info-icons {flex-shrink: 0;display: inline-flex;flex-direction: column;gap: 8px;}

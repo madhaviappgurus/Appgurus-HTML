@@ -214,7 +214,7 @@
 .industry_case_study .industry_cs_card:hover .sdropdown-slide-title{ color: #f05d26;}
 .industry_case_study .industry_cs_card:hover .sdropdown-testimonial-img .sdropdown-uimg{ transform: scale(1.04) translateZ(0); -webkit-transform: scale(1.04) translateZ(0); -moz-transform: scale(1.04) translateZ(0); -ms-transform: scale(1.04) translateZ(0); -o-transform: scale(1.04) translateZ(0); }
 .industry_case_study .sdropdown-slider, .industry_case_study .slick-track, .industry_case_study .slick-slide, .industry_case_study .slick-list{height: 100%;}
-
+.industries_menu .sdropdown-redirect-link {z-index: 2;}
 
 @media (min-width:992px){
 	.industries_menu .sm-menu-row .col_3{width: 32%;}

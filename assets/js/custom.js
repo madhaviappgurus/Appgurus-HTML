@@ -913,7 +913,7 @@ if ($('#service-Tabs').length) {
 // sticky hero banner
 $(function () {
   var $banner = $('.sticky_banner .container');
-  var mq = window.matchMedia('(min-width: 991px)');
+  var mq = window.matchMedia('(min-width: 300px)');
 
   function scaleBanner() {
     if (!mq.matches) {
