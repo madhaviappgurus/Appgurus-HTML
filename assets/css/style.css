@@ -1269,7 +1269,7 @@ ul.why-invest-points li{padding:8px 10px;font-size:13px;letter-spacing:0px;}
 
 
 .show_hide{display:none;}
-#fixedButton{position:fixed;bottom:15px;right:15px;left:80px;padding:10px 10px;background-color:rgba(240,93,40,0.9);color:white;border:none;border-radius:12px;z-index:999;box-shadow:0px 0px 20px rgba(0,0,0,0.2);}
+#fixedButton{position:fixed;bottom:15px;right:15px;left:80px;padding:10px 10px;background-color:rgba(255, 255, 255, .3);color:white;border:none;border-radius:12px;z-index:999;box-shadow:0 0 10px rgba(0, 0, 0, .4); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);}
 .btn-fixed-main{display:flex;justify-content:space-evenly;gap:10px;}
 .btn-fixed-main .btn{width:50%; font-size:13px; }
 .btn-fixed-main .btn-with-arrow:after {margin-left: 5px;}
@@ -1278,10 +1278,10 @@ ul.why-invest-points li{padding:8px 10px;font-size:13px;letter-spacing:0px;}
 #fixedButton.hide{opacity:0;transform:translateY(100%);}
 .btn-fixed-main .btn.black_btn{background-color:#272727;border:1px solid #272727;}
 
-.btn-fixed-main .btn.white_btn{background:#fff;color:#000;}
+.btn-fixed-main .btn.white_btn{background:#fff;color:#000;border-color: #272727;}
 .btn-fixed-main .btn.white_btn:after{background:url('../images/btn-right-arrow.svg');filter:invert(0%) sepia(3%) saturate(0%) hue-rotate(275deg) brightness(94%) contrast(104%);}
 
-.btn-fixed-main .btn.white_btn:hover{color:#f26e45;background:#000;}
+.btn-fixed-main .btn.white_btn:hover{color:#f26e45;background:#000; border-color: #272727;}
 .btn-fixed-main .btn.white_btn:hover:after{filter:none;}
 
 
@@ -2699,7 +2699,7 @@ RESPONSIVE
 .modal-open .overlay-bg{
 	z-index: initial;
 }
-.home-update .page-wrapper{overflow-x: clip;}
+.home-update .page-wrapper, .industry .page-wrapper{overflow-x: clip;}
 
 @media (max-width: 1199px) {
 	.sticky_banner{
@@ -2717,3 +2717,42 @@ RESPONSIVE
 .team-person-info.team-person-info-bottom .team-person-info-icons {position: absolute;right: 2px;top: 15px;}
 .team-person-info-icons a:hover .team-social-icon rect {fill: #737171;}
 .team-person-info-icons .team-social-icon rect {transition: all 0.4s ease;}
+
+/* Industry Page CSS 2-11-2026 */
+.industries-we-serve{padding: 100px 0;}
+.industries-we-serve .industries-list-title{font-size: clamp(22px, 2.0vw, 32px); margin-bottom: 32px;}
+.industries-we-serve .industry-name{font-size: 22px;}
+.industries-we-serve .industry-item {display: flex;align-items: center;justify-content: space-between;gap: 20px;border-bottom: 1px solid #eeeeee; padding: 16px 0;}
+.industries-we-serve .industry-item:last-child{border-bottom: 0;}
+.industry-list-icon{width: clamp(35px, 4vw, 45px); height: clamp(35px, 4vw, 45px);} 
+.industry-item .industry-name, .bl-arrow-hover path, .bl-arrow-hover{ transition:all 0.2s ease ; -webkit-transition:all 0.2s ease ; -moz-transition:all 0.2s ease ; -ms-transition:all 0.2s ease ; -o-transition:all 0.2s ease ; }
+.industry-item:hover .bl-arrow-hover path{fill: #F05D27;}
+.industry-item:hover .bl-arrow-hover{transform: translate(3px, -3px);}
+.industry-item:hover .industry-name{color: #F05D27 !important;}
+.industries-we-serve .industries-sticky {position: sticky;top: 120px; margin-right: 60px;}
+
+
+@media (max-width: 1650px) {
+	.industries-we-serve{padding: 80px 0;}
+	.industries-we-serve .industry-name {font-size: 20px;}
+}
+@media (max-width: 1450px) {
+	.industries-we-serve .industry-item{ padding: 14px 0;}
+	.industries-we-serve .industry-name { font-size: 18px;}
+	.industries-we-serve .industry-list-icon {width: 38px;height: 38px;}
+	.industries-we-serve .bl-arrow-hover {width: 12px;height: 12px;}
+}
+@media (max-width: 1199px) {
+	.industries-we-serve{padding: 60px 0;}
+	.industries-we-serve .industries-sticky {margin-right: 30px;}
+}
+@media (max-width: 991px) {
+	.industries-we-serve .industries-sticky {position: static;}
+	.industries-we-serve .industries-list-title {margin-bottom: 10px;margin-top: 40px;}
+}
+@media (max-width: 575px) {
+	.industries-we-serve{padding: 40px 0;}
+	.industries-we-serve .industry-name {font-size: 16px;}
+	.industries-we-serve .industry-list-icon {width: 36px;height: 36px;}
+	.industries-we-serve .bl-arrow-hover {width: 10px;height: 10px;}
+}
