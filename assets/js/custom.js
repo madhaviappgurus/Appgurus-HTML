@@ -937,3 +937,30 @@ $(function () {
   $(window).on('scroll resize', scaleBanner);
   scaleBanner();
 });
+
+
+// Scale Section Effect JS
+$(function () {
+
+  function getOffset() {
+    // <575px = 100, desktop/tablet = 200
+    return window.matchMedia('(max-width: 575px)').matches ? 250 : 200;
+  }
+
+  function checkSections() {
+    var offset = getOffset();
+    var triggerPoint = $(window).scrollTop() + $(window).height() - offset;
+
+    $('.scale-section').each(function () {
+      var $sec = $(this);
+      if ($sec.offset().top < triggerPoint) {
+        $sec.addClass('in-view');
+      } else {
+        $sec.removeClass('in-view');
+      }
+    });
+  }
+
+  $(window).on('scroll resize', checkSections);
+  checkSections();
+});
