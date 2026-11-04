@@ -590,7 +590,7 @@ AI v2 page CSS
 	.right-choice-sec .perfect-title{font-size:14px;}
 	.right-choice-sec .perfect-desc{font-size:12.5px;}
 	.right-choice-sec .decorative-cloud img{width:50%;margin-left:auto;}
-	.devops-banner .banner-heading br{display:none;}
+	.devops-banner .banner-heading br{display:none !important;}
 	.devops-banner .devops-right-img img{max-width:300px;}
 	.devops-banner .banner-text>p{max-width:100%!important;width:100%;}
 	.devops-tabs-wrap .devops-tab.ds-white-box.last .ds-icon path{fill:#fff;}

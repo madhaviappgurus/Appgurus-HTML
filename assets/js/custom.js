@@ -911,30 +911,58 @@ if ($('#service-Tabs').length) {
 // AI Tool JS End
 
 // sticky hero banner
+// sticky hero banner
 $(function () {
   var $banner = $('.sticky_banner .container');
+  var bannerEl = $banner.get(0);
+  if (!bannerEl) return;
+
   var mq = window.matchMedia('(min-width: 300px)');
 
+  var ticking = false;
+  var bannerHeight = $banner.outerHeight();
+
+  function reset() {
+    bannerEl.style.transform = '';
+    bannerEl.style.opacity = '';
+  }
+
   function scaleBanner() {
+    ticking = false;
+
     if (!mq.matches) {
-      $banner.css({ transform: '', opacity: '' });
+      reset();
       return;
     }
 
-    var h = $banner.outerHeight();
-    var scroll = $(window).scrollTop();
-    var progress = Math.min(Math.max(scroll / h, 0), 1);
+    // Safari bounce (negative scroll) handle
+    var scroll = Math.max(window.pageYOffset || document.documentElement.scrollTop || 0, 0);
+    var progress = Math.min(Math.max(scroll / bannerHeight, 0), 1);
 
     var scale = 1 - (progress * 0.1);
     var opacity = 1 - (progress * 0.5);
 
-    $banner.css({
-      transform: 'scale(' + scale + ')',
-      opacity: opacity
-    });
+    bannerEl.style.transform = 'scale(' + scale.toFixed(4) + ') translateZ(0)';
+    bannerEl.style.opacity = opacity.toFixed(3);
   }
 
-  $(window).on('scroll resize', scaleBanner);
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(scaleBanner);
+    }
+  }
+
+  function onResize() {
+    bannerHeight = $banner.outerHeight();
+    onScroll();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onResize);
+  window.addEventListener('orientationchange', onResize);
+  window.addEventListener('load', onResize);
+
   scaleBanner();
 });
 
