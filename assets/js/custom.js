@@ -968,45 +968,26 @@ $(function () {
 
 // Scale Section Effect JS
 $(function () {
-    var $sections = $('.scale-section');
-    if (!$sections.length) return;
 
-    if (!('IntersectionObserver' in window)) {
-        $sections.addClass('in-view');
-        return;
-    }
-    var observer = null;
-    function getOffset() {
-        return window.matchMedia('(max-width: 575px)').matches ? 250 : 200;
-    }
-    function init() {
-        if (observer) observer.disconnect();
+  function getOffset() {
+    // <575px = 100, desktop/tablet = 200
+    return window.matchMedia('(max-width: 575px)').matches ? 250 : 200;
+  }
 
-        observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                var $sec = $(entry.target);
-                if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
-                    $sec.addClass('in-view');
-                } else {
-                    $sec.removeClass('in-view');
-                }
-            });
-        }, {
-            root: null,
-            threshold: 0,
-            rootMargin: '0px 0px -' + getOffset() + 'px 0px'
-        });
+  function checkSections() {
+    var offset = getOffset();
+    var triggerPoint = $(window).scrollTop() + $(window).height() - offset;
 
-        $sections.each(function () {
-            observer.observe(this);
-        });
-    }
-
-    init();
-
-    var resizeTimer;
-    $(window).on('resize orientationchange', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(init, 200);
+    $('.scale-section').each(function () {
+      var $sec = $(this);
+      if ($sec.offset().top < triggerPoint) {
+        $sec.addClass('in-view');
+      } else {
+        $sec.removeClass('in-view');
+      }
     });
+  }
+
+  $(window).on('scroll resize', checkSections);
+  checkSections();
 });
