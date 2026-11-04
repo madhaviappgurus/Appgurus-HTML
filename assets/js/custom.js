@@ -906,89 +906,107 @@ if ($('#service-Tabs').length) {
             }
         });
     });
-    
+
 })();
 // AI Tool JS End
 
 // sticky hero banner
-// sticky hero banner
 $(function () {
-  var $banner = $('.sticky_banner .container');
-  var bannerEl = $banner.get(0);
-  if (!bannerEl) return;
+    var $banner = $('.sticky_banner .container');
+    var bannerEl = $banner.get(0);
+    if (!bannerEl) return;
 
-  var mq = window.matchMedia('(min-width: 300px)');
+    var mq = window.matchMedia('(min-width: 300px)');
 
-  var ticking = false;
-  var bannerHeight = $banner.outerHeight();
+    var ticking = false;
+    var bannerHeight = $banner.outerHeight();
 
-  function reset() {
-    bannerEl.style.transform = '';
-    bannerEl.style.opacity = '';
-  }
-
-  function scaleBanner() {
-    ticking = false;
-
-    if (!mq.matches) {
-      reset();
-      return;
+    function reset() {
+        bannerEl.style.transform = '';
+        bannerEl.style.opacity = '';
     }
 
-    // Safari bounce (negative scroll) handle
-    var scroll = Math.max(window.pageYOffset || document.documentElement.scrollTop || 0, 0);
-    var progress = Math.min(Math.max(scroll / bannerHeight, 0), 1);
+    function scaleBanner() {
+        ticking = false;
 
-    var scale = 1 - (progress * 0.1);
-    var opacity = 1 - (progress * 0.5);
+        if (!mq.matches) {
+            reset();
+            return;
+        }
 
-    bannerEl.style.transform = 'scale(' + scale.toFixed(4) + ') translateZ(0)';
-    bannerEl.style.opacity = opacity.toFixed(3);
-  }
+        // Safari bounce (negative scroll) handle
+        var scroll = Math.max(window.pageYOffset || document.documentElement.scrollTop || 0, 0);
+        var progress = Math.min(Math.max(scroll / bannerHeight, 0), 1);
 
-  function onScroll() {
-    if (!ticking) {
-      ticking = true;
-      window.requestAnimationFrame(scaleBanner);
+        var scale = 1 - (progress * 0.1);
+        var opacity = 1 - (progress * 0.5);
+
+        bannerEl.style.transform = 'scale(' + scale.toFixed(4) + ') translateZ(0)';
+        bannerEl.style.opacity = opacity.toFixed(3);
     }
-  }
 
-  function onResize() {
-    bannerHeight = $banner.outerHeight();
-    onScroll();
-  }
+    function onScroll() {
+        if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(scaleBanner);
+        }
+    }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onResize);
-  window.addEventListener('orientationchange', onResize);
-  window.addEventListener('load', onResize);
+    function onResize() {
+        bannerHeight = $banner.outerHeight();
+        onScroll();
+    }
 
-  scaleBanner();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    window.addEventListener('orientationchange', onResize);
+    window.addEventListener('load', onResize);
+
+    scaleBanner();
 });
 
 
 // Scale Section Effect JS
 $(function () {
+    var $sections = $('.scale-section');
+    if (!$sections.length) return;
 
-  function getOffset() {
-    // <575px = 100, desktop/tablet = 200
-    return window.matchMedia('(max-width: 575px)').matches ? 250 : 200;
-  }
+    if (!('IntersectionObserver' in window)) {
+        $sections.addClass('in-view');
+        return;
+    }
+    var observer = null;
+    function getOffset() {
+        return window.matchMedia('(max-width: 575px)').matches ? 250 : 200;
+    }
+    function init() {
+        if (observer) observer.disconnect();
 
-  function checkSections() {
-    var offset = getOffset();
-    var triggerPoint = $(window).scrollTop() + $(window).height() - offset;
+        observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                var $sec = $(entry.target);
+                if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
+                    $sec.addClass('in-view');
+                } else {
+                    $sec.removeClass('in-view');
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0,
+            rootMargin: '0px 0px -' + getOffset() + 'px 0px'
+        });
 
-    $('.scale-section').each(function () {
-      var $sec = $(this);
-      if ($sec.offset().top < triggerPoint) {
-        $sec.addClass('in-view');
-      } else {
-        $sec.removeClass('in-view');
-      }
+        $sections.each(function () {
+            observer.observe(this);
+        });
+    }
+
+    init();
+
+    var resizeTimer;
+    $(window).on('resize orientationchange', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(init, 200);
     });
-  }
-
-  $(window).on('scroll resize', checkSections);
-  checkSections();
 });
