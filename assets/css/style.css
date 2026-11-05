@@ -2685,7 +2685,7 @@ RESPONSIVE
 
 /* start */
 .sticky_banner{	position: -webkit-sticky;position:sticky!important;top:0!important;z-index:1!important;}
-.sticky_banner .container{transform-origin:center top;will-change:transform,opacity;backface-visibility:hidden;-webkit-backface-visibility:hidden;	-webkit-transform: translateZ(0); transform: translateZ(0);   transition:all 0.4s cubic-bezier(0.22,1,0.36,1);-webkit-transition:all 0.4s cubic-bezier(0.22,1,0.36,1);-moz-transition:all 0.4s cubic-bezier(0.22,1,0.36,1);-ms-transition:all 0.4s cubic-bezier(0.22,1,0.36,1);-o-transition:all 0.4s cubic-bezier(0.22,1,0.36,1);}
+.sticky_banner .banner-wrap{transform-origin:center top;will-change:transform,opacity;backface-visibility:hidden;-webkit-backface-visibility:hidden;	-webkit-transform: translateZ(0); transform: translateZ(0);   transition:all 0.4s cubic-bezier(0.22,1,0.36,1);-webkit-transition:all 0.4s cubic-bezier(0.22,1,0.36,1);-moz-transition:all 0.4s cubic-bezier(0.22,1,0.36,1);-ms-transition:all 0.4s cubic-bezier(0.22,1,0.36,1);-o-transition:all 0.4s cubic-bezier(0.22,1,0.36,1);}
 .overlay-bg{position:relative;z-index:1;background-color:#fff;}
 .modal-open .overlay-bg{z-index:initial;}
 .home-update .page-wrapper,.industry .page-wrapper{overflow-x:clip;}

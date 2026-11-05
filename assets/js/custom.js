@@ -912,7 +912,7 @@ if ($('#service-Tabs').length) {
 
 // sticky hero banner
 $(function () {
-    var $banner = $('.sticky_banner .container');
+    var $banner = $('.sticky_banner .banner-wrap');
     var bannerEl = $banner.get(0);
     if (!bannerEl) return;
 
