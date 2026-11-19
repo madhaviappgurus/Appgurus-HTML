@@ -662,7 +662,7 @@ button.slick-arrow {font-size: 0;position: absolute;z-index:9;background: transp
 .free-consultation-popup .fc-trust-row{flex-wrap:wrap;gap:17px;flex-direction: column;}
 	.free-consultation-popup .fc-trust-row .fc-trust-item:not(:first-child):after{display:none;}
 .free-consultation-popup .fc-trust-item br{display:none;}
-.free-consultation-popup .fc-trust-row
+.free-consultation-popup .fc-trust-row{}
 
 }
 
@@ -2630,9 +2630,9 @@ RESPONSIVE
 .videoModal-main video{max-height:100%;width:auto;max-width:100%;}
 .testimonials_slider_main .slick-list.draggable,.testimonials_slider_main .slick-list.draggable .slick-track{display:flex;}
 .testimonials_slider_main .slick-list.draggable .slick-track .row{height:100%;}
-.testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details{width:100%;height:100%;}
-.testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details .client-video-main{width:100%;height:100%;}
-.testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details .client-video-main img.img-fluid{width:100%;height:100%;object-fit:cover;border-radius:12px;}
+/*.testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details{width:100%;height:100%;}*/
+/*.testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details .client-video-main{width:100%;height:100%;}*/
+/*.testimonials_slider_main .slick-list.draggable .slick-track .row .testimonials-details .client-video-main img.img-fluid{width:100%;height:100%;object-fit:cover;border-radius:12px;}*/
 .testimonials-sec .client-video-main .play-video:before{content:'';position:absolute;z-index:0;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);display:block;width:100%;height:100%;background:#F05D27;border-radius:50%;animation:pulse-border 1500ms ease-out infinite;z-index:-1;}
 .testimonials-sec .client-video-main .play-video:after{content:'';position:absolute;z-index:1;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);display:block;width:100%;height:100%;background:#F05D27;border-radius:50%;transition:all 200ms;animation:pulse-border 2000ms ease-out infinite;z-index:-1;}
 @keyframes pulse-border{
@@ -2764,27 +2764,39 @@ RESPONSIVE
 }
 
 /* 19 Nov 2026 changes */
-/* 19 Nov 2026 changes */
 .industries-slider-main:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 3.5);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
 .industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 3.5);}
 
 .ai-dev-services-slider:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 3.5);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
 .ai-dev-services-slider:not(.slick-slider){grid-auto-columns:calc(100% / 4.4);}
 
+.ai-client-review-slider:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 3.5);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3.5);}
+
 @media (max-width:1700px){
 	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 3.2);}
 }
 @media (max-width:1500px){
 	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 2.5);}
+	.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3);}
 }
 @media (max-width:1199px){
 	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 2.2);}
 	.ai-dev-services-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3.2);}
+	.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2);}
 }
 @media (max-width:991px){
 	.ai-dev-services-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2.2);}
+	.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2);}
 }
 @media (max-width:550px){
 	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 1.5);}
 	.ai-dev-services-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1.2);}
 }
+
+@media (max-width:480px){
+	.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1);}
+}
+
+
+
