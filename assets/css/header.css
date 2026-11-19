@@ -216,7 +216,12 @@
 .industry_case_study .sdropdown-slider, .industry_case_study .slick-track, .industry_case_study .slick-slide, .industry_case_study .slick-list{height: 100%;}
 .industries_menu .sdropdown-redirect-link {z-index: 2;}
 
+/* Header GIf */
+.header-main.sticky.active .navbar-container:after{ max-width: calc(1640px + 20px) !important; width: calc(87% + 20px) !important;}
+
 @media (min-width:992px){
+	.header-main.active.sticky .header-inner-main .header-inner .header-menu ul li a.on-change-sticky{padding-top: 30px;padding-bottom: 30px;}
+	.header-logo {max-width: 200px; padding-bottom: 8px;}
 	.industries_menu .sm-menu-row .col_3{width: 32%;}
 	.industries_menu .sm-menu-row .col_6{ width: 68%;}
 
@@ -325,7 +330,7 @@
 	.header-main .header-btn-main .header-btn{font-size:14px;min-width:125px;padding:10px 10px 12px;line-height:1;}
 	.header-main .header-inner-main .header-menu-inner>.navbar-nav{width:calc(100% - 270px);}
 	.header-main .header-menu .header-menu-inner ul.navbar-nav>li.nav-item .main-menu>.dropdown-click{margin-left:-8px;}
-	.header-btn-main{padding-top:7px;}
+	/* .header-btn-main{padding-top:7px;} */
 	.header-logo{max-width:150px;}
 }
 @media (max-width:1199px){

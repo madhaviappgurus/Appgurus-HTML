@@ -1,7 +1,7 @@
 /* ============================================
    APP GURUS FOOTER
    Based on your original CSS, with fixes + additions
-   ============================================ */
+   ============================================ * /
 
 /* ---------- Base resets (so the footer works standalone) ---------- */
 *,*::before,*::after{box-sizing:border-box;}
