@@ -2776,22 +2776,56 @@ RESPONSIVE
 .case-studies-slider:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 3.5);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
 .case-studies-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3.5);}
 
+.team-title-slider:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 1);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.team-title-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1);}
+
+
+.testimonials--slider:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 1);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.testimonials--slider:not(.slick-slider){grid-auto-columns:calc(100% / 1);}
+
+.team-person-slider:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 5.2);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.team-person-slider:not(.slick-slider){grid-auto-columns:calc(100% / 5.2);}
+
+.iot-industry-served-slider:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 4.3);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.iot-industry-served-slider:not(.slick-slider){grid-auto-columns:calc(100% / 4.3);}
+
+.clients-logo-inner:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 7.2);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.clients-logo-inner:not(.slick-slider){grid-auto-columns:calc(100% / 7.2);}
+
+.industries-slider-main:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 3.2);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 3.1);}
+
+
+
 @media (max-width:1700px){
 	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 3.2);}
+}
+@media (max-width:1599px){
+	.iot-industry-served-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3.2);}
 }
 @media (max-width:1500px){
 	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 2.5);}
 	.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3);}
+}
+@media (max-width:1400px){
+	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 2.1);}
 }
 @media (max-width:1199px){
 	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 2.2);}
 	.ai-dev-services-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3.2);}
 	.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2);}
 	.case-studies-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3.2);}
+	.team-person-slider:not(.slick-slider){grid-auto-columns:calc(100% / 4.3);}
+}
+@media (max-width:1024px){
+	.clients-logo-inner:not(.slick-slider){grid-auto-columns:calc(100% / 4.2);}
 }
 @media (max-width:991px){
 	.ai-dev-services-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2.2);}
 	.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2);}
+	.team-person-slider:not(.slick-slider){grid-auto-columns:calc(100% / 3.3);}
+	.iot-industry-served-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2.3);}
+	.clients-logo-inner:not(.slick-slider){grid-auto-columns:calc(100% / 3.2);}
 }
 @media (max-width:768px){
 	.case-studies-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2.2);}
@@ -2799,11 +2833,17 @@ RESPONSIVE
 @media (max-width:550px){
 	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 1.5);}
 	.ai-dev-services-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1.2);}
+	.team-person-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2.3);}
+	.iot-industry-served-slider:not(.slick-slider){grid-auto-columns:calc(100% / 2.3);}
+	.industries-slider-main:not(.slick-slider){grid-auto-columns:calc(100% / 1.1);}
 }
 
 @media (max-width:480px){
 	.ai-client-review-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1);}
 	.case-studies-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1.5);}
+	.team-person-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1.1);}
+	.iot-industry-served-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1.2);}
+	.clients-logo-inner:not(.slick-slider){grid-auto-columns:calc(100% / 2);}
 }
 
 
