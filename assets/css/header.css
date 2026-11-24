@@ -589,6 +589,5 @@
 }
 
 /*20/Nov/2026*/
-/*.sdropdown-testimonial .sdropdown-slider{display:flex;white-space:nowrap;}*/
 .sdropdown-slider:not(.slick-slider){display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% / 1);gap:0;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
 .sdropdown-slider:not(.slick-slider){grid-auto-columns:calc(100% / 1);}
